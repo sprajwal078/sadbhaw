@@ -1,0 +1,52 @@
+----- v1.0 ------------
+2015/10/19: Initial Release
+
+----- v1.0.1 (2016/03/04) ------------
+- Upgraded: Revolution Slider v5.2
+
+----- v1.1.0 (2016/03/15) ------------
+- Added: External Donation link
+- Added: Allowing to disable payment methods (Offline/paypal)
+- Upgraded: Visual Composer v4.11, Revolution Slider v5.2.2
+- Fixed: Sending empty email to donors
+
+----- v1.2.0 (2016/03/17) ------------
+- Supported: PHP5.3
+- Added: Back To Top button
+- Added: Button Link for Inwave Slider
+- Added: target="_blank" to social links
+- Fixed: Header padding issue
+- Fixed: Responsive mobile menu on desktop
+- Upgraded: Visual Composer v4.11.1
+
+----- v1.2.1 (2016/03/21) ------------
+- Upgraded: Revolution Slider v5.2.3
+- Corrected: Header style v4
+- Added: Changing Paypal email for every campaigns
+
+----- v1.3.0 (2016/03/21) ------------
+- Upgrade: Revolution Slider v5.2.4.1
+- Removed: unnecessary fonts, Page options in post
+- Added: Allowing unlimited goal & No end date option
+- Fixed: Misc bugs
+
+----- v1.3.1 (2016/04/14) ------------
+- Upgraded: Visual Composer v4.11.2 & Wordpress 4.5
+
+----- v1.3.2 (2016/04/22) ------------
+- Fixed: pagination bug
+- Upgraded: Visual Composer v4.11.2.1 & Revolution Slider v5.2.5
+
+----- v1.3.3 (2016/05/12) ------------
+- Upgraded: Revolution Slider v5.2.5.1
+- Fixed: Shortcode Admin Popup height
+- Fixed: Event Facts responsive
+- Fixed: Number format of campaign percent
+
+----- v1.3.5 (2016/06/10) ------------
+- Added: System Requirements in ImportData tool
+- Added:  Date & Check box user field type
+- Upgraded: Revolution Slider 5.2.5.3, Visual Composer 4.12
+- Allowed: Child-theme layout overriding
+- Fixed: currency symbol issue
+- Fixed: Misc bugs

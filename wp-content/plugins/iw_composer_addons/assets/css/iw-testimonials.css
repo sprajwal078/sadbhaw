@@ -1,0 +1,99 @@
+/*
+@package Inwave Inhost
+@version 1.0.0
+@created May 6, 2015
+@author Inwavethemes
+@email inwavethemes@gmail.com
+@website http://inwavethemes.com
+@support Ticket https://inwave.ticksy.com/
+@copyright Copyright (c) 2015 Inwavethemes. All rights reserved.
+@license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+
+*/
+/* 
+    Created on : May 6, 2015, 1:21:05 PM
+    Deverloper     : duongca
+*/
+.iw-testimonial-item.layout1 {
+    width: 100%;
+    padding: 60px 20px 120px;
+    color: #ffffff;
+}
+.iw-testimonial-item {
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.iw-testimonial-item .testi-title:before {
+    content: "“";
+    font-size: 24px;
+}
+.iw-testimonial-item .testi-title {
+    font-size: 24px;
+    font-weight: 300;
+    width: 66%;
+    margin: 30px auto 60px;
+    line-height: 1.5em;
+}
+.iw-testimonial-item .testi-title:after {
+    content: "”";
+    font-size: 24px;
+}
+.iw-testimonial-item .iw-testimonial-info {
+    text-align: left;
+    font-size: 13px;
+}
+.iw-testimonial-item .testimonial-info-right .testi-signature {
+    font-family: "pwsignaturetwomedium";
+    font-size: 60px;
+    line-height: 1;
+    position: relative;
+    margin: 25px 0 15px;
+}
+.iw-testimonial-item .testimonial-info-right .testi-signature:after {
+    border-bottom: 2px solid #fff;
+    bottom: 20px;
+    content: "";
+    height: 10px;
+    position: absolute;
+    width: 210px;
+}
+.iw-testimonial-item .testimonial-info-right .testi-name-position {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.iw-testimonial-item .testi-name-position .testi-name {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.iw-testimonial-item.layout1 .testi-col-left{
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.iw-testimonial-item.layout1 .testi-image {
+    border: 4px #ffffff solid;
+    border-radius: 50%;
+    height: 145px;
+    overflow: hidden;
+    width: 145px;
+    background: #E5E5E5;
+    margin: 0 auto;
+}
+.iw-testimonial-item .testi-image img{
+    width: 100%;
+}
+/* RTL */
+
+.rtl .iw-testimonial-item .iw-testimonial-info {
+    text-align: right;
+}
+@media (max-width: 480px) {
+    .iw-testimonial-item .testi-title {
+        width: 100%;
+    }
+}

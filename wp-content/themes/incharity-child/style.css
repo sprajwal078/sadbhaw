@@ -1,0 +1,21 @@
+/*
+Theme Name: inCharity Child
+Theme URI: http://inwavethemes.com/wordpress/incharity
+Author: inwavethemes
+Author URI: http://inwavethemes.com
+Template: incharity
+Description: Wordpress theme for Charity and Fundraising and non-profit organization
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: inwavethemes
+Tags: light, fluid-layout, responsive-layout, post-formats, theme-options, flexible-header, custom-header, custom-background, custom-colors, left-sidebar, right-sidebar
+
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+@import url("../incharity/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */

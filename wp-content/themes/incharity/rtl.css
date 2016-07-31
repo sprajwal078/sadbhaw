@@ -1,0 +1,483 @@
+/*
+Theme Name: incharity
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+GENERAL
+ */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+	text-align:right;
+}
+.wpb_column,.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+    float:right;
+}
+.content-main-right{
+    float:right;
+}
+.content-main-left{
+    float:left;
+}
+th{
+    text-align: right;
+}
+.owl-carousel .owl-item{
+    float:right;
+}
+.pull-right{
+	float:left;
+}
+.pull-left{
+	float:right;
+}
+/*------------------- RTL Panel setting  -----------------*/
+.rtl .panel-tools{
+    right: 0;
+    width: 240px;
+}
+.rtl .panel-tools .panel-button{
+    right: 0;
+}
+.rtl .panel-tools .panel-button.active{
+    right: 240px;
+}
+@media (min-width: 992px) {
+
+    /*------------------- RTL Header default -----------------*/
+    .rtl .header .navbar .main-menu{
+        float: left;
+    }
+    .rtl .header.header-default .header-donate-button {
+        float: left;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li{
+        float: right;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li:first-child > a strong::after{
+        display: none;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li:last-child > a strong::after{
+        display: block;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li{
+        float: right;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li > .sub-menu{
+        left: auto;
+        right: 0;
+        text-align: right;
+    }
+    .rtl .header .iw-nav-menu li a .icon-arrow::before{
+        content: "";
+        float: left;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li .sub-menu li .sub-menu{
+        right: 80%;
+        left: auto;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li .sub-menu li:hover > .sub-menu {
+        border-left: 0 none;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        left: auto;
+        margin: 0 20px 0 0;
+        right: 100%;
+    }
+
+
+    /*------------------- RTL Header version 2 -----------------*/
+    .rtl .header.header-version-2 .header-donate-button {
+        float: left;
+    }
+    .rtl .header.header-version-2 .iw-menu-default .iw-nav-menu > li:first-child > a {
+        border-right: 0;
+    }
+    .rtl .header.header-version-2 .iw-menu-default .iw-nav-menu > li:last-child > a {
+        border-right: 1px solid rgb(218, 218, 218);
+    }
+    .rtl .header.header-version-2 .header-top-left{
+        float: right;
+    }
+    .rtl .header.header-version-2 .header-top .mobile-top{
+        margin-right: 20px;
+    }
+    .rtl .header.header-version-2 .header-top .email-top{
+        margin-right: 0;
+    }
+    .rtl .header-version-2 .header-top .iw-social-all {
+        text-align: left;
+    }
+    .rtl .header.header-version-2 .navbar .main-menu {
+        float: left;
+    }
+
+    /*---------- Style header RTL - Header version 3 -----------*/
+    .rtl .header.header-version-3 .header-donate-button{
+        float: left;
+    }
+    .rtl .header.header-version-3 .iw-menu-default .iw-nav-menu > li > a strong::after {
+        display: block;
+    }
+    .rtl .header.header-version-3 .iw-menu-default .iw-nav-menu > li > a strong::after {
+        display: none;
+    }
+    .rtl .header.header-version-3 .menu-menu-with-icons-container {
+        float: left;
+    }
+
+    /*---------- Style header RTL - Header version 4 -----------*/
+
+    .rtl .header.header-version-4 .header-donate-button {
+        float: left;
+    }
+    .rtl .header.header-version-4 .iw-header-menu-wrapper {
+        margin-left: 70px;
+        margin-right: 0;
+    }
+    .rtl .header.header-version-4 .iw-menu-default .iw-nav-menu > li:last-child > a strong::after{
+        display: none;
+    }
+    .rtl .header.header-version-4.header-sticky.clone .iw-menu-default .iw-nav-menu > li:last-child > a strong::after {
+        display: block;
+    }
+    .rtl .header-version-4 .nav-trigger{
+        right: auto;
+        left: 30px;
+        float: left;
+    }
+    /*---------- Style header RTL - Header version 4 -----------*/
+
+    .rtl .header.header-version-2.header-version-5 .logo {
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    .rtl .header.header-version-2.header-version-5 .header-donate-button {
+        margin: 0 0 0 20px;
+    }
+    .rtl .header.header-version-2.header-version-5 .iw-menu-default .iw-nav-menu > li > a strong::after{
+        left: auto;
+        right: 5px;
+    }
+    .rtl .header.header-version-2.header-version-5 .form-search-header,
+    .rtl .header.header-version-2.header-version-5 .header-cart-count,
+    .rtl .header.header-version-2.header-version-5 .header-top .iw-social-all{
+        float: left;
+    }
+    .rtl .header.header-version-2.header-version-5 .form-search-header .input-text {
+        padding: 10px 30px 10px 15px;
+    }
+    .rtl .header-version-5 .header-top-left {
+        float: right;
+        text-align: right;
+    }
+    .rtl .header-version-5 .header-top-right{
+        float: right;
+    }
+    .rtl .header.header-version-2.header-version-5 .header-top .email-top{
+        margin-right: 20px;
+    }
+    .rtl .header-version-5 .search-box .sub-search{
+        left: auto;
+        right: -5px;
+    }
+    .rtl .header.header-version-5 .iw-menu-default .iw-nav-menu > li a strong::after {
+        display: block;
+    }
+    .rtl .header.header-version-5 .iw-menu-default .iw-nav-menu > li:hover > a strong::before{
+        display: none;
+    }
+
+}
+
+
+.rtl .iw-footer-v2-widget .footer-title > h4,
+.rtl .iw-footer-v2-widget .iw-support-heading > p,
+.rtl .iw-footer-v2-widget .iw-contact-widget .form-submit{
+    text-align: right;
+}
+.rtl .iw-footer-v2-widget .footer-post-campaign ol{
+    padding-right: 0;
+}
+.rtl .iw-footer-v2-widget .footer-post-campaign ol{
+    text-align: right;
+    padding-right: 0;
+}
+.rtl .iw-footer-v2-widget .footer-post-campaign span{
+    padding-left: 0;
+    padding-right: 10px;
+}
+.rtl .iw-footer-v2-widget .footer-left {
+    text-align: right;
+}
+.rtl .iw-footer-v2-copyright .iw-main-nav .menu {
+    text-align: left;
+}
+.rtl .iw-footer-v2-copyright .iw-main-nav .menu li{
+    float: left;
+}
+
+.shortcode_widget .iw-tabs .iw-tab-item{
+    float: right;
+}
+.rtl .widget_categories ul li:hover a,
+.rtl .widget_archive ul li:hover a{
+    transform: translateX(-15px);
+    -webkit-transform: translate(-15px);
+}
+.rtl .page-numbers li{
+    float: right;
+}
+
+.rtl .iw-category .post-content .post-content-right .post-title a {
+    padding-right: 35px;
+}
+
+.rtl .iw-category .tags-links{
+    margin: 15px 25px 15px 0;
+}
+.rtl .iw-category .more-link i{
+    margin-left: 10px;
+}
+.rtl .iw-category .post-info .post-info-date i,
+.rtl .iw-category .post-info .post-info-comment i,
+.rtl .iw-category .post-info .post-info-category i {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 0;
+}
+.rtl .iw-mailchimp-form.style4 {
+    text-align: right;
+}
+.rtl .iw-event-facts2 .iw-event-fact-item .event-fact-desc:before{
+	right:0;
+}
+.rtl .iw-mailchimp-form.style4 .mc-name, .rtl .iw-mailchimp-form.style4 .mc-email{
+	margin:0 0 0 12px;
+}
+
+.rtl .iw-tabs.layout3 .iw-tab-items{
+	float:right;
+}
+.rtl .tab-testimonial-home6 .iw-tabs.layout3:before{
+	right:0;
+	left:auto;
+}
+.rtl .tab-testimonial-home6 .iw-tabs.layout3 .iw-tab-item .iw-tab-title,
+.rtl .tab-testimonial-home6 .iw-tabs.layout3 .iw-tab-item .iw-tab-subtitle{
+	margin-left:0;
+	margin-right:73px;
+}
+.rtl .tab-testimonial-home6 .iw-tabs.layout3 .iw-tab-item.active::before, 
+.rtl .tab-testimonial-home6 .iw-tabs.layout3 .iw-tab-item:hover::before, 
+.rtl .tab-testimonial-home6 .iw-tabs.layout3 .iw-tab-item.active::after, 
+.rtl .tab-testimonial-home6 .iw-tabs.layout3 .iw-tab-item:hover::after{
+	transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	left:-10px;
+	right:auto;
+}
+.rtl .iw-testimonial-item.layout2 .iw-testimonial-info{
+	text-align:right;
+}
+
+
+.rtl .recent-blog-posts .recent-blog-post > a {
+    float: right;
+}
+.rtl .recent-blog-post-detail {
+    margin-left: 0;
+    margin-right: 85px;
+}
+
+
+.rtl .post-content-head .post-head-detail{
+	margin-left:0;
+	margin-right:60px;
+}
+.post-content-head .post-icon{
+	float:right;
+}
+.post-info .post-info-date,
+.post-info .post-info-comment,
+.post-info .post-info-category{
+	margin-right:0;
+	margin-left:13px;
+}
+.post-content-head .post-info i{
+	margin-right:0;
+	margin-left:5px;
+}
+.post-content-desc .simple-list ul li{
+	margin:0 0 0 10px;
+}
+.post-content-desc .simple-list ul li i{
+	margin:0 0 0 4px;
+}
+.post-content-desc .post-quote{
+	border-right:3px solid #dedede;
+	border-left:none;
+	margin-right:4px;
+	padding-right:14px;
+	margin-left:0;
+	padding-left:0;
+}
+.post-content-footer a.more-link i.fa{
+	margin-right:0;
+	margin-left:5px;
+}
+.post-content-footer .post-share-buttons{
+	float:left;
+}
+.single-post-share .social-icon{
+	float:left;
+}
+.blog-author .authorAvt {
+    float: right;
+}
+.blog-author .authorDetails {
+    margin-left: 0;
+    padding-right: 0;
+	margin-right: 234px;
+    padding-left: 25px;
+}
+.commentList .comment_list .commentAvt {
+    float: right;
+}
+.comment_list .commentRight {
+    margin-right: 120px;
+	margin-left:0;
+}
+ul.comment_list .comment_reply {
+    float: left;
+}
+.content-cmt .content-reply > p::after{
+	right:0;
+	left:auto;
+}
+ul.comment_list .name-cmt, .author-title {
+    padding-right: 0;
+	padding-left: 10px;
+}
+.rtl .page-heading {
+    text-align: right;
+}
+
+
+.campaing-listing.infunding_style2 .campaign-info{
+	padding-left:30px;
+	padding-right:0;
+}
+.campaing-listing.infunding_style2 .campaign-location i {
+    margin-right: 0;
+	margin-left: 4px;
+}
+.campaing-listing.infunding_style2 .camp-funded span {
+    float: right;
+}
+.campaing-listing.infunding_style2 .camp-timeremaining-goal .donate-btn {
+    float: left;
+}
+.campaing-listing.infunding_style2 .camp-timeremaining-goal .donates-info-item {
+    float: right;
+}
+.campaing-listing.infunding_style2 .camp-timeremaining-goal .donates-info-item + .donates-info-item {
+	border-left: none;
+	margin-left: 0;
+	padding-left: 0;
+	border-right: 1px solid #d9d9d9;
+	margin-right: 25px;
+	padding-right: 25px;
+}
+.load-campaigns .post-pagination .page-numbers {
+    margin: 0 0 0 7px;
+}
+.contact-details i{
+	margin-right:0;
+	margin-left:12px;
+}
+
+
+
+
+@media (max-width: 991px) {
+    .rtl .iw-footer-v2-widget .footer-post-campaign span{
+        float: left;
+    }
+    .rtl .iw-footer-v2-copyright .iw-main-nav .menu li a{
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    /*---------- Style header RTL - Header default -----------*/
+
+    .rtl .iw-button-toggle{
+        text-align: left;
+    }
+    .rtl .header .iw-nav-menu li > a .icon-arrow{
+        left: 5px;
+        right: auto;
+    }
+    .rtl .header .iw-menu-default .iw-nav-menu > li .sub-menu li{
+        text-align: right;
+    }
+    .rtl .header.header-default .header-donate-button{
+        float: left;
+        left: 0;
+        right: auto;
+    }
+    /*---------- Style header RTL - Header version 2 -----------*/
+    .rtl .header.header-version-2 .header-donate-button {
+        left: 15px;
+        right: auto;
+    }
+    .rtl .header.header.header-version-2 .iw-nav-menu li > a .icon-arrow {
+        left: 10px;
+        right: auto;
+    }
+
+    /*---------- Style header RTL - Header version 3 -----------*/
+    .rtl .header.header-version-3 .header-donate-button {
+        left: 10px;
+        right: auto;
+    }
+    .rtl .header.header.header-version-3 .iw-nav-menu li > a .icon-arrow {
+        left: -10px;
+        right: auto;
+    }
+    /*---------- Style header RTL - Header version 4 -----------*/
+    .rtl .header.header-version-4 .header-donate-button{
+        left: 0;
+        right: auto!important;
+    }
+    .rtl .header-version-4 .nav-trigger{
+        float: left;
+        right: auto;
+        left: 15px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

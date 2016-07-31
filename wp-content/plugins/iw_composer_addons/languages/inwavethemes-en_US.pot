@@ -1,0 +1,1510 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Visual Composer Addons\n"
+"POT-Creation-Date: 2016-06-10 15:38+0700\n"
+"PO-Revision-Date: 2016-06-10 15:38+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:66
+msgid "Insert IW Shortcode"
+msgstr ""
+
+#: functions.php:71
+msgid "List Shortcode"
+msgstr ""
+
+#: functions.php:73
+msgid "Shortcode filter"
+msgstr ""
+
+#: functions.php:109
+msgid "Shortcode settings"
+msgstr ""
+
+#: functions.php:118
+msgid "Insert Shortcode"
+msgstr ""
+
+#: functions.php:119 shortcodes/infunding_donate.php:289
+msgid "Cancel"
+msgstr ""
+
+#: functions.php:120
+msgid "Preview"
+msgstr ""
+
+#: functions.php:313
+msgid "Load map image"
+msgstr ""
+
+#: functions.php:314
+msgid "Add location"
+msgstr ""
+
+#: functions.php:315
+msgid "Remove location"
+msgstr ""
+
+#: functions.php:346
+msgid "Select marker Post"
+msgstr ""
+
+#: functions.php:350
+msgid "Select post"
+msgstr ""
+
+#: functions.php:389
+msgid "Click to select new or search..."
+msgstr ""
+
+#: functions.php:559
+msgid "- Click on map to set map position."
+msgstr ""
+
+#: functions.php:560
+msgid "- Drag and Drop marker to set map position."
+msgstr ""
+
+#: functions.php:561
+msgid "- ZoomIn or ZoomOut to change and set map Zoom Level."
+msgstr ""
+
+#: inc/parsers.php:42 inc/parsers.php:72 inc/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: inc/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: inc/parsers.php:84 inc/parsers.php:89 inc/parsers.php:279
+#: inc/parsers.php:464
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: inc/wordpress-importer.php:136 inc/wordpress-importer.php:204
+#: inc/wordpress-importer.php:265 inc/wordpress-importer.php:269
+#: inc/wordpress-importer.php:278
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: inc/wordpress-importer.php:137
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: inc/wordpress-importer.php:249
+msgid "All done."
+msgstr ""
+
+#: inc/wordpress-importer.php:249
+msgid "Have fun!"
+msgstr ""
+
+#: inc/wordpress-importer.php:250
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: inc/wordpress-importer.php:270
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: inc/wordpress-importer.php:286
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: inc/wordpress-importer.php:311
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: inc/wordpress-importer.php:337
+msgid "Assign Authors"
+msgstr ""
+
+#: inc/wordpress-importer.php:338
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+
+#: inc/wordpress-importer.php:340
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: inc/wordpress-importer.php:350
+msgid "Import Attachments"
+msgstr ""
+
+#: inc/wordpress-importer.php:353
+msgid "Download and import file attachments"
+msgstr ""
+
+#: inc/wordpress-importer.php:357 shortcodes/mailchimp.php:169
+msgid "Submit"
+msgstr ""
+
+#: inc/wordpress-importer.php:370
+msgid "Import author:"
+msgstr ""
+
+#: inc/wordpress-importer.php:381
+msgid "or create new user with login name:"
+msgstr ""
+
+#: inc/wordpress-importer.php:384
+msgid "as a new user:"
+msgstr ""
+
+#: inc/wordpress-importer.php:392
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: inc/wordpress-importer.php:394
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: inc/wordpress-importer.php:395
+msgid "- Select -"
+msgstr ""
+
+#: inc/wordpress-importer.php:445
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: inc/wordpress-importer.php:496
+#, php-format
+msgid "Failed to import category %s"
+msgstr ""
+
+#: inc/wordpress-importer.php:536
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: inc/wordpress-importer.php:582 inc/wordpress-importer.php:724
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: inc/wordpress-importer.php:609
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: inc/wordpress-importer.php:631
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: inc/wordpress-importer.php:690
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: inc/wordpress-importer.php:864
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: inc/wordpress-importer.php:871
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: inc/wordpress-importer.php:974
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: inc/wordpress-importer.php:989
+msgid "Invalid file type"
+msgstr ""
+
+#: inc/wordpress-importer.php:1037
+msgid "Remote server did not respond"
+msgstr ""
+
+#: inc/wordpress-importer.php:1044
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: inc/wordpress-importer.php:1052
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: inc/wordpress-importer.php:1058
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: inc/wordpress-importer.php:1065
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: inc/wordpress-importer.php:1164
+msgid "Import WordPress"
+msgstr ""
+
+#: inc/wordpress-importer.php:1171
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: inc/wordpress-importer.php:1186
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: inc/wordpress-importer.php:1187
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: iw_composer_addons.php:69
+msgid "Not exists"
+msgstr ""
+
+#: shortcodes/adv_banner.php:21
+msgid "Add a banner & some advertising information"
+msgstr ""
+
+#: shortcodes/adv_banner.php:28
+msgid "Banner Image"
+msgstr ""
+
+#: shortcodes/adv_banner.php:33
+msgid "Background Image"
+msgstr ""
+
+#: shortcodes/adv_banner.php:39 shortcodes/athlete_map.php:49
+#: shortcodes/athlete_map.php:90 shortcodes/call_to_action.php:29
+#: shortcodes/heading.php:30 shortcodes/info_list.php:72
+#: shortcodes/infunding_checkout_block.php:42
+#: shortcodes/infunding_donate.php:38 shortcodes/inhost_checkdomain.php:60
+#: shortcodes/iw_slider.php:88 shortcodes/mailchimp.php:35
+#: shortcodes/product_list.php:29 shortcodes/server_locations.php:45
+#: shortcodes/tabs.php:97 shortcodes/testimonials.php:95
+#: shortcodes/text_box.php:46 shortcodes/wp_posts.php:49
+msgid "Title"
+msgstr ""
+
+#: shortcodes/adv_banner.php:45 shortcodes/heading.php:38
+#: shortcodes/infunding_checkout_block.php:49
+#: shortcodes/infunding_donate.php:44 shortcodes/tabs.php:104
+msgid "Sub Title"
+msgstr ""
+
+#: shortcodes/adv_banner.php:51 shortcodes/price_box.php:38
+msgid "Price"
+msgstr ""
+
+#: shortcodes/adv_banner.php:63
+msgid "Available Date"
+msgstr ""
+
+#: shortcodes/adv_banner.php:68 shortcodes/button.php:32
+#: shortcodes/call_to_action.php:44 shortcodes/infunding_donate.php:74
+msgid "Button Text"
+msgstr ""
+
+#: shortcodes/adv_banner.php:73 shortcodes/button.php:39
+#: shortcodes/call_to_action.php:50
+msgid "Button Link"
+msgstr ""
+
+#: shortcodes/adv_banner.php:107
+msgid "Banner Size"
+msgstr ""
+
+#: shortcodes/adv_banner.php:109
+msgid "Enter image size. Example in pixels: 200x100 (Width x Height)"
+msgstr ""
+
+#: shortcodes/adv_banner.php:113 shortcodes/athlete_map.php:107
+#: shortcodes/button.php:94 shortcodes/call_to_action.php:110
+#: shortcodes/countdown.php:45 shortcodes/event_fact.php:37
+#: shortcodes/faq.php:42 shortcodes/heading.php:66 shortcodes/info_list.php:40
+#: shortcodes/info_list.php:131 shortcodes/infunding_checkout_block.php:71
+#: shortcodes/infunding_donate.php:94 shortcodes/infunding_listing.php:188
+#: shortcodes/infunding_map.php:80 shortcodes/inhost_checkdomain.php:91
+#: shortcodes/iw_contact.php:143 shortcodes/iw_slider.php:54
+#: shortcodes/iw_slider.php:134 shortcodes/iw_sponsors.php:41
+#: shortcodes/iw_sponsors.php:88 shortcodes/layers_effect.php:66
+#: shortcodes/layers_effect.php:113 shortcodes/price_box.php:89
+#: shortcodes/product_list.php:98 shortcodes/profile.php:39
+#: shortcodes/profile.php:88 shortcodes/server_locations.php:63
+#: shortcodes/simple_list.php:43 shortcodes/tabs.php:75
+#: shortcodes/tabs.php:116 shortcodes/testimonials.php:75
+#: shortcodes/testimonials.php:154 shortcodes/text_box.php:70
+#: shortcodes/video.php:120 shortcodes/wp_posts.php:112
+msgid "Extra Class"
+msgstr ""
+
+#: shortcodes/adv_banner.php:115 shortcodes/athlete_map.php:109
+#: shortcodes/button.php:96 shortcodes/call_to_action.php:112
+#: shortcodes/countdown.php:47 shortcodes/faq.php:44 shortcodes/heading.php:68
+#: shortcodes/infunding_checkout_block.php:73
+#: shortcodes/infunding_listing.php:190 shortcodes/infunding_map.php:82
+#: shortcodes/inhost_checkdomain.php:93 shortcodes/iw_contact.php:145
+#: shortcodes/iw_slider.php:136 shortcodes/price_box.php:91
+#: shortcodes/product_list.php:100 shortcodes/profile.php:90
+#: shortcodes/server_locations.php:65 shortcodes/simple_list.php:45
+#: shortcodes/video.php:122 shortcodes/wp_posts.php:114
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: shortcodes/athlete_map.php:41
+msgid "Display a Google Map"
+msgstr ""
+
+#: shortcodes/athlete_map.php:52
+msgid "Title of map block."
+msgstr ""
+
+#: shortcodes/athlete_map.php:57
+msgid "Latitude"
+msgstr ""
+
+#: shortcodes/athlete_map.php:64
+msgid "Longitude"
+msgstr ""
+
+#: shortcodes/athlete_map.php:70
+msgid "Zoom"
+msgstr ""
+
+#: shortcodes/athlete_map.php:76
+msgid "Map width"
+msgstr ""
+
+#: shortcodes/athlete_map.php:82
+msgid "Map height"
+msgstr ""
+
+#: shortcodes/athlete_map.php:85
+msgid "Example: 400px"
+msgstr ""
+
+#: shortcodes/athlete_map.php:96
+msgid "Image"
+msgstr ""
+
+#: shortcodes/athlete_map.php:102
+msgid "Info"
+msgstr ""
+
+#: shortcodes/button.php:25
+msgid "Insert a button with some styles"
+msgstr ""
+
+#: shortcodes/button.php:83 shortcodes/info_list.php:140
+#: shortcodes/infunding_donate.php:103 shortcodes/iw_slider.php:154
+#: shortcodes/profile.php:110 shortcodes/simple_list.php:68
+#: shortcodes/testimonials.php:163
+msgid "Text align"
+msgstr ""
+
+#: shortcodes/call_to_action.php:21
+msgid "Catch visitors attention with Call To Action block"
+msgstr ""
+
+#: shortcodes/call_to_action.php:31 shortcodes/heading.php:31
+#: shortcodes/price_box.php:33 shortcodes/text_box.php:47
+msgid ""
+"You can add |TEXT_EXAMPLE| to specify strong words, {TEXT_EXAMPLE} to "
+"specify colorful words"
+msgstr ""
+
+#: shortcodes/countdown.php:30
+msgid "Schedule a countdown until a time in the future"
+msgstr ""
+
+#: shortcodes/countdown.php:38
+msgid "Time to end:"
+msgstr ""
+
+#: shortcodes/countdown.php:39
+msgid "Example: February 24, 2017 00:00:00"
+msgstr ""
+
+#: shortcodes/event_fact.php:28
+msgid "Show Event Fact"
+msgstr ""
+
+#: shortcodes/event_fact.php:43 shortcodes/layers_effect.php:58
+msgid "Height"
+msgstr ""
+
+#: shortcodes/event_fact.php:45
+msgid "Example 16px"
+msgstr ""
+
+#: shortcodes/event_fact.php:50
+msgid "Text intro"
+msgstr ""
+
+#: shortcodes/event_fact.php:56
+msgid "Source Video"
+msgstr ""
+
+#: shortcodes/event_fact.php:75
+msgid "Event Fact Item"
+msgstr ""
+
+#: shortcodes/event_fact.php:82
+msgid "Add a event fact item"
+msgstr ""
+
+#: shortcodes/event_fact.php:88
+msgid "Event fact item title"
+msgstr ""
+
+#: shortcodes/event_fact.php:95
+msgid "Event fact item description"
+msgstr ""
+
+#: shortcodes/event_fact.php:101
+msgid "Bottom"
+msgstr ""
+
+#: shortcodes/event_fact.php:103
+msgid "Example 16"
+msgstr ""
+
+#: shortcodes/event_fact.php:109 shortcodes/info_list.php:85
+#: shortcodes/text_box.php:54
+msgid "Select Icon"
+msgstr ""
+
+#: shortcodes/event_fact.php:113 shortcodes/info_list.php:89
+#: shortcodes/text_box.php:58
+msgid ""
+"Click and select icon of your choice. You can get complete list of available "
+"icons here: <a target='_blank' href='http://fortawesome.github.io/Font-"
+"Awesome/icons/'>Font-Awesome</a>"
+msgstr ""
+
+#: shortcodes/event_fact.php:117 shortcodes/info_list.php:99
+#: shortcodes/text_box.php:62 shortcodes/video.php:113
+msgid "Icon Size"
+msgstr ""
+
+#: shortcodes/event_fact.php:119 shortcodes/info_list.php:101
+#: shortcodes/text_box.php:64 shortcodes/video.php:115
+msgid "Example: 70"
+msgstr ""
+
+#: shortcodes/faq.php:22
+msgid "Frequently asked question"
+msgstr ""
+
+#: shortcodes/faq.php:30
+msgid "Question"
+msgstr ""
+
+#: shortcodes/faq.php:36
+msgid "Answer"
+msgstr ""
+
+#: shortcodes/heading.php:22
+msgid "Add a heading & some information"
+msgstr ""
+
+#: shortcodes/heading.php:44
+msgid "Content Below"
+msgstr ""
+
+#: shortcodes/heading.php:51
+msgid "Heading type"
+msgstr ""
+
+#: shortcodes/heading.php:62
+msgid "Select heading type."
+msgstr ""
+
+#: shortcodes/heading.php:93
+msgid "Font Size Title"
+msgstr ""
+
+#: shortcodes/heading.php:95
+msgid "Custom font-size for heading title. Example 16"
+msgstr ""
+
+#: shortcodes/heading.php:101 shortcodes/heading.php:102
+msgid "Font Weight Title"
+msgstr ""
+
+#: shortcodes/heading.php:126 shortcodes/info_list.php:151
+#: shortcodes/infunding_donate.php:114 shortcodes/iw_slider.php:165
+#: shortcodes/profile.php:121 shortcodes/simple_list.php:79
+#: shortcodes/testimonials.php:174
+msgid "CSS box"
+msgstr ""
+
+#: shortcodes/heading.php:129 shortcodes/info_list.php:154
+#: shortcodes/infunding_donate.php:117 shortcodes/iw_slider.php:168
+#: shortcodes/profile.php:124 shortcodes/simple_list.php:82
+#: shortcodes/testimonials.php:177
+msgid "Design Options"
+msgstr ""
+
+#: shortcodes/info_list.php:27
+msgid "Info List"
+msgstr ""
+
+#: shortcodes/info_list.php:32
+msgid "Add a set of list info and give some custom style."
+msgstr ""
+
+#: shortcodes/info_list.php:43 shortcodes/info_list.php:134
+#: shortcodes/infunding_donate.php:97 shortcodes/iw_slider.php:57
+#: shortcodes/iw_sponsors.php:44 shortcodes/iw_sponsors.php:91
+#: shortcodes/layers_effect.php:69 shortcodes/layers_effect.php:116
+#: shortcodes/profile.php:42 shortcodes/tabs.php:78 shortcodes/tabs.php:119
+#: shortcodes/testimonials.php:78 shortcodes/testimonials.php:157
+#: shortcodes/text_box.php:73
+msgid "Write your own CSS and mention the class name here."
+msgstr ""
+
+#: shortcodes/info_list.php:60
+msgid "Info Item"
+msgstr ""
+
+#: shortcodes/info_list.php:65 shortcodes/iw_slider.php:82
+#: shortcodes/iw_sponsors.php:66
+msgid "Add a information block and give some custom style."
+msgstr ""
+
+#: shortcodes/info_list.php:93 shortcodes/iw_sponsors.php:71
+msgid "Icon Image"
+msgstr ""
+
+#: shortcodes/info_list.php:95 shortcodes/iw_sponsors.php:73
+msgid "Use for style 4"
+msgstr ""
+
+#: shortcodes/info_list.php:106
+msgid "Link"
+msgstr ""
+
+#: shortcodes/infunding_checkout_block.php:24
+msgid "All Fields"
+msgstr ""
+
+#: shortcodes/infunding_checkout_block.php:34
+msgid "Add a event checkout block"
+msgstr ""
+
+#: shortcodes/infunding_checkout_block.php:44
+#: shortcodes/infunding_checkout_block.php:102
+msgid "I am Title"
+msgstr ""
+
+#: shortcodes/infunding_checkout_block.php:51
+#: shortcodes/infunding_checkout_block.php:103
+msgid "I am Subtitle"
+msgstr ""
+
+#: shortcodes/infunding_checkout_block.php:62
+msgid "Select field"
+msgstr ""
+
+#: shortcodes/infunding_checkout_block.php:67
+msgid "Select customer field to show on checkout form."
+msgstr ""
+
+#: shortcodes/infunding_donate.php:30 shortcodes/infunding_listing.php:22
+#: shortcodes/infunding_map.php:23
+msgid "Create a list of events"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:57
+msgid "List Price"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:64
+msgid "Payment Method"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:137 shortcodes/infunding_donate.php:255
+msgid "Donate Us"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:153
+msgid "Please select campaign"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:185 shortcodes/infunding_donate.php:212
+#, php-format
+msgid "%s&percnt;"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:189 shortcodes/infunding_donate.php:215
+msgid "Select a mount or enter the number and click to paypal"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:245
+msgid "raised"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:246
+msgid "goal"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:258
+msgid "Your Name*"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:261
+msgid "Your Email*"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:264
+msgid "Your Phone*"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:268
+msgid "Donate Amount*"
+msgstr ""
+
+#: shortcodes/infunding_donate.php:277
+msgid "Your Message"
+msgstr ""
+
+#: shortcodes/infunding_listing.php:37 shortcodes/infunding_map.php:38
+msgid "Campaign Ids"
+msgstr ""
+
+#: shortcodes/infunding_listing.php:40 shortcodes/infunding_map.php:41
+msgid ""
+"Id of posts you want to get. Separated by commas. IF this value is set, data "
+"is result value only"
+msgstr ""
+
+#: shortcodes/infunding_listing.php:68
+msgid "Number of campaign per page"
+msgstr ""
+
+#: shortcodes/infunding_listing.php:155 shortcodes/infunding_listing.php:167
+msgid "Only available on default style"
+msgstr ""
+
+#: shortcodes/infunding_listing.php:236 shortcodes/infunding_map.php:124
+#: shortcodes/product_list.php:269 shortcodes/wp_posts.php:35
+msgid "All"
+msgstr ""
+
+#: shortcodes/infunding_map.php:73
+msgid "Map"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:52
+msgid "Create a block for checking domain"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:67 shortcodes/iw_slider.php:95
+#: shortcodes/mailchimp.php:43 shortcodes/profile.php:70
+#: shortcodes/server_locations.php:51
+msgid "Description"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:72
+msgid "Domain list"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:76
+msgid "Domains to check."
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:163 shortcodes/inhost_checkdomain.php:207
+msgid "Search"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:166 shortcodes/inhost_checkdomain.php:211
+msgid "Bulk Domain Search"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:210
+msgid "View Domain Price List"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:212
+msgid "Transfer Domain"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:273
+msgid "Please enter the domain name you want to register!"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:274
+#, php-format
+msgid " Congrast %d is available!"
+msgstr ""
+
+#: shortcodes/inhost_checkdomain.php:275
+#, php-format
+msgid "%d is not available!"
+msgstr ""
+
+#: shortcodes/iw_contact.php:41
+msgid "Show contact form"
+msgstr ""
+
+#: shortcodes/iw_contact.php:49
+msgid "Receiver Email"
+msgstr ""
+
+#: shortcodes/iw_contact.php:52
+msgid "If not specified, Admin E-mail Address in General setting will be used"
+msgstr ""
+
+#: shortcodes/iw_contact.php:56
+msgid "Title contact form"
+msgstr ""
+
+#: shortcodes/iw_contact.php:62
+msgid "Button text"
+msgstr ""
+
+#: shortcodes/iw_contact.php:68
+msgid "Description for support forum"
+msgstr ""
+
+#: shortcodes/iw_contact.php:75
+msgid "Show name"
+msgstr ""
+
+#: shortcodes/iw_contact.php:77
+msgid "Show name field"
+msgstr ""
+
+#: shortcodes/iw_contact.php:86
+msgid "Show email"
+msgstr ""
+
+#: shortcodes/iw_contact.php:88
+msgid "Show email field"
+msgstr ""
+
+#: shortcodes/iw_contact.php:96
+msgid "Show mobile"
+msgstr ""
+
+#: shortcodes/iw_contact.php:98
+msgid "Show mobile field"
+msgstr ""
+
+#: shortcodes/iw_contact.php:107
+msgid "Show website"
+msgstr ""
+
+#: shortcodes/iw_contact.php:109
+msgid "Show website field"
+msgstr ""
+
+#: shortcodes/iw_contact.php:119
+msgid "Show message"
+msgstr ""
+
+#: shortcodes/iw_contact.php:121
+msgid "Show message field"
+msgstr ""
+
+#: shortcodes/iw_contact.php:195
+msgid "First Name"
+msgstr ""
+
+#: shortcodes/iw_contact.php:203 shortcodes/iw_contact.php:265
+msgid "Email Address"
+msgstr ""
+
+#: shortcodes/iw_contact.php:211
+msgid "Your Mobile"
+msgstr ""
+
+#: shortcodes/iw_contact.php:219
+msgid "Your Website"
+msgstr ""
+
+#: shortcodes/iw_contact.php:227
+msgid "Write message"
+msgstr ""
+
+#: shortcodes/iw_contact.php:237 shortcodes/iw_contact.php:272
+#: shortcodes/iw_contact.php:303 shortcodes/iw_contact.php:363
+msgid "SEND MESSAGE"
+msgstr ""
+
+#: shortcodes/iw_contact.php:287
+msgid "Your full name"
+msgstr ""
+
+#: shortcodes/iw_contact.php:295
+msgid "Your email address"
+msgstr ""
+
+#: shortcodes/iw_contact.php:318
+msgid "Your Name :"
+msgstr ""
+
+#: shortcodes/iw_contact.php:319 shortcodes/mailchimp.php:124
+msgid "Enter your name"
+msgstr ""
+
+#: shortcodes/iw_contact.php:327
+msgid "Your Email :"
+msgstr ""
+
+#: shortcodes/iw_contact.php:328 shortcodes/mailchimp.php:126
+msgid "Enter your email"
+msgstr ""
+
+#: shortcodes/iw_contact.php:336
+msgid "Your Phone :"
+msgstr ""
+
+#: shortcodes/iw_contact.php:337
+msgid "+84 0123 456 789"
+msgstr ""
+
+#: shortcodes/iw_contact.php:345
+msgid "Your Website :"
+msgstr ""
+
+#: shortcodes/iw_contact.php:354
+msgid "Your Message :"
+msgstr ""
+
+#: shortcodes/iw_contact.php:355
+msgid "What do you think about us?"
+msgstr ""
+
+#: shortcodes/iw_contact.php:391
+msgid "Email from Contact Form"
+msgstr ""
+
+#: shortcodes/iw_contact.php:394
+msgid "Hi Admin,"
+msgstr ""
+
+#: shortcodes/iw_contact.php:394
+msgid "This email was sent from contact form"
+msgstr ""
+
+#: shortcodes/iw_contact.php:397 shortcodes/profile.php:58
+#: shortcodes/testimonials.php:102
+msgid "Name"
+msgstr ""
+
+#: shortcodes/iw_contact.php:400
+msgid "Email"
+msgstr ""
+
+#: shortcodes/iw_contact.php:403
+msgid "Mobile"
+msgstr ""
+
+#: shortcodes/iw_contact.php:406
+msgid "Website"
+msgstr ""
+
+#: shortcodes/iw_contact.php:409
+msgid "Message"
+msgstr ""
+
+#: shortcodes/iw_contact.php:419
+msgid "Your message was sent, we will contact you soon"
+msgstr ""
+
+#: shortcodes/iw_contact.php:421
+msgid "Can't send message, please try again"
+msgstr ""
+
+#: shortcodes/iw_get_recent_comment.php:22
+msgid "Show Recent Comment Post"
+msgstr ""
+
+#: shortcodes/iw_get_recent_comment.php:30
+msgid "Number comment"
+msgstr ""
+
+#: shortcodes/iw_get_recent_comment.php:33
+msgid "Enter number comment to display"
+msgstr ""
+
+#: shortcodes/iw_slider.php:41
+msgid "Inwave Slider"
+msgstr ""
+
+#: shortcodes/iw_slider.php:45 shortcodes/profile.php:30
+msgid "Add a set of list item."
+msgstr ""
+
+#: shortcodes/iw_slider.php:75
+msgid "Inwave Slider Item"
+msgstr ""
+
+#: shortcodes/iw_slider.php:101 shortcodes/profile.php:83
+msgid "Profile Image"
+msgstr ""
+
+#: shortcodes/iw_slider.php:106
+msgid "Button Text Left"
+msgstr ""
+
+#: shortcodes/iw_slider.php:113
+msgid "Button Link Left"
+msgstr ""
+
+#: shortcodes/iw_slider.php:120
+msgid "Button Text Right"
+msgstr ""
+
+#: shortcodes/iw_slider.php:127
+msgid "Button Link Right"
+msgstr ""
+
+#: shortcodes/iw_sponsors.php:28
+msgid "Inwave Sponsors Slider"
+msgstr ""
+
+#: shortcodes/iw_sponsors.php:33
+msgid "Add a set of sponsors and give some custom style."
+msgstr ""
+
+#: shortcodes/iw_sponsors.php:61
+msgid "Inwave Sponsors"
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:22
+msgid "Show Lastest Post Twitter"
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:40
+msgid "Twitter number post"
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:43
+msgid "Enter Twitter number post to display"
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:47
+msgid "Account:"
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:50
+msgid "Your Twitter account"
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:50
+msgid " and You can create a new "
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:50
+msgid "Twitter widget."
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:55
+msgid "Twitter Data Widget ID:"
+msgstr ""
+
+#: shortcodes/iw_twitter_post.php:58
+msgid "Enter your Twitter  widgets, ex:657020480394674176"
+msgstr ""
+
+#: shortcodes/layers_effect.php:27
+msgid "Layers Effect"
+msgstr ""
+
+#: shortcodes/layers_effect.php:32
+msgid "Add a set of layers and give a scene parallax effect."
+msgstr ""
+
+#: shortcodes/layers_effect.php:39 shortcodes/profile.php:64
+#: shortcodes/testimonials.php:110
+msgid "Position"
+msgstr ""
+
+#: shortcodes/layers_effect.php:41
+msgid "Choose position fix or absolute"
+msgstr ""
+
+#: shortcodes/layers_effect.php:50
+msgid "Z-Index"
+msgstr ""
+
+#: shortcodes/layers_effect.php:53
+msgid ""
+"Enter integer number number. (-1) value means that the Layers Effect is "
+"behind other objects"
+msgstr ""
+
+#: shortcodes/layers_effect.php:61
+msgid "Height in pixel. Example:500px. Default value is 100%"
+msgstr ""
+
+#: shortcodes/layers_effect.php:74
+msgid "Layer"
+msgstr ""
+
+#: shortcodes/layers_effect.php:79
+msgid ""
+"Add a list of layers_effect with some content and give some custom style."
+msgstr ""
+
+#: shortcodes/layers_effect.php:85
+msgid "Layer Background"
+msgstr ""
+
+#: shortcodes/layers_effect.php:92
+msgid "Data Depth"
+msgstr ""
+
+#: shortcodes/layers_effect.php:95
+msgid ""
+"Depth of the layer. A depth of 0 will cause the layer to remain stationary, "
+"and a depth of 1 will cause the layer to move by the total effect of the "
+"calculated motion. Values inbetween 0 and 1 will cause the layer to move by "
+"an amount relative to the supplied ratio."
+msgstr ""
+
+#: shortcodes/layers_effect.php:100
+msgid "Opacity"
+msgstr ""
+
+#: shortcodes/layers_effect.php:103
+msgid "Opacity of the layer"
+msgstr ""
+
+#: shortcodes/mailchimp.php:27
+msgid "Simple form for mailchimp"
+msgstr ""
+
+#: shortcodes/mailchimp.php:38
+msgid "You can add |TEXT_EXAMPLE| to specify strong words"
+msgstr ""
+
+#: shortcodes/mailchimp.php:50
+msgid "Action URL"
+msgstr ""
+
+#: shortcodes/mailchimp.php:57
+msgid "Show 'Your name'"
+msgstr ""
+
+#: shortcodes/mailchimp.php:101
+msgid "Submitting..."
+msgstr ""
+
+#: shortcodes/mailchimp.php:102
+msgid "We have sent you a confirmation email"
+msgstr ""
+
+#: shortcodes/mailchimp.php:103
+msgid "Please enter a value"
+msgstr ""
+
+#: shortcodes/mailchimp.php:104
+msgid "An email address must contain a single @"
+msgstr ""
+
+#: shortcodes/mailchimp.php:105
+msgid ""
+"The domain portion of the email address is invalid (the portion after the "
+"@: )"
+msgstr ""
+
+#: shortcodes/mailchimp.php:106
+msgid ""
+"The username portion of the email address is invalid (the portion before the "
+"@: )"
+msgstr ""
+
+#: shortcodes/mailchimp.php:107
+msgid ""
+"This email address looks fake or invalid. Please enter a real email address"
+msgstr ""
+
+#: shortcodes/mailchimp.php:127
+msgid "GO"
+msgstr ""
+
+#: shortcodes/mailchimp.php:137 shortcodes/mailchimp.php:167
+msgid "Your name"
+msgstr ""
+
+#: shortcodes/mailchimp.php:139 shortcodes/mailchimp.php:168
+msgid "Your email"
+msgstr ""
+
+#: shortcodes/mailchimp.php:140
+msgid "Keep me updates"
+msgstr ""
+
+#: shortcodes/mailchimp.php:145
+msgid "YOUR EMAIL:"
+msgstr ""
+
+#: shortcodes/mailchimp.php:146
+msgid "GET OUR NEWS UPDATE"
+msgstr ""
+
+#: shortcodes/price_box.php:22
+msgid "Add a price box & some information"
+msgstr ""
+
+#: shortcodes/price_box.php:31
+msgid "Package name/Title"
+msgstr ""
+
+#: shortcodes/price_box.php:43
+msgid "Price Description"
+msgstr ""
+
+#: shortcodes/price_box.php:48
+msgid "Purchase button text"
+msgstr ""
+
+#: shortcodes/price_box.php:53
+msgid "Purchase link"
+msgstr ""
+
+#: shortcodes/price_box.php:64
+msgid "Select image"
+msgstr ""
+
+#: shortcodes/price_box.php:69
+msgid "Or select icon"
+msgstr ""
+
+#: shortcodes/price_box.php:74
+msgid "Icon size"
+msgstr ""
+
+#: shortcodes/price_box.php:80
+msgid "Featured"
+msgstr ""
+
+#: shortcodes/price_box.php:95
+msgid "Free trial day"
+msgstr ""
+
+#: shortcodes/price_box.php:97
+msgid "Free trial day of plan - For Price box style 5 only."
+msgstr ""
+
+#: shortcodes/product_list.php:21
+msgid "Add list of products"
+msgstr ""
+
+#: shortcodes/product_list.php:81
+msgid "Number of products"
+msgstr ""
+
+#: shortcodes/profile.php:26
+msgid "Inwave Profile Slider"
+msgstr ""
+
+#: shortcodes/profile.php:49
+msgid "Show a personal profile"
+msgstr ""
+
+#: shortcodes/profile.php:76
+msgid "Social links"
+msgstr ""
+
+#: shortcodes/profile.php:77
+msgid "Separated by newline"
+msgstr ""
+
+#: shortcodes/server_locations.php:37
+msgid "Add a server locations block"
+msgstr ""
+
+#: shortcodes/server_locations.php:57
+msgid "Location info"
+msgstr ""
+
+#: shortcodes/server_locations.php:70 shortcodes/wp_posts.php:119
+msgid "Style"
+msgstr ""
+
+#: shortcodes/simple_list.php:22
+msgid "Add a items list with some simple style"
+msgstr ""
+
+#: shortcodes/simple_list.php:30 shortcodes/video.php:42
+msgid "Content"
+msgstr ""
+
+#: shortcodes/tabs.php:29
+msgid "Tabs"
+msgstr ""
+
+#: shortcodes/tabs.php:33 shortcodes/tabs.php:88
+msgid "Add a set of tabs and give some custom style."
+msgstr ""
+
+#: shortcodes/tabs.php:83
+msgid "Tab Container"
+msgstr ""
+
+#: shortcodes/tabs.php:110
+msgid "Tab Icon"
+msgstr ""
+
+#: shortcodes/testimonials.php:51
+msgid "Testimonial Slider"
+msgstr ""
+
+#: shortcodes/testimonials.php:56
+msgid "Add a set of testimonial and give some custom style."
+msgstr ""
+
+#: shortcodes/testimonials.php:83
+msgid "Testimonial Item"
+msgstr ""
+
+#: shortcodes/testimonials.php:88
+msgid ""
+"Add a list of testimonials with some content and give some custom style."
+msgstr ""
+
+#: shortcodes/testimonials.php:117
+msgid "Client Image"
+msgstr ""
+
+#: shortcodes/text_box.php:38
+msgid "Inwave Text Box"
+msgstr ""
+
+#: shortcodes/video.php:22
+msgid "HTML5 Video"
+msgstr ""
+
+#: shortcodes/video.php:30
+msgid "Video URL"
+msgstr ""
+
+#: shortcodes/video.php:36
+msgid "Poster image"
+msgstr ""
+
+#: shortcodes/video.php:47
+msgid "Background overlay"
+msgstr ""
+
+#: shortcodes/video.php:48
+msgid "Enter value: 'transparent' if you want to disable overlay"
+msgstr ""
+
+#: shortcodes/video.php:53
+msgid "Parallax video effect"
+msgstr ""
+
+#: shortcodes/video.php:55
+msgid "Required 'Parallax height' value"
+msgstr ""
+
+#: shortcodes/video.php:60
+msgid "Parallax height"
+msgstr ""
+
+#: shortcodes/video.php:63
+msgid "Example: '450px'"
+msgstr ""
+
+#: shortcodes/video.php:75
+msgid "Background overlay opacity"
+msgstr ""
+
+#: shortcodes/video.php:76
+msgid "Enter value 0 -> 1, example '0.9'"
+msgstr ""
+
+#: shortcodes/video.php:82
+msgid "Show controls"
+msgstr ""
+
+#: shortcodes/video.php:88
+msgid "Auto play"
+msgstr ""
+
+#: shortcodes/video.php:94
+msgid "Auto replay"
+msgstr ""
+
+#: shortcodes/video.php:100
+msgid "Hide content overlay when playing"
+msgstr ""
+
+#: shortcodes/video.php:107
+msgid "Play Icon"
+msgstr ""
+
+#: shortcodes/video.php:108
+msgid "Only show when 'controls' = false and 'autoplay' = false"
+msgstr ""
+
+#: shortcodes/wp_posts.php:41
+msgid "Display a list of posts "
+msgstr ""
+
+#: shortcodes/wp_posts.php:52
+msgid "Title of wp_posts block."
+msgstr ""
+
+#: shortcodes/wp_posts.php:56
+msgid "Post Ids"
+msgstr ""
+
+#: shortcodes/wp_posts.php:59
+msgid "Id of posts you want to get. Separated by commas."
+msgstr ""
+
+#: shortcodes/wp_posts.php:63
+msgid "Post Category"
+msgstr ""
+
+#: shortcodes/wp_posts.php:66
+msgid "Category to get posts."
+msgstr ""
+
+#: shortcodes/wp_posts.php:70
+msgid "Post number"
+msgstr ""
+
+#: shortcodes/wp_posts.php:73
+msgid "Number of posts to display on box."
+msgstr ""
+
+#: shortcodes/wp_posts.php:77
+msgid "Order By"
+msgstr ""
+
+#: shortcodes/wp_posts.php:90
+msgid "Order Type"
+msgstr ""
+
+#: shortcodes/wp_posts.php:99
+msgid "Excerpt Word Limit"
+msgstr ""
+
+#: shortcodes/wp_posts.php:106
+msgid "Read More Text"
+msgstr ""
+
+#: shortcodes/wp_posts.php:130
+msgid "Show date"
+msgstr ""
+
+#: shortcodes/wp_posts.php:140
+msgid "Show category"
+msgstr ""
+
+#: shortcodes/wp_posts.php:150
+msgid "Show Author"
+msgstr ""
+
+#: shortcodes/wp_posts.php:160
+msgid "Show thumbnail"
+msgstr ""
+
+#: shortcodes/wp_posts.php:170
+msgid "Show description"
+msgstr ""
+
+#: shortcodes/wp_posts.php:180
+msgid "Show comment count"
+msgstr ""
+
+#: shortcodes/wp_posts.php:190
+msgid "Show like counter"
+msgstr ""
+
+#: shortcodes/wp_posts.php:200
+msgid "Show facebook share"
+msgstr ""
+
+#: shortcodes/wp_posts.php:210
+msgid "Show read-more"
+msgstr ""
+
+#: shortcodes/wp_posts.php:220
+msgid "Show post type icon"
+msgstr ""
+
+#: shortcodes/wp_posts.php:230
+msgid "Columns Desktop"
+msgstr ""
+
+#: shortcodes/wp_posts.php:231
+msgid "Number of columns on Desktop devices"
+msgstr ""
+
+#: shortcodes/wp_posts.php:238
+msgid "Columns Small Desktop"
+msgstr ""
+
+#: shortcodes/wp_posts.php:239
+msgid "Number of columns on Small Desktop devices"
+msgstr ""
+
+#: shortcodes/wp_posts.php:246
+msgid "Columns Tablet"
+msgstr ""
+
+#: shortcodes/wp_posts.php:247
+msgid "Number of columns on Tablet devices"
+msgstr ""
+
+#: shortcodes/wp_posts.php:254
+msgid "Columns Mobile"
+msgstr ""
+
+#: shortcodes/wp_posts.php:255
+msgid "Number of columns on Mobile Desktop devices"
+msgstr ""
+
+#: shortcodes/wp_posts.php:399 shortcodes/wp_posts.php:414
+#: shortcodes/wp_posts.php:551 shortcodes/wp_posts.php:566
+#, php-format
+msgid "%s"
+msgstr ""
