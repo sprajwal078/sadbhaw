@@ -19,3 +19,24 @@ This theme, like WordPress, is licensed under the GPL.
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
+.iw-footer-v2-copyright p {
+	text-align: left;
+}
+
+.white-link,
+.iw-footer-v2-copyright p a
+{
+	color: white;
+}
+
+body.down .header .iw-menu-default .iw-nav-menu > li.active > a{
+	background-color: #002e5f;
+	color: white;
+}
+body.down .header.header-sticky.clone .iw-menu-default .iw-nav-menu > li.active > a strong{
+	color: white !important;
+}
+body.down .header .iw-menu-default .iw-nav-menu > li > a strong:after{
+	display: none;
+}

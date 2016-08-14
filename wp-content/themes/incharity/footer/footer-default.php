@@ -9,7 +9,7 @@ $inwave_cfg = Inwave_Main::getConfig();
 $inwave_smof_data = Inwave_Main::getConfig('smof');
 ?>
 <footer class="page-footer footer-version-1 theme-bg">
-    <?php if (isset($inwave_smof_data['footer_social_links']) && $inwave_smof_data['footer_social_links']): ?>
+<?php if (isset($inwave_smof_data['footer_social_links']) && $inwave_smof_data['footer_social_links']): ?>
         <div class="iw-footer-social">
             <?php get_template_part('blocks/social-links'); ?>
         </div>
@@ -22,7 +22,6 @@ $inwave_smof_data = Inwave_Main::getConfig('smof');
     <div class="iw-footer-logo">
         <a href="<?php echo esc_url(home_url('/')); ?>"><img alt="logo" src="<?php echo esc_url($inwave_smof_data['footer-logo']); ?>"/></a>
     </div>
-
     <div class="iw-copyright">
         <div class="container">
             <div class="row">

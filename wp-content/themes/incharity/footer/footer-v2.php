@@ -9,7 +9,7 @@ $inwave_cfg = Inwave_Main::getConfig();
 $inwave_smof_data = Inwave_Main::getConfig('smof');
 ?>
 <footer class="page-footer">
-    <div class="iw-footer-v2-widget">
+     <div class="iw-footer-v2-widget">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 footer-left">
