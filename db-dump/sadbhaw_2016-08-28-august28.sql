@@ -38,7 +38,6 @@ CREATE TABLE `wp_advps_optionset` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `wp_advps_optionset` WRITE;
 /*!40000 ALTER TABLE `wp_advps_optionset` DISABLE KEYS */;
 
 INSERT INTO `wp_advps_optionset` (`id`, `template`, `plist`, `query`, `slider`, `caro_ticker`, `container`, `content`, `navigation`)
@@ -65,7 +64,6 @@ CREATE TABLE `wp_advps_thumbnail` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `wp_advps_thumbnail` WRITE;
 /*!40000 ALTER TABLE `wp_advps_thumbnail` DISABLE KEYS */;
 
 INSERT INTO `wp_advps_thumbnail` (`id`, `thumb_name`, `width`, `height`, `crop`)
@@ -122,7 +120,6 @@ CREATE TABLE `wp_comments` (
   KEY `comment_author_email` (`comment_author_email`(10))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_comments` WRITE;
 /*!40000 ALTER TABLE `wp_comments` DISABLE KEYS */;
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`)
@@ -231,7 +228,6 @@ CREATE TABLE `wp_options` (
   UNIQUE KEY `option_name` (`option_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_options` WRITE;
 /*!40000 ALTER TABLE `wp_options` DISABLE KEYS */;
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`)
@@ -634,7 +630,6 @@ CREATE TABLE `wp_postmeta` (
   KEY `meta_key` (`meta_key`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_postmeta` WRITE;
 /*!40000 ALTER TABLE `wp_postmeta` DISABLE KEYS */;
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`)
@@ -1855,7 +1850,6 @@ CREATE TABLE `wp_posts` (
   KEY `post_author` (`post_author`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_posts` WRITE;
 /*!40000 ALTER TABLE `wp_posts` DISABLE KEYS */;
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`)
@@ -2142,7 +2136,6 @@ CREATE TABLE `wp_revslider_css` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `wp_revslider_css` WRITE;
 /*!40000 ALTER TABLE `wp_revslider_css` DISABLE KEYS */;
 
 INSERT INTO `wp_revslider_css` (`id`, `handle`, `settings`, `hover`, `params`, `advanced`)
@@ -2274,7 +2267,6 @@ CREATE TABLE `wp_revslider_layer_animations` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `wp_revslider_layer_animations` WRITE;
 /*!40000 ALTER TABLE `wp_revslider_layer_animations` DISABLE KEYS */;
 
 INSERT INTO `wp_revslider_layer_animations` (`id`, `handle`, `params`, `settings`)
@@ -2317,7 +2309,6 @@ CREATE TABLE `wp_revslider_sliders` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `wp_revslider_sliders` WRITE;
 /*!40000 ALTER TABLE `wp_revslider_sliders` DISABLE KEYS */;
 
 INSERT INTO `wp_revslider_sliders` (`id`, `title`, `alias`, `params`, `settings`, `type`)
@@ -2347,7 +2338,6 @@ CREATE TABLE `wp_revslider_slides` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `wp_revslider_slides` WRITE;
 /*!40000 ALTER TABLE `wp_revslider_slides` DISABLE KEYS */;
 
 INSERT INTO `wp_revslider_slides` (`id`, `slider_id`, `slide_order`, `params`, `layers`, `settings`)
@@ -2393,7 +2383,6 @@ CREATE TABLE `wp_revslider_static_slides` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `wp_revslider_static_slides` WRITE;
 /*!40000 ALTER TABLE `wp_revslider_static_slides` DISABLE KEYS */;
 
 INSERT INTO `wp_revslider_static_slides` (`id`, `slider_id`, `params`, `layers`, `settings`)
@@ -2419,7 +2408,6 @@ CREATE TABLE `wp_term_relationships` (
   KEY `term_taxonomy_id` (`term_taxonomy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_term_relationships` WRITE;
 /*!40000 ALTER TABLE `wp_term_relationships` DISABLE KEYS */;
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`)
@@ -2524,7 +2512,6 @@ CREATE TABLE `wp_term_taxonomy` (
   KEY `taxonomy` (`taxonomy`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_term_taxonomy` WRITE;
 /*!40000 ALTER TABLE `wp_term_taxonomy` DISABLE KEYS */;
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`)
@@ -2589,7 +2576,6 @@ CREATE TABLE `wp_terms` (
   KEY `name` (`name`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_terms` WRITE;
 /*!40000 ALTER TABLE `wp_terms` DISABLE KEYS */;
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`)
@@ -2637,7 +2623,6 @@ CREATE TABLE `wp_usermeta` (
   KEY `meta_key` (`meta_key`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_usermeta` WRITE;
 /*!40000 ALTER TABLE `wp_usermeta` DISABLE KEYS */;
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`)
@@ -2722,7 +2707,6 @@ CREATE TABLE `wp_users` (
   KEY `user_email` (`user_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `wp_users` WRITE;
 /*!40000 ALTER TABLE `wp_users` DISABLE KEYS */;
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`)
