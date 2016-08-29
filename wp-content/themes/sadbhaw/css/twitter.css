@@ -1,0 +1,54 @@
+@import 'http://fonts.googleapis.com/css?family=Roboto+Slab:300,400';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css';
+body *{
+    font-family:"Roboto Slab"!important;
+    font-size: 12px;
+}
+.e-entry-title{
+    font-size: 12px!important;
+    line-height: 24px!important;
+}
+.timeline{
+    border-top-right-radius: 0!important;
+    border-top-left-radius: 0!important;
+}
+.thm-dark .env-narrow .tweet .header{
+    padding-top: 10px!important;
+}
+.u-url.profile img{
+    display: none!important;
+}
+.thm-dark .u-url.profile::before{
+	position:absolute;
+	display:block;
+	height: 32px;
+    left: -36px;
+    top: 2px;
+    width: 32px;
+	font-family:FontAwesome!important;
+	content:'\f099';
+	color:#4a4a4a;
+	font-size:20px;
+}
+.env-narrow .tweet .header{
+	padding:0!important;
+}
+.tweet{
+	padding:10px 0 5px 15px !important;
+	border-bottom:1px solid rgba(0,0,0,0.1)!important;
+	margin-bottom:15px!important;
+}
+.thm-dark .tweet{
+	padding:0 0 5px 36px !important;
+	border-bottom:1px solid rgba(255,255,255,0.1)!important;
+}
+.env-narrow .var-chromeless .tweet:last-child, .env-narrow.var-chromeless .tweet:last-child{
+	border:none!important;
+	margin-bottom:0!important;
+}
+.env-narrow .header .p-name{
+	color:#ed9914!important;
+}
+.tweet-box-button{
+	text-indent:5px;
+}
