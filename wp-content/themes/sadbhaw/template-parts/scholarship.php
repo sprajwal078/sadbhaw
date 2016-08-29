@@ -1,6 +1,15 @@
   <?php
   /*
-  *Template name: Scholarship
+  *Template name: Scholarship Sadbhaw
   */
  get_header(); 
   ?>
+  <div class="page-heading">
+   <div class="container">
+    <div class="page-title">
+     <div class="iw-heading-title"><h1>Scholarship</h1></div> </div>
+   </div>
+  </div>
+  <?php
+  get_footer();?>
+  
