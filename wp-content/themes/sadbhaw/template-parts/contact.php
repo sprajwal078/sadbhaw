@@ -7,10 +7,18 @@
   <div class="page-heading">
    <div class="container">
     <div class="page-title">
-     <div class="iw-heading-title"><h1>Contact Us</h1></div> </div>
+     <div class="iw-heading-title"><h1>Our Location</h1></div> </div>
    </div>
   </div>
   <div class="container">
+  <?php $args = array('post_type'=>'page',
+                        'p'=>139,
+                        'showposts'=>1
+    ) ?>
+    <?php $contactQuery = new WP_Query($args); ?>
+    <?php if( $contactQuery->have_posts() ):
+          while( $contactQuery->have_posts() ): $contactQuery->the_post();
+     ?>
       <div class="vc_row wpb_row vc_row-fluid iw-map vc_custom_1445586865423" style="margin-left:0;margin-right:0;background-size:100% auto">
           <div class="wpb_column vc_column_container vc_col-sm-12">
               <div class="vc_column-inner vc_custom_1471336175417">
@@ -25,13 +33,13 @@
                               <div class="contact-map-info">
                                   <div class="contact-map-image"><img src="../wp-content/uploads/2015/10/xmap-maker-image.jpg.pagespeed.ic.GUdTn8XflP.jpg" alt="map-maker-image"/></div>
                                   <div class="contact-info-detail">
-                                      <div class="title">Heading office</div>
-                                      <div class="desc">Lorem ipsum dolor sit amet, consectetur adipi scing elit suspendisse in.</div>
+                                      <!-- <div class="title">Heading office</div> -->
+                                      <!-- <div class="desc">Lorem ipsum dolor sit amet, consectetur adipi scing elit suspendisse in.</div> -->
                                       <div class="contact-details">
-                                          <div class="detail-add"><i class="fa fa-map-marker theme-color"></i> #302 Rainbow Building, Van Quan, Ha Noi, Viet nam</div>
-                                          <div class="detail-email"><i class="fa fa-envelope-o theme-color"></i> support@inwavethemes.com</div>
-                                          <div class="detail-phone"><i class="fa fa-phone theme-color"></i> 084 1234 56789</div>
-                                          <div class="detail-website"><i class="fa fa-globe theme-color"></i> http://inwavethemes.com</div>
+                                          <div class="detail-add"><i class="fa fa-map-marker theme-color"></i> <?php the_field('address'); ?></div>
+                                          <div class="detail-email"><i class="fa fa-envelope-o theme-color"></i><?php the_field('email'); ?></div>
+                                          <div class="detail-phone"><i class="fa fa-phone theme-color"></i><?php the_field('telephone'); ?></div>
+                                          <!-- <div class="detail-website"><i class="fa fa-globe theme-color"></i> http://inwavethemes.com</div> -->
                                       </div>
                                   </div>
                               </div>
@@ -41,6 +49,7 @@
               </div>
           </div>
       </div>
+    <?php endwhile; wp_reset_postdata(); endif; ?>
       <div id="contact-form" class="vc_row wpb_row vc_row-fluid vc_custom_1457075974857 vc_row-has-fill" style="margin-left:0;margin-right:0;background-size:100% auto">
           <div class="container">
               <div class="row">
@@ -52,8 +61,9 @@
                                       <span class="ajax-loading"><i class="fa fa-spinner fa-spin fa-2x"></i></span>
                                   </div>
                                   <div class="headding-bottom"></div>
-                                  <form method="post" name="contact-form">
-                                      <div class="title_contact_form"> Leave A Message</div>
+                                      <div class="title_contact_form"> Write To Us</div>
+                                  <?php echo do_shortcode('[contact-form-7 id="1977" title="Sadbhaw contact"]'); ?>
+                                  <!-- <form method="post" name="contact-form">
                                       <div class="row">
                                           <div class="form-group col-md-4 col-md-6 col-xs-12">
                                               <input type="text" placeholder="First Name" required="required" class="control" name="name">
@@ -76,7 +86,7 @@
                                           </div>
                                           <div class="form-group col-md-12 form-message"></div>
                                       </div>
-                                  </form>
+                                  </form> -->
                               </div>
                           </div>
                       </div>
