@@ -11,6 +11,14 @@
    </div>
   </div>
   <div class="container">
+    <?php $args = array('post_type'=>'page',
+                        'p'=>1826,
+                        'showposts'=>1
+    ) ?>
+    <?php $selectionQuery = new WP_Query($args); ?>
+    <?php if( $selectionQuery->have_posts() ):
+          while( $selectionQuery->have_posts() ): $selectionQuery->the_post();
+     ?>
       <div class="vc_row wpb_row vc_row-fluid missions" style="">
           <div class="wpb_column vc_column_container vc_col-sm-12">
               <div class="vc_column-inner ">
@@ -20,8 +28,8 @@
                               <div class="vc_column-inner vc_custom_1451981561873">
                                   <div class="wpb_wrapper">
                                       <div class="iw-heading   style1  center-text">
-                                          <h3 class="iwh-title" style="font-size:40px">Selection Process</h3>
-                                          <p class="iwh-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel purus vel mi rhoncus commodo. Duis elementum sapien et neque lobortis laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada </p>
+                                          <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
+                                          <p class="iwh-content"><?php the_content(); ?> </p>
                                       </div>
                                   </div>
                               </div>
@@ -30,10 +38,12 @@
                   </div>
                   <hr>
                <div class="featured-image">
-                <img width="870" height="380" src="../wp-content/uploads/2015/10/x20605063626_6f87454667_k.jpg.pagespeed.ic.wM_GIMt3Ux.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="post-20605063626_6f87454667_k"> </div>
+               <?php $infoImage = get_field('infographic'); ?>
+                <img width="870" height="380" src="<?php echo $infoImage['url'] ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?php echo $infoImage['alt'] ?>"> </div>
               </div>
           </div>
       </div>
+    <?php endwhile; wp_reset_postdata(); endif; ?>
   </div>
   <?php
   get_footer();?>
