@@ -96,10 +96,7 @@
 			.vc_custom_1454588490991{
 				margin-bottom:0!important
 			}
-			.vc_custom_1451364776558{
-				margin-top:200px!important;
-				margin-bottom:200px!important
-			}
+			
 			.vc_custom_1451527585372{
 				padding-right:0!important;
 				padding-left:0!important
@@ -124,8 +121,8 @@
 					<div class="col-md-2 col-sm-12 col-xs-12 no-padding">
 						<h1 class="logo">
 							<a href="<?php echo site_url()?>" title="inCharity">
-								<img class="main-logo" src="<?php echo get_template_directory_uri().'/images/logos/logo1.png'?>" alt="inCharity">
-								<img class="sticky-logo" src="<?php echo get_template_directory_uri().'/images/logos/logo1.png'?>" alt="inCharity">
+								<img class="main-logo" src="<?php echo get_template_directory_uri().'/images/logos/logo_big.png'?>" alt="inCharity">
+								<img class="sticky-logo" src="<?php echo get_template_directory_uri().'/images/logos/logo_small.png'?>" alt="inCharity">
 							</a>
 						</h1>
 					</div>

@@ -61,6 +61,14 @@
     .tp-thumbs{
         display: none;
     }
+    .style4.profile-box{
+        color:black !important;
+    }
 </style>
+<script>
+    $(document).ready(function() {
+        $('.page-heading').css({'background-image' , 'none'});
+    });
+</script>
 <?php wp_footer(); ?>
 </body>

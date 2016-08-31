@@ -15,6 +15,7 @@ get_header();
         <div class="main-content">
             <div class="container">
                 <div class="row">
+                    <?php if(have_posts()): while (have_posts()):the_post();?>
                     <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 blog-content single-content">
                         <article id="post-340" class="post-340 post type-post status-publish format-gallery has-post-thumbnail hentry category-blog-listing-page category-bussiness category-charity-events category-mobile-conference tag-charity tag-conference tag-festival tag-kind post_format-post-format-gallery">
                             <div class="post-item fit-video">
@@ -62,6 +63,7 @@ get_header();
                             </div>
                         </article>
                     </div>
+                    <?php endwhile;endif;?>
                 </div>
             </div>
         </div>

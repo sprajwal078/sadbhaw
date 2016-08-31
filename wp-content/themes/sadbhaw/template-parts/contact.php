@@ -5,6 +5,7 @@
   get_header(); ?>
 
   <div class="page-heading">
+      <!--<img class="page-heading" src="http://localhost/sadbhaw/wp-content/themes/sadbhaw/images/image-heading-blog-detail.jpg">-->
    <div class="container">
     <div class="page-title">
      <div class="iw-heading-title"><h1>Our Location</h1></div> </div>
@@ -25,13 +26,13 @@
                   <div class="wpb_wrapper">
                       <div class="contact-map ">
                           <div class="map-contain" data-title="inwavethemes" data-image="http://inwavethemes.com/wordpress/incharity/wp-content/uploads/2015/10/map-maker.png" data-lat="40.6700" data-long="-73.9400" data-zoom="11" data-info="">
-                              <div class="map-view map-frame" style="height:610px"></div>
+                              <div class="map-view map-frame" style="height:610px"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28253.60137753605!2d85.3406408!3d27.7265422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu+44600!5e0!3m2!1sen!2snp!4v1472621645651" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
                           </div>
                       </div>
                       <div class="wpb_text_column wpb_content_element  map-info">
                           <div class="wpb_wrapper">
                               <div class="contact-map-info">
-                                  <div class="contact-map-image"><img src="../wp-content/uploads/2015/10/xmap-maker-image.jpg.pagespeed.ic.GUdTn8XflP.jpg" alt="map-maker-image"/></div>
+                                  <div class="contact-map-image"><img src="<?php echo get_template_directory_uri().'/images/logos/logo_big.png'?>" alt="map-maker-image"/></div>
                                   <div class="contact-info-detail">
                                       <!-- <div class="title">Heading office</div> -->
                                       <!-- <div class="desc">Lorem ipsum dolor sit amet, consectetur adipi scing elit suspendisse in.</div> -->
@@ -62,7 +63,7 @@
                                   </div>
                                   <div class="headding-bottom"></div>
                                       <div class="title_contact_form"> Write To Us</div>
-                                  <?php echo do_shortcode('[contact-form-7 id="1977" title="Sadbhaw contact"]'); ?>
+                                  <?php echo do_shortcode('[contact-form-7 id="1988" title="Contact Us"]'); ?>
                                   <!-- <form method="post" name="contact-form">
                                       <div class="row">
                                           <div class="form-group col-md-4 col-md-6 col-xs-12">
