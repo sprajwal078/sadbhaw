@@ -14,12 +14,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p>Copyright <?php echo date('Y'); ?> © <a href='#' class='theme-color'>Sadbhaw</a>. All rights reserved.</p>
+                        <p>Copyright <?php echo date('Y'); ?> © <a href='<?php echo site_url()?>' class='theme-color'>Sadbhaw</a>. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 col-sm-6 back-to-top-container">
                         <nav class="iw-main-nav">
                             <ul id="menu-footer-menu" class="menu">
-                                <li id="menu-item-475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-475"><a href="#">Home</a></li>
+                                <li id="menu-item-475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-475"><a href="<?php echo site_url()?>">Home</a></li>
                             </ul>
                         </nav>
                         <div class="back-to-top"><a href="#page-top" title="Back to top" class="button-effect3"><i class="fa fa-arrow-up"></i></a></div>

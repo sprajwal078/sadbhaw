@@ -2,56 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66d29e5a-1dc8-4b31-984c-25ca47108411" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Sadbhaw Website Draft/SadbhawMockup.bmpr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Sadbhaw Website Draft/SadbhawMockupFinalReviewed.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Butti Tamang.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Chiring_Sherpa_is_a_student_of_grade_7_studying__in_Shree_Seti_Devi_School.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Lakpa Nurpu Sherpa.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Laxmi_Tamang.doc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Mangali Balami.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Pemba_Chhering_Sherpa.doc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Santosh Balami.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Santosh Rajak.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Shiva Shankar Balami.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Shreyjan_Shrestha.doc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Sumitra Balami.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/images/amar_singh_tamang.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/images/butti Tamang.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/monitoring.xps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/sumita balami.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/logos/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/logos/logo_final.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/our impacts img/districts.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/our impacts img/institutional_partners.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/our impacts img/schools.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/our impacts img/students.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/partners logo/arts_nepal.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/partners logo/jagadamba.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/partners logo/nepal_govt.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/partners logo/vg_foundation_logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/partners logo/volunteers.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Fulman Tamang.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Laxmi Tamang.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Sabita Kumari Shah.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Shreeyjan Shrestha.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Sunita Sunar.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/Sunita_Sunar.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/amar singh tamang.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/dinesh Shivakoti.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/ganga_B.K.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/om bahadur.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/pasang nurbu Sherpa.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Stories/sirjana poudel.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/single-campaign.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/single-event.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sadbhaw_database.sql" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/images/logos/logo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/images/logos/logo_final.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/events.php" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/events.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/fund-raise.php" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/fund-raise.php" />
     </list>
     <ignored path="sadbhaw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,76 +58,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="events.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/events.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="40" column="50" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="50" />
-              <folding>
-                <marker date="1472614420000" expanded="true" signature="1478:1487" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single-event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/single-event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="49" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+            <state relative-caret-position="195">
+              <caret line="21" column="162" selection-start-line="21" selection-start-column="162" selection-end-line="21" selection-end-column="162" />
               <folding>
-                <marker date="1472616348000" expanded="true" signature="1892:1921" placeholder="..." />
+                <marker date="1472619003000" expanded="true" signature="1936:1965" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/contact.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about-us.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/about-us.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="42" column="40" selection-start-line="37" selection-start-column="34" selection-end-line="42" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single-campaign.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/single-campaign.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -207,9 +100,9 @@
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/events.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/fund-raise.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/single-event.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/single-campaign.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php" />
       </list>
     </option>
   </component>
@@ -328,24 +221,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sadbhaw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sadbhaw" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -356,6 +231,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/sadbhaw/images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -409,12 +289,12 @@
       <workItem from="1472442030208" duration="2173000" />
       <workItem from="1472477169253" duration="2037000" />
       <workItem from="1472527712606" duration="534000" />
-      <workItem from="1472614325600" duration="2527000" />
+      <workItem from="1472614325600" duration="3581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25963000" />
+    <option name="totallyTimeSpent" value="27017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="24" width="1280" height="727" extended-state="6" />
@@ -457,27 +337,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="51" column="77" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/incharity/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -728,7 +587,7 @@
     <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
-          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -741,28 +600,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-          <folding>
-            <marker date="1472616348000" expanded="true" signature="1892:1921" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/single-event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="49" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/logos/logo_final.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Stories/amar singh tamang.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -772,6 +626,29 @@
         <state relative-caret-position="433">
           <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/logos/logo1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="141" column="120" selection-start-line="141" selection-start-column="120" selection-end-line="141" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="162" selection-start-line="21" selection-start-column="162" selection-end-line="21" selection-end-column="162" />
+          <folding>
+            <marker date="1472619003000" expanded="true" signature="1936:1965" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
