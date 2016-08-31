@@ -11,6 +11,7 @@ register_nav_menus( array(
 ) );
 
 /**
+<<<<<<< HEAD
  * @param $args
  * @return WP_Query
  */
@@ -20,6 +21,8 @@ function generate_query( $args ){
 }
 
 /**
+=======
+>>>>>>> 74363f09b9f90cec21f3267e3fdad4c178feb268
  * @param $menu_id
  * @return null
  */

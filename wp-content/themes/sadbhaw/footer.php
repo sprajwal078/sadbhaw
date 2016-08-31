@@ -14,15 +14,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p>Copyright 2015 © <a href='#' class='theme-color'>InCharity</a>. All rights reserved. Made with<i class="fa fa-heart theme-color"></i>by <a href='#' class='theme-color'>Inwavethemes</a></p>
+                        <p>Copyright <?php echo date('Y'); ?> © <a href='#' class='theme-color'>Sadbhaw</a>. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 col-sm-6 back-to-top-container">
                         <nav class="iw-main-nav">
                             <ul id="menu-footer-menu" class="menu">
                                 <li id="menu-item-475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-475"><a href="#">Home</a></li>
-                                <li id="menu-item-476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-476"><a href="#">Terms of Use</a></li>
-                                <li id="menu-item-477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-477"><a href="#">Privacy Policy</a></li>
-                                <li id="menu-item-479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-479"><a href="#">Disclaimer</a></li>
                             </ul>
                         </nav>
                         <div class="back-to-top"><a href="#page-top" title="Back to top" class="button-effect3"><i class="fa fa-arrow-up"></i></a></div>

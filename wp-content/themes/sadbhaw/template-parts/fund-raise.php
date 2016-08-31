@@ -13,7 +13,6 @@
   ?>
   <div class="page-heading">
    <div class="container">
-
     <div class="page-title">
      <div class="iw-heading-title"><h1>Campaigns</h1></div> </div>
    </div>

@@ -17,7 +17,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="xmlrpc.php">
 		<script type="text/javascript">document.documentElement.className=document.documentElement.className+' yes-js js_active js'</script>
-		<title>inCharity &#8211; Just another WordPress site</title>
+		<title>Sadhbhaw </title>
 		<style>.wishlist_table .add_to_cart,a.add_to_wishlist.button.alt{border-radius:16px;-moz-border-radius:16px;-webkit-border-radius:16px}</style>
 		<script type="text/javascript">var yith_wcwl_plugin_ajax_web_url='wp-admin/admin-ajax.html';</script>
 		<link rel="alternate" type="application/rss+xml" title="inCharity &raquo; Feed" href="feed/index.html"/>
