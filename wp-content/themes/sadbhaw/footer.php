@@ -67,7 +67,17 @@
 </style>
 <script>
     $(document).ready(function() {
-        $('.page-heading').css({'background-image' , 'none'});
+        //for stories slider
+        setInterval(function(){
+            var showm_item = $('.slide-item:visible');
+            if(showm_item.next().length != 0){
+                $('.slide-item:visible').hide();
+                showm_item.next().show();
+            }else{
+                $('.slide-item:visible').hide();
+                $('.slide-item').eq(0).show();
+            }
+        },5000);
     });
 </script>
 <?php wp_footer(); ?>

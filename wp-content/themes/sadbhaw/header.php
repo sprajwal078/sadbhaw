@@ -136,8 +136,18 @@
 							<div class="menu-default-menu-container">
 								<ul id="menu-main-menu" class="iw-nav-menu">
 									<?php $menus = get_menu_tree('Header Sadbhaw');
-									foreach ($menus as $menu){ ?>
-										<li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page <?php if(isset($menu->children)) echo 'menu-item-has-children'?>">
+									$title = get_the_title();
+									foreach ($menus as $menu){
+										if($menu->title == $title){$class = "active";} else{$class = "";}
+										 if(isset($menu->children)){
+											 $child_menus = array();
+												foreach ($menu->children as $child){
+													$child_menus[] = $child->title;
+												}
+											 if(in_array($title, $child_menus)){$class="active";}
+											}
+										?>
+										<li id="menu-item-611" class="<?php echo $class?> menu-item menu-item-type-post_type menu-item-object-page <?php if(isset($menu->children)) echo 'menu-item-has-children'?>">
 											<a href="<?php if(isset($menu->children)){echo '#';} else {echo $menu->url;}?>"><strong><?php echo $menu->title?></strong>
 											</a>
 											<?php if(isset($menu->children)){?>
