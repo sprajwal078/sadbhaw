@@ -28,14 +28,70 @@
         </div>
        </div>
       </div>
-      <div class="container">
+      <div class="container ">
        <div class="row">
-        <div class="col-md-6 col-sm-3 footer-left">
-
-         this is for stories section
+        <div class="col-md-6 col-sm-3 footer-left stories">          
+          <div class="center-text">
+            <h3 class="iwh-title" style="font-size:40px">Stories</h3>
+          </div>
+          <div class="slide">            
+            <div class="media"> 
+              <div class="media-body"> 
+                <h4 class="media-heading">Student Name</h4> 
+                Student Details .... <a href="#">read more</a>
+              </div> 
+              <div class="media-right"> 
+                <a href="#"> 
+                  <img alt="64x64" class="media-object" data-src="holder.js/64x64" src="http://placehold.it/150x200" data-holder-rendered="true" style="width: 64px; height: 64px;"> 
+                </a> 
+              </div> 
+            </div>
+            <div class="media"> 
+              <div class="media-body"> 
+                <h4 class="media-heading">Student Name</h4> 
+                Student Details .... <a href="#">read more</a>
+              </div> 
+              <div class="media-right"> 
+                <a href="#"> 
+                  <img alt="64x64" class="media-object" data-src="holder.js/64x64" src="http://placehold.it/150x200" data-holder-rendered="true" style="width: 64px; height: 64px;"> 
+                </a> 
+              </div> 
+            </div>
+          </div>
+          
         </div>
-        <div class="col-md-6 col-sm-6 footer-right">
-         social feed section
+        <div class="col-md-6 col-sm-6 footer-right social-tabs">
+          <div class="center-text">
+            <h3 class="iwh-title" style="font-size:40px">Social Feeds</h3>
+          </div>
+          <!-- nav tabs -->
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+                  <i class="fa fa-youtube"></i>
+                </a>
+              </li>
+              <li role="presentation">
+                <a href="#facebook" aria-controls="facebook" role="tab" data-toggle="tab">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li role="presentation">
+                <a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>              
+            </ul>
+
+          <!-- Tab panes -->
+            <div class="col-md-12">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="youtube">YOUTUBE</div>
+                <div role="tabpanel" class="tab-pane" id="facebook">Facebook</div>
+                <div role="tabpanel" class="tab-pane" id="twitter">Twitter</div>
+              </div>              
+            </div>
+          
         </div>
        </div>
       </div>
@@ -136,12 +192,57 @@
            <div class="wpb_wrapper"></div>
           </div>
          </div>
-         <div class="wpb_column vc_column_container vc_col-sm-8">
+         <div class="wpb_column vc_column_container vc_col-sm-8 partners">
           <div class="vc_column-inner ">
            <div class="wpb_wrapper">
             <div class="iw-heading   style4  center-text">
              <h3 class="iwh-title" style="font-size:40px">Our Partners</h3>
              <div class="iwh-sub-title">Partner section .. </div>
+
+             <!-- nav tabs -->
+               <ul class="nav nav-tabs nav-justified" role="tablist">
+                 <li role="presentation" class="active">
+                   <a href="#partner1" aria-controls="partner1" role="tab" data-toggle="tab">
+                    Partner 1
+                   </a>
+                 </li>
+                 <li role="presentation">
+                   <a href="#partner2" aria-controls="partner2" role="tab" data-toggle="tab">
+                    Partner 2
+                   </a>
+                 </li>
+                 <li role="presentation">
+                   <a href="#partner3" aria-controls="partner3" role="tab" data-toggle="tab">
+                     Partner 3
+                   </a>
+                 </li>              
+                 <li role="presentation">
+                   <a href="#partner4" aria-controls="partner4" role="tab" data-toggle="tab">
+                     Partner 4
+                   </a>
+                 </li>              
+               </ul>
+
+             <!-- Tab panes -->
+               <div class="col-md-12">
+                 <div class="tab-content">                  
+                   <div role="tabpanel" class="tab-pane active" id="partner1">
+                    <figure>
+                      <img src="http://placehold.it/350x150" alt="partner1">                      
+                    </figure>
+                    <figure>
+                      <img src="http://placehold.it/350x150" alt="partner1">                      
+                    </figure>
+                   </div>
+                   <div role="tabpanel" class="tab-pane" id="partner2">
+                    <figure>
+                      <img src="http://placehold.it/350x150" alt="partner1">                      
+                    </figure>
+                   </div>
+                   <div role="tabpanel" class="tab-pane" id="partner3">Partner 3</div>
+                   <div role="tabpanel" class="tab-pane" id="partner4">Partner 4</div>
+                 </div>              
+               </div>
             </div>
            </div>
           </div>

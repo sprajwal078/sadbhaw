@@ -61,7 +61,8 @@
 		<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyAQ-kNIGl-wRlW4gbo-Se0tZKkBXnvbuT0&ver=4.5.3'></script>
 		<script type='text/javascript'>var wc_add_to_cart_params={"ajax_url":"\/wordpress\/incharity\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wordpress\/incharity\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View Cart","cart_url":"http:\/\/inwavethemes.com\/wordpress\/incharity\/cart\/","is_cart":"","cart_redirect_after_add":"no"};</script>
 
-
+	<!-- custom css -->
+	<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/sadbhaw/css/custom.css' type='text/css' media='all'/>
 
 
 		<!--[if lte IE 9]>
@@ -102,6 +103,7 @@
 				padding-left:0!important
 			}
 		</style>
+
 		<noscript>
 			<style type="text/css">.wpb_animate_when_almost_visible{opacity:1}</style>
 		</noscript>
