@@ -28,35 +28,37 @@
         </div>
        </div>
       </div>
+      <!--get the stories post 2 for now -->
+      <?php $stories = generate_query(
+          array(
+              'post_type' => 'story',
+              'posts_per_page'	=> 2,
+              'orderby'   => 'menu_order',
+              'order' => 'ASC')
+      );?>
       <div class="container ">
        <div class="row">
         <div class="col-md-6 col-sm-3 footer-left stories">          
           <div class="center-text">
             <h3 class="iwh-title" style="font-size:40px">Stories</h3>
           </div>
-          <div class="slide">            
+          <div class="slide">
+           <?php if( $stories->have_posts() ) :
+           while ( $stories->have_posts() ) : $stories->the_post();
+            $image = get_field('image');
+           ?>
             <div class="media"> 
               <div class="media-body"> 
-                <h4 class="media-heading">Student Name</h4> 
-                Student Details .... <a href="#">read more</a>
+                <h3 class="media-heading"><?php the_title()?></h3>
+                <?php the_content()?> <a href="#">read more</a>
               </div> 
               <div class="media-right"> 
                 <a href="#"> 
-                  <img alt="64x64" class="media-object" data-src="holder.js/64x64" src="http://placehold.it/150x200" data-holder-rendered="true" style="width: 64px; height: 64px;"> 
+                  <img alt="64x64" class="media-object" data-src="holder.js/64x64" src="<?php echo $image['url']?>" data-holder-rendered="true" style="width: 64px; height: 64px;">
                 </a> 
               </div> 
             </div>
-            <div class="media"> 
-              <div class="media-body"> 
-                <h4 class="media-heading">Student Name</h4> 
-                Student Details .... <a href="#">read more</a>
-              </div> 
-              <div class="media-right"> 
-                <a href="#"> 
-                  <img alt="64x64" class="media-object" data-src="holder.js/64x64" src="http://placehold.it/150x200" data-holder-rendered="true" style="width: 64px; height: 64px;"> 
-                </a> 
-              </div> 
-            </div>
+            <?php endwhile;wp_reset_postdata();endif;?>
           </div>
           
         </div>
@@ -86,7 +88,7 @@
           <!-- Tab panes -->
             <div class="col-md-12">
               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="youtube">YOUTUBE</div>
+                <div role="tabpanel" class="tab-pane active" id="youtube"><?php the_field('youtube')?></div>
                 <div role="tabpanel" class="tab-pane" id="facebook">Facebook</div>
                 <div role="tabpanel" class="tab-pane" id="twitter">Twitter</div>
               </div>              
@@ -199,50 +201,50 @@
              <h3 class="iwh-title" style="font-size:40px">Our Partners</h3>
              <div class="iwh-sub-title">Partner section .. </div>
 
+             <!--get the category of partners-->
+             <?php $categories = list_terms_by_post_type('partner-cat','our-partner');
+             if(!empty($categories)){
+             ?>
              <!-- nav tabs -->
                <ul class="nav nav-tabs nav-justified" role="tablist">
-                 <li role="presentation" class="active">
-                   <a href="#partner1" aria-controls="partner1" role="tab" data-toggle="tab">
-                    Partner 1
+                <?php $i=1;foreach ($categories as $cat){?>
+                 <li role="presentation" class="<?php if($i == 1){ echo "active";}?>">
+                   <a href="#partner<?php echo $i?>" aria-controls="partner<?php echo $i;?>" role="tab" data-toggle="tab">
+                    <?php echo $cat->name?>
                    </a>
                  </li>
-                 <li role="presentation">
-                   <a href="#partner2" aria-controls="partner2" role="tab" data-toggle="tab">
-                    Partner 2
-                   </a>
-                 </li>
-                 <li role="presentation">
-                   <a href="#partner3" aria-controls="partner3" role="tab" data-toggle="tab">
-                     Partner 3
-                   </a>
-                 </li>              
-                 <li role="presentation">
-                   <a href="#partner4" aria-controls="partner4" role="tab" data-toggle="tab">
-                     Partner 4
-                   </a>
-                 </li>              
+                <?php $i++;} ?>
                </ul>
-
              <!-- Tab panes -->
                <div class="col-md-12">
-                 <div class="tab-content">                  
-                   <div role="tabpanel" class="tab-pane active" id="partner1">
+                 <div class="tab-content">
+                  <?php $i=1;foreach ($categories as $cat){?>
+                   <div role="tabpanel" class="tab-pane <?php if($i == 1){ echo "active";}?>" id="partner<?php echo $i;?>">
+                    <?php $partners = generate_query(array( 'post_type' => 'our-partner','orderby'   => 'menu_order',
+                        'order' => 'ASC',
+                        'posts_per_page'	=> 3,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'partner-cat',
+                                'field' => 'id',
+                                'terms' => $cat->term_id
+                            ),
+                        )));
+                      if( $partners->have_posts() ) :
+                          while ( $partners->have_posts() ) : $partners->the_post();
+                              $image = get_field('logo');
+                    ?>
                     <figure>
-                      <img src="http://placehold.it/350x150" alt="partner1">                      
+                      <img style="float: left;" width="100px" height="100px" src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
                     </figure>
-                    <figure>
-                      <img src="http://placehold.it/350x150" alt="partner1">                      
-                    </figure>
+                  <?php endwhile;wp_reset_postdata();endif;?>
                    </div>
-                   <div role="tabpanel" class="tab-pane" id="partner2">
-                    <figure>
-                      <img src="http://placehold.it/350x150" alt="partner1">                      
-                    </figure>
-                   </div>
-                   <div role="tabpanel" class="tab-pane" id="partner3">Partner 3</div>
-                   <div role="tabpanel" class="tab-pane" id="partner4">Partner 4</div>
+                  <?php $i++;}?>
                  </div>              
                </div>
+             <?php }else {
+              echo "no partners category found";
+             }?>
             </div>
            </div>
           </div>

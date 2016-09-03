@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="66d29e5a-1dc8-4b31-984c-25ca47108411" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/home.php" afterPath="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/home.php" />
     </list>
     <ignored path="sadbhaw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,53 +56,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="37" column="28" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fund-raise.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/fund-raise.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="66" column="10" selection-start-line="37" selection-start-column="4" selection-end-line="66" selection-end-column="10" />
-              <folding>
-                <element signature="n#div#0;n#section#0;n#div#1;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stories.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/stories.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="8" selection-start-line="34" selection-start-column="4" selection-end-line="36" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about-us.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/about-us.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="44" selection-start-line="37" selection-start-column="38" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="-317">
+              <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -127,7 +87,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/donate.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/thank-you.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/scholarship.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/events.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/fund-raise.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/about-us.php" />
@@ -139,6 +98,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/slider-part.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/home.php" />
       </list>
     </option>
@@ -267,32 +227,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sadbhaw" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template-parts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sadbhaw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sadbhaw" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -304,7 +238,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../physiobox" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
@@ -367,12 +301,12 @@
       <workItem from="1472477169253" duration="2037000" />
       <workItem from="1472527712606" duration="534000" />
       <workItem from="1472614325600" duration="11750000" />
-      <workItem from="1472886480046" duration="1298000" />
+      <workItem from="1472886480046" duration="4230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36484000" />
+    <option name="totallyTimeSpent" value="39416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="727" extended-state="0" />
@@ -386,7 +320,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -582,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/events.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -706,28 +633,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/fund-raise.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="66" column="10" selection-start-line="37" selection-start-column="4" selection-end-line="66" selection-end-column="10" />
+        <state relative-caret-position="420">
+          <caret line="36" column="6" selection-start-line="34" selection-start-column="3" selection-end-line="36" selection-end-column="6" />
           <folding>
             <element signature="n#div#0;n#section#0;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/template-parts/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="28" />
+        <state relative-caret-position="691">
+          <caret line="237" column="45" selection-start-line="237" selection-start-column="41" selection-end-line="237" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1472896328000" expanded="true" signature="11001:11175" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/sadbhaw/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-317">
+          <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
           <folding />
         </state>
       </provider>

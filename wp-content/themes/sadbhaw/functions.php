@@ -52,3 +52,26 @@ function buildTree( array &$elements, $parentId = 0 ){
     }
     return $branch;
 }
+
+
+function list_terms_by_post_type($taxonomy = 'category',$post_type = 'post'){
+    //get a list of all post of your type
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => $post_type
+    );
+    $terms= array();
+    $posts = get_posts($args);
+    foreach($posts as $p){
+        //get all terms of your taxonomy for each type
+        $ts = wp_get_object_terms($p->ID,$taxonomy);
+        foreach ( $ts as $t ) {
+            if (!in_array($t,$terms)){ //only add this term if its not there yet
+                $terms[] = $t;
+            }
+        }
+    }
+    wp_reset_postdata();
+    return $terms;
+}
+
