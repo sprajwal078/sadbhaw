@@ -83,7 +83,7 @@
               </li>
               <li role="presentation">
                 <a href="#facebook" aria-controls="facebook" role="tab" data-toggle="tab">
-                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-facebook-official"></i>
                 </a>
               </li>
               <li role="presentation">
@@ -136,7 +136,6 @@
         </div>
        </div>
       </div>
-      
 
       <!-- leaders profile -->
       <div class="vc_row wpb_row vc_row-fluid vc_custom_1469676508172 vc_row-has-fill leaders-profile" style="background:none!important;position:relative;margin-left:0;margin-right:0;background-size:100% auto">
@@ -191,7 +190,9 @@
            <div class="wpb_wrapper">
             <div class="iw-heading   style4  center-text">
              <h3 class="iwh-title" style="font-size:40px">Our Partners</h3>
-             <div class="iwh-sub-title">Partner section .. </div>
+             <div class="iwh-sub-title">
+              Sadbhaw is a unique model of Private-Public Partnership to make difference. Many individuals and entities have joined to educate the rural village children.
+             </div>
 
              <!--get the category of partners-->
              <?php $categories = list_terms_by_post_type('partner-cat','our-partner');
@@ -227,7 +228,7 @@
                               $image = get_field('logo');
                     ?>
                     <figure>
-                      <img style="float: left;" width="100px" height="100px" src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
+                      <img style="float: left;" src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
                     </figure>
                   <?php endwhile;wp_reset_postdata();endif;?>
                    </div>
