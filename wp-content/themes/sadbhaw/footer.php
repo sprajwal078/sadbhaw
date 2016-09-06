@@ -71,11 +71,15 @@
         setInterval(function(){
             var showm_item = $('.slide-item:visible');
             if(showm_item.next().length != 0){
+                // $('.slide-item:visible').hide();
+                // showm_item.next().show();
                 $('.slide-item:visible').hide();
-                showm_item.next().show();
+                showm_item.next().fadeIn('slow');
             }else{
+                // $('.slide-item:visible').hide();
+                // $('.slide-item').eq(0).show();
                 $('.slide-item:visible').hide();
-                $('.slide-item').eq(0).show();
+                $('.slide-item').eq(0).fadeIn('slow');
             }
         },5000);
     });

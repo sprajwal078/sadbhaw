@@ -1,0 +1,13 @@
+1) our partners ko description dynamic banaunu cha
+2) our partners ko tabs lai reorder garna milcha ki nai?
+
+3) stories slider read more link to proper story
+4) limitting words on stories
+
+5) stories slider read more link to proper leaders profile
+6) limitting words on leaders profile
+
+7) Facebook and twitter feeds
+
+8) Our Impact - rotating numbers
+9) header bg needs to be changable
