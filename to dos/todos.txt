@@ -1,13 +1,13 @@
-1) our partners ko description dynamic banaunu cha
-2) our partners ko tabs lai reorder garna milcha ki nai?
+1) our partners ko description dynamic banaunu cha - done
+2) our partners ko tabs lai reorder garna milcha ki nai? -can be done
 
-3) stories slider read more link to proper story
-4) limitting words on stories
+3) stories slider read more link to proper story - done
+4) limitting words on stories - done
 
-5) stories slider read more link to proper leaders profile
-6) limitting words on leaders profile
+5) stories slider read more link to proper leaders profile - done
+6) limitting words on leaders profile -done (but hidden please look)
 
-7) Facebook and twitter feeds
+7) Facebook and twitter feeds - done (but need to make fb app for sadbhaw page both fb and twitter - but general idea has been implemented)
 
-8) Our Impact - rotating numbers
-9) header bg needs to be changable
+8) Our Impact - rotating numbers - will take time can.
+9) header bg needs to be changable - can be done (next phase)

@@ -56,7 +56,8 @@
                 <div class="media"> 
                   <div class="media-body"> 
                     <h3 class="media-heading"><?php the_title()?></h3>
-                    <?php the_content()?> <a href="#">read more</a>
+                    <?php $content = get_the_content(); echo wp_trim_words( $content, 15, '...' );?> <br>
+                      <a href="<?php the_permalink()?>">read more</a>
                   </div> 
                   <div class="media-right"> 
                     <a href="#"> 
@@ -97,8 +98,16 @@
             <div class="col-md-12">
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="youtube"><?php the_field('youtube')?></div>
-                <div role="tabpanel" class="tab-pane" id="facebook">Facebook</div>
-                <div role="tabpanel" class="tab-pane" id="twitter">Twitter</div>
+                <div role="tabpanel" class="tab-pane" id="facebook"><div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/20531316728/posts/10154009990506729/" class="fb-xfbml-parse-ignore">Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on&nbsp;<a href="https://www.facebook.com/20531316728/posts/10154009990506729/">Thursday, August 27, 2015</a></blockquote></div>
+                    <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1519539795026213";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script></div>
+                <div role="tabpanel" class="tab-pane" id="twitter"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New on Amazon Alexa! Use the Twitter Reader skill to hear trends, top Tweets, notifications &amp; more! Just <a href="https://twitter.com/hashtag/AskAlexa?src=hash">#AskAlexa</a>. <a href="https://t.co/BvXRS4NiQu">pic.twitter.com/BvXRS4NiQu</a></p>&mdash; Twitter (@twitter) <a href="https://twitter.com/twitter/status/774276250407886848">September 9, 2016</a></blockquote>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
               </div>              
             </div>
           
@@ -120,7 +129,7 @@
                   <div class="profile-image"><img src="<?php echo $image['url']?>" alt="sarah stone"></div>
                   <div class="item-info-wrap profile-info-wrap">
                    <div class="profile-info">
-                    <h3 class="name"><?php the_sub_field('title')?></h3>
+                    <h3 class="name counter_rotate_number"><?php the_sub_field('title')?></h3>
                     <div class="position"></div>
                     <div class="description"><?php the_sub_field('text')?></div>
                    </div>
@@ -164,7 +173,8 @@
                 <div class="detail">
                   <h3><?php the_title()?></h3>
                   <p>
-                    <?php the_content()?><a href="#"> read more</a>
+                    <?php $content = get_the_content(); echo wp_trim_words( $content, 15, '...' );?>
+                      <a href="<?php the_permalink()?>"> read more</a>
                   </p>
                 </div>
               </div>
@@ -189,9 +199,20 @@
           <div class="vc_column-inner ">
            <div class="wpb_wrapper">
             <div class="iw-heading   style4  center-text">
+                <?php  $partner_info = generate_query(array( 'post_type' => 'general-info','meta_query'	=> array(
+                    array(
+                        'key'		=> 'info_for',
+                        'value'		=> 'partner',
+                        'compare'	=> '='
+                    )
+                ),'numberposts'	=> 1, ));?>
              <h3 class="iwh-title" style="font-size:40px">Our Partners</h3>
              <div class="iwh-sub-title">
-              Sadbhaw is a unique model of Private-Public Partnership to make difference. Many individuals and entities have joined to educate the rural village children.
+                 <?php if( $partner_info->have_posts() ) :
+                 while ( $partner_info->have_posts() ) : $partner_info->the_post();
+                     the_content();
+                 ?>
+                 <?php endwhile;wp_reset_postdata();endif;?>
              </div>
 
              <!--get the category of partners-->

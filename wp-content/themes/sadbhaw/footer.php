@@ -57,6 +57,7 @@
     <script src="<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/js/jquery.parallax-1.1.3.js"></script>
     <script src="<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/js/jquery.gallery.js"></script>
     <script src="<?php echo site_url()?>/wp-content/plugins/infunding/assets/js/owl.carousel.min.js"></script>
+    <script src="<?php echo site_url()?>/wp-content/themes/sadbhaw/js/animatejs/jquery.counterup.min.js"></script>
 <style>
     .tp-thumbs{
         display: none;
