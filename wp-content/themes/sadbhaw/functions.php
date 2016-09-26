@@ -65,12 +65,19 @@ function list_terms_by_post_type($taxonomy = 'category',$post_type = 'post'){
     foreach($posts as $p){
         //get all terms of your taxonomy for each type
         $ts = wp_get_object_terms($p->ID,$taxonomy);
+
         foreach ( $ts as $t ) {
+            $order = get_field('order', $t->taxonomy.'_'.$t->term_id);
+
             if (!in_array($t,$terms)){ //only add this term if its not there yet
-                $terms[] = $t;
+                $terms[$order] = $t;
             }
+
         }
+
     }
+
+    ksort($terms);
     wp_reset_postdata();
     return $terms;
 }

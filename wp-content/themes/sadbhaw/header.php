@@ -114,9 +114,9 @@
 		<script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>
 	<?php wp_head(); ?>
 </head>
-<body id="page-top" class="home page page-id-725 page-parent page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php wpb-js-composer js-comp-ver-4.12 vc_responsive">
+<body id="page-top" class="home page page-id-725 page-parent page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php wpb-js-composer js-comp-ver-4.12 vc_responsive down">
 <div class="wrapper ">
-	<div class="header header-default header-sticky ">
+	<div class="header header-default header-sticky clone">
 		<div role="navigation" class="navbar navbar-default navbar-bg-light">
 			<div class="container">
 				<div class="row">

@@ -129,7 +129,7 @@
                   <div class="profile-image"><img src="<?php echo $image['url']?>" alt="sarah stone"></div>
                   <div class="item-info-wrap profile-info-wrap">
                    <div class="profile-info">
-                    <h3 class="name counter_rotate_number"><?php the_sub_field('title')?></h3>
+                    <h3 class="name Count"><?php the_sub_field('title')?></h3>
                     <div class="position"></div>
                     <div class="description"><?php the_sub_field('text')?></div>
                    </div>
@@ -146,48 +146,70 @@
        </div>
       </div>
 
-      <!-- leaders profile -->
-      <div class="vc_row wpb_row vc_row-fluid vc_custom_1469676508172 vc_row-has-fill leaders-profile" style="background:none!important;position:relative;margin-left:0;margin-right:0;background-size:100% auto">
-       <div class="container">
-        <div class="row">
-         <div class="wpb_column vc_column_container vc_col-sm-12">
-          <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Leaders Profile</h3></div>
-          <div class="col-md-10 col-md-offset-1 profile-wrap">
-            <div class="row">
-                <?php
-                $leaders = generate_query(
-                    array(
-                        'post_type' => 'leader',
-                        'posts_per_page'	=> -1,
-                        'orderby'   => 'menu_order',
-                        'order' => 'ASC')
-                );?>
-              <!-- item1 -->
-                <?php if( $leaders->have_posts() ) :
-                while ( $leaders->have_posts() ) : $leaders->the_post();
-                ?>
-              <div class="col-md-6 profile-item">
-                <figure>
-                  <img src="<?php the_post_thumbnail_url()?>" alt="img">
-                </figure>
-                <div class="detail">
-                  <h3><?php the_title()?></h3>
-                  <p>
-                    <?php $content = get_the_content(); echo wp_trim_words( $content, 35, '...' );?>
-                      <a href="<?php the_permalink()?>"> read more</a>
-                  </p>
-                </div>
-              </div>
-                <?php endwhile;wp_reset_postdata();endif;?>
-            </div>
+         <div class="vc_row wpb_row vc_row-fluid vc_custom_1469676508172 vc_row-has-fill leaders-profile" style="background:none!important;position:relative;margin-left:0;margin-right:0;background-size:100% auto">
+             <div class="container">
+                 <div class="row">
+                     <div class="wpb_column vc_column_container vc_col-sm-12">
+                         <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Leaders Profile</h3></div>
+                         <div class="col-md-10 col-md-offset-1 profile-wrap">
+                             <div class="row">
+                                 <?php
+                                 $leaders = generate_query(
+                                     array(
+                                         'post_type' => 'leader',
+                                         'posts_per_page'	=> -1,
+                                         'orderby'   => 'menu_order',
+                                         'order' => 'ASC')
+                                 );?>
+                                 <!-- item1 -->
+                                 <?php if( $leaders->have_posts() ) :
+                                     while ( $leaders->have_posts() ) : $leaders->the_post();
+                                         ?>
+                                         <div class="col-md-6 profile-item">
+                                             <figure>
+                                                 <img src="<?php the_post_thumbnail_url()?>" alt="img">
+                                             </figure>
+                                             <div class="detail">
+                                                 <h3><?php the_title()?></h3>
+                                                 <p>
+                                                     <?php $content = get_the_content(); echo wp_trim_words( $content, 35, '...' );?>
+                                                     <a href="<?php the_permalink()?>"> read more</a>
+                                                 </p>
+                                             </div>
+                                         </div>
+                                     <?php endwhile;wp_reset_postdata();endif;?>
+                             </div>
 
 
-          </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
          </div>
-        </div>
-       </div>
-      </div>
-      <div class="vc_row wpb_row vc_row-fluid theme-bg vc_custom_1454496271895 vc_row-has-fill partners" style="margin-left:0;margin-right:0;background-size:100% auto">
+
+      <!-- leaders profile -->
+         <div class="vc_row wpb_row vc_row-fluid vc_custom_1451359398429 our-impacts" style="margin-left:0;margin-right:0;background-size:100% auto;">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-md-10 col-md-offset-1">
+                         <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                             <?php  $home_donate = generate_query(array( 'post_type' => 'general-info','meta_query'	=> array(
+                                 array(
+                                     'key'		=> 'info_for',
+                                     'value'		=> 'homedonate',
+                                     'compare'	=> '='
+                                 )
+                             ),'numberposts'	=> 1, ));?>
+                             <?php if( $home_donate->have_posts() ) :
+                                 while ( $home_donate->have_posts() ) : $home_donate->the_post();?>
+                                     <a href="#"><img src="<?php echo the_post_thumbnail_url();?>"/></a>
+                                 <?php endwhile;wp_reset_postdata();endif;?>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+      <div class="vc_row wpb_row vc_row-fluid  vc_custom_1454496271895  partners" style="color:black;margin-left:0;margin-right:0;background-size:100% auto">
        <div class="container">
         <div class="row">
          <div class="wpb_column vc_column_container vc_col-sm-2">
@@ -198,7 +220,7 @@
          <div class="wpb_column vc_column_container vc_col-sm-8">
           <div class="vc_column-inner ">
            <div class="wpb_wrapper">
-            <div class="iw-heading   style4  center-text">
+            <div class="center-text">
                 <?php  $partner_info = generate_query(array( 'post_type' => 'general-info','meta_query'	=> array(
                     array(
                         'key'		=> 'info_for',

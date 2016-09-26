@@ -5,7 +5,7 @@
 4) limitting words on stories - done
 
 5) stories slider read more link to proper leaders profile - done
-6) limitting words on leaders profile -done (but hidden please look)
+6) limitting words on leaders profile -done
 
 7) Facebook and twitter feeds - done (but need to make fb app for sadbhaw page both fb and twitter - but general idea has been implemented)
 
@@ -15,9 +15,9 @@
 
 New TO DOs after meeting on 9/25/2016
 
-1) Tabs Reordering - Subash
-2) New Section after leaders profile - Subash/Prajwal
-3) Make Team Leaders section white bg - Prajwal
-4) Top Nav make it sticky all the time - Subash/Prajwal
+1) Tabs Reordering - Subash - done
+2) New Section after leaders profile - Subash/Prajwal - done
+3) Make Team Leaders section white bg - Prajwal - done
+4) Top Nav make it sticky all the time - Subash/Prajwal - done
 5) Impacts section rolling numbers - Subash
 6) An Initiation of HCI logo - Prajwal

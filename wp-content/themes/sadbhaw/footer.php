@@ -68,6 +68,7 @@
 </style>
 <script>
     $(document).ready(function() {
+        var animate_done = false;
         //for stories slider
         setInterval(function(){
             var showm_item = $('.slide-item:visible');
@@ -83,6 +84,27 @@
                 $('.slide-item').eq(0).fadeIn('slow');
             }
         },5000);
+
+        $( document ).scroll(function(e) {
+            if($('.our-impacts').position().top <= $(document).scrollTop() + 100){
+                if(!animate_done){
+                    animate_done = true;
+                    $('.Count').each(function () {
+                        var $this = $(this);
+                        jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                            duration: 3000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.ceil(this.Counter));
+                            }
+                        });
+                    });
+                }
+
+            }
+            e.stopPropagation();
+            $('body').addClass('down');
+        });
     });
 </script>
 <?php wp_footer(); ?>
