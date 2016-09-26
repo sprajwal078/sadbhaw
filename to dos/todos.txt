@@ -11,3 +11,13 @@
 
 8) Our Impact - rotating numbers - will take time can.
 9) header bg needs to be changable - can be done (next phase)
+
+
+New TO DOs after meeting on 9/25/2016
+
+1) Tabs Reordering - Subash
+2) New Section after leaders profile - Subash/Prajwal
+3) Make Team Leaders section white bg - Prajwal
+4) Top Nav make it sticky all the time - Subash/Prajwal
+5) Impacts section rolling numbers - Subash
+6) An Initiation of HCI logo - Prajwal

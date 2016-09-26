@@ -38,7 +38,7 @@
       );?>
       <div class="container ">
        <div class="row">
-        <div class="col-md-6 col-sm-3 footer-left stories">          
+        <div class="col-md-6 col-sm-3 footer-left stories">
           <div class="center-text">
             <h3 class="iwh-title" style="font-size:40px">Stories</h3>
           </div>
@@ -53,23 +53,23 @@
              <?php }
              ?>
               <div class="">
-                <div class="media"> 
-                  <div class="media-body"> 
+                <div class="media">
+                  <div class="media-body">
                     <h3 class="media-heading"><?php the_title()?></h3>
-                    <?php $content = get_the_content(); echo wp_trim_words( $content, 15, '...' );?> <br>
+                    <?php $content = get_the_content(); echo wp_trim_words( $content, 30, '...' );?> <br>
                       <a href="<?php the_permalink()?>">read more</a>
-                  </div> 
-                  <div class="media-right"> 
-                    <a href="#"> 
+                  </div>
+                  <div class="media-right">
+                    <a href="#">
                       <img alt="64x64" class="media-object" data-src="holder.js/64x64" src="<?php echo $image['url']?>" data-holder-rendered="true" width="100%">
-                    </a> 
-                  </div> 
+                    </a>
+                  </div>
                 </div>
               </div>
               <?php endwhile;wp_reset_postdata();endif;?>
               </div>
           </div>
-          
+
         </div>
         <div class="col-md-6 col-sm-6 footer-right social-tabs">
           <div class="center-text">
@@ -91,7 +91,7 @@
                 <a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab">
                   <i class="fa fa-twitter"></i>
                 </a>
-              </li>              
+              </li>
             </ul>
 
           <!-- Tab panes -->
@@ -108,9 +108,9 @@
                         }(document, 'script', 'facebook-jssdk'));</script></div>
                 <div role="tabpanel" class="tab-pane" id="twitter"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New on Amazon Alexa! Use the Twitter Reader skill to hear trends, top Tweets, notifications &amp; more! Just <a href="https://twitter.com/hashtag/AskAlexa?src=hash">#AskAlexa</a>. <a href="https://t.co/BvXRS4NiQu">pic.twitter.com/BvXRS4NiQu</a></p>&mdash; Twitter (@twitter) <a href="https://twitter.com/twitter/status/774276250407886848">September 9, 2016</a></blockquote>
                     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-              </div>              
+              </div>
             </div>
-          
+
         </div>
        </div>
       </div>
@@ -140,7 +140,7 @@
               </div>
               <?php endwhile;endif;?>
            </div>
-            
+
           </div>
         </div>
        </div>
@@ -173,15 +173,15 @@
                 <div class="detail">
                   <h3><?php the_title()?></h3>
                   <p>
-                    <?php $content = get_the_content(); echo wp_trim_words( $content, 15, '...' );?>
+                    <?php $content = get_the_content(); echo wp_trim_words( $content, 35, '...' );?>
                       <a href="<?php the_permalink()?>"> read more</a>
                   </p>
                 </div>
               </div>
                 <?php endwhile;wp_reset_postdata();endif;?>
             </div>
-            
-            
+
+
           </div>
          </div>
         </div>
@@ -254,7 +254,7 @@
                   <?php endwhile;wp_reset_postdata();endif;?>
                    </div>
                   <?php $i++;}?>
-                 </div>              
+                 </div>
                </div>
              <?php }else {
               echo "no partners category found";
