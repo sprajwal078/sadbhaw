@@ -1,23 +1,16 @@
-1) our partners ko description dynamic banaunu cha - done
-2) our partners ko tabs lai reorder garna milcha ki nai? -can be done
+Latest Todos
 
-3) stories slider read more link to proper story - done
-4) limitting words on stories - done
+- Home page - social feeds youtube, fb, twitter [focus on this later]
+- bug fix -> consistent menu on all pages
+- About us -> About Sadhbaw Scholarship
+- About us -> Selection process
+- News and updates -> Events
+- News and updates -> Campaign for Fund Raising
+- campaign detail page
+- Downloads page
+- Stories
+- Donate page
+- Donate page Esewa integration
+- Contact Us page
 
-5) stories slider read more link to proper leaders profile - done
-6) limitting words on leaders profile -done
-
-7) Facebook and twitter feeds - done (but need to make fb app for sadbhaw page both fb and twitter - but general idea has been implemented)
-
-8) Our Impact - rotating numbers - will take time can.
-9) header bg needs to be changable - can be done (next phase)
-
-
-New TO DOs after meeting on 9/25/2016
-
-1) Tabs Reordering - Subash - done
-2) New Section after leaders profile - Subash/Prajwal - done
-3) Make Team Leaders section white bg - Prajwal - done
-4) Top Nav make it sticky all the time - Subash/Prajwal - done
-5) Impacts section rolling numbers - Subash
-6) An Initiation of HCI logo - Prajwal
+(Advised to make pages as per the mockups)
