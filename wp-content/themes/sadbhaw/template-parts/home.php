@@ -19,7 +19,7 @@
           <div class="vc_column-inner ">
            <div class="wpb_wrapper">
             <div class="iw-heading   style4  center-text">
-             <h3 class="iwh-title" style="font-size:40px">Our Goals</h3>
+             <h3 class="iwh-title" style="font-size:40px">Our Goal</h3>
              <div class="iwh-sub-title"><?php the_field('our_goals')?></div>
             </div>
            </div>
@@ -150,7 +150,7 @@
              <div class="container">
                  <div class="row">
                      <div class="wpb_column vc_column_container vc_col-sm-12">
-                         <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Leaders Profile</h3></div>
+                         <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Ambassadors</h3></div>
                          <div class="col-md-10 col-md-offset-1 profile-wrap">
                              <div class="row">
                                  <?php
@@ -164,6 +164,7 @@
                                  <!-- item1 -->
                                  <?php if( $leaders->have_posts() ) :
                                      while ( $leaders->have_posts() ) : $leaders->the_post();
+                                         the_sub_field('location');
                                          ?>
                                          <div class="col-md-6 profile-item">
                                              <figure>
@@ -175,12 +176,13 @@
                                                      <?php $content = get_the_content(); echo wp_trim_words( $content, 35, '...' );?>
                                                      <a href="<?php the_permalink()?>"> read more</a>
                                                  </p>
+                                                 <p> Location: <?php the_field('location');?></p>
                                              </div>
                                          </div>
                                      <?php endwhile;wp_reset_postdata();endif;?>
                              </div>
-
-
+                             <h5 style="font-size: 20px;">Want to be an ambassador ?</h5>
+                             <button data-id="389" data-external-link="" class="btn btn-primary"><a style="color: white;" href="<?php echo site_url().'/get-engaged/'?>" >Join Us</a></button>
                          </div>
                      </div>
                  </div>

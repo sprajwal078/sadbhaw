@@ -33,8 +33,8 @@
    </div>
    <section class="campaing-listing infunding_style2">
     <?php if( $stories->have_posts() ) :
-     while ( $stories->have_posts() ) : $stories->the_post();
-      ?>
+       while ( $stories->have_posts() ) : $stories->the_post();
+        ?>
       <div class="post_item">
        <div class="item-info">
         <div class="row">

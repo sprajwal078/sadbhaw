@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p>Copyright <?php echo date('Y'); ?> © <a href='<?php echo site_url()?>' class='theme-color'>Sadbhaw</a>. All rights reserved.</p>
+                        <p>Copyright <?php echo date('Y'); ?> © <a href='http://himalayanclimate.org' target="_blank" class='theme-color'>Hci</a>. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 col-sm-6 back-to-top-container">
                         <nav class="iw-main-nav">
@@ -86,24 +86,26 @@
         },5000);
 
         $( document ).scroll(function(e) {
-            if($('.our-impacts').position().top <= $(document).scrollTop() + 100){
-                if(!animate_done){
-                    animate_done = true;
-                    $('.Count').each(function () {
-                        var $this = $(this);
-                        jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                            duration: 3000,
-                            easing: 'swing',
-                            step: function () {
-                                $this.text(Math.ceil(this.Counter));
-                            }
+            if($('.our-impacts').length > 0 ) {
+                if ($('.our-impacts').position().top <= $(document).scrollTop() + 100) {
+                    if (!animate_done) {
+                        animate_done = true;
+                        $('.Count').each(function () {
+                            var $this = $(this);
+                            jQuery({Counter: 0}).animate({Counter: $this.text()}, {
+                                duration: 3000,
+                                easing: 'swing',
+                                step: function () {
+                                    $this.text(Math.ceil(this.Counter));
+                                }
+                            });
                         });
-                    });
-                }
+                    }
 
+                }
             }
-            e.stopPropagation();
             $('body').addClass('down');
+            e.stopPropagation();
         });
     });
 </script>
