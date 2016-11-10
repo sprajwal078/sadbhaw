@@ -13,6 +13,7 @@
           while( $generalQuery->have_posts() ): $generalQuery->the_post();
   ?>
   <div class="page-heading">
+     
    <div class="container">
     <div class="page-title">
      <div class="iw-heading-title"><h1><?php the_title(); ?></h1>

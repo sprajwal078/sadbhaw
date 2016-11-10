@@ -40,7 +40,8 @@
         <div class="row">
          <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="image">
-           <img src="<?php echo the_post_thumbnail_url()?>" alt=""/>
+           <?php $image = get_field('image');?>
+           <img src="<?php echo $image['url']?>" alt=""/>
           </div>
          </div>
          <div class="col-md-8 col-sm-12 col-xs-12">

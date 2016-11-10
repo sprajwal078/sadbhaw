@@ -3,14 +3,9 @@
   *Template name: About Sadbhaw
   */
   get_header(); ?>
-
-  <div class="page-heading">
-   <div class="container">
-    <div class="page-title">
-     <div class="iw-heading-title"><h1>About Us</h1></div> </div>
-   </div>
+  <div class="feature_image">
+    <img src="<?php the_post_thumbnail_url()?>"/>
   </div>
-
   <div class="container">
       <div class="vc_row wpb_row vc_row-fluid missions" style="">
 

@@ -347,3 +347,7 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   margin-left: -12px;
   margin-right: -41px;
 }
+
+.feature_image{
+  padding-bottom: 100px;
+}
