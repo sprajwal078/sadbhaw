@@ -171,18 +171,23 @@
                                                  <img src="<?php the_post_thumbnail_url()?>" alt="img">
                                              </figure>
                                              <div class="detail">
-                                                 <h3><?php the_title()?></h3>
+                                                 <h3>
+                                                    <?php the_title()?>
+                                                    <small>Location: <?php the_field('location');?></small>
+                                                 </h3>
                                                  <p>
                                                      <?php $content = get_the_content(); echo wp_trim_words( $content, 35, '...' );?>
                                                      <a href="<?php the_permalink()?>"> read more</a>
                                                  </p>
-                                                 <p> Location: <?php the_field('location');?></p>
                                              </div>
                                          </div>
                                      <?php endwhile;wp_reset_postdata();endif;?>
                              </div>
-                             <h5 style="font-size: 20px;">Want to be an ambassador ?</h5>
-                             <button data-id="389" data-external-link="" class="btn btn-primary"><a style="color: white;" href="<?php echo site_url().'/get-engaged/'?>" >Join Us</a></button>
+                             <p class="text-center" style="font-size: 18px;">
+                                Want to be an ambassador ?
+                                <a href="<?php echo site_url().'/get-engaged/'?>" class="get-engaged">Get Engaged</a>
+                             </p>
+
                          </div>
                      </div>
                  </div>
@@ -190,26 +195,26 @@
          </div>
 
       <!-- leaders profile -->
-         <div class="vc_row wpb_row vc_row-fluid vc_custom_1451359398429 our-impacts" style="margin-left:0;margin-right:0;background-size:100% auto;">
-             <div class="container">
+         <div class="vc_row wpb_row vc_row-fluid vc_custom_1451359398429" style="margin-left:0;margin-right:0;background-size:100% auto;">
+             <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                 <?php  $home_donate = generate_query(array( 'post_type' => 'general-info','meta_query'	=> array(
+                     array(
+                         'key'		=> 'info_for',
+                         'value'		=> 'homedonate',
+                         'compare'	=> '='
+                     )
+                 ),'numberposts'	=> 1, ));?>
+                 <?php if( $home_donate->have_posts() ) :
+                     while ( $home_donate->have_posts() ) : $home_donate->the_post();?>
+                         <a href="#"><img class="fill" src="<?php echo the_post_thumbnail_url();?>"/></a>
+                     <?php endwhile;wp_reset_postdata();endif;?>
+             </div>
+             <!-- <div class="container">
                  <div class="row">
                      <div class="col-md-10 col-md-offset-1">
-                         <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                             <?php  $home_donate = generate_query(array( 'post_type' => 'general-info','meta_query'	=> array(
-                                 array(
-                                     'key'		=> 'info_for',
-                                     'value'		=> 'homedonate',
-                                     'compare'	=> '='
-                                 )
-                             ),'numberposts'	=> 1, ));?>
-                             <?php if( $home_donate->have_posts() ) :
-                                 while ( $home_donate->have_posts() ) : $home_donate->the_post();?>
-                                     <a href="#"><img src="<?php echo the_post_thumbnail_url();?>"/></a>
-                                 <?php endwhile;wp_reset_postdata();endif;?>
-                         </div>
                      </div>
                  </div>
-             </div>
+             </div> -->
          </div>
       <div class="vc_row wpb_row vc_row-fluid  vc_custom_1454496271895  partners" style="color:black;margin-left:0;margin-right:0;background-size:100% auto">
        <div class="container">

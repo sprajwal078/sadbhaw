@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p>Copyright <?php echo date('Y'); ?> © <a href='http://himalayanclimate.org' target="_blank" class='theme-color'>Hci</a>. All rights reserved.</p>
+                        <p>Copyright <?php echo date('Y'); ?> © <a href='http://himalayanclimate.org' target="_blank" class='theme-color'>HCI</a>. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 col-sm-6 back-to-top-container">
                         <nav class="iw-main-nav">

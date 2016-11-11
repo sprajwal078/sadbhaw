@@ -16,3 +16,23 @@ Latest Todos
 - Contact Us page
 
 (Advised to make pages as per the mockups)
+
+
+Add new menu items - Get Engaged, Partners
+Rename News & Updates rename to Events
+	News and Updates submenu
+	|_
+		news & updates
+	|_
+		Fundraising Campaigns
+	No changes on the pages whatsover
+
+Home Page story section remove pic [do this later]
+
+rename goals to our goal
+rename copyright sadbhaw to hci and link to http://www.himalayanclimate.org/
+remove paratners from home - > move the tab to partners page
+In place of partners home place editable loremm ipsum paragraph
+In partner page add a section "Become a Partner" and add relevant form
+Leader Profile -> change to Ambassadors and add 1 more section below leader name for location
+	Leader profile ko bottom ma "Want to be an ambassador? Join Us (link)"

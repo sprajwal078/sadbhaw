@@ -23,7 +23,7 @@
     <?php if( $events->have_posts() ) :
       while ( $events->have_posts() ) : $events->the_post();
     ?>
-    <div class="col-sm-6 col-md-4 col-xs-12 post_item">
+    <div class="col-sm-6 col-md-4 col-xs-12 post_item events">
      <div class="item-info">
       <div class="image">
        <img src="<?php echo the_post_thumbnail_url();?>" alt=""/>
@@ -52,4 +52,3 @@
    </div>
   <?php
   get_footer();?>
-  

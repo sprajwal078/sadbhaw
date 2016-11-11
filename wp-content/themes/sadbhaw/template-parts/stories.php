@@ -35,16 +35,16 @@
     <?php if( $stories->have_posts() ) :
        while ( $stories->have_posts() ) : $stories->the_post();
         ?>
-      <div class="post_item">
+      <div class="post_item col-md-10 col-md-offset-1">
        <div class="item-info">
         <div class="row">
-         <div class="col-md-4 col-sm-12 col-xs-12">
+         <div class="col-md-3 col-sm-12 col-xs-12">
           <div class="image">
            <?php $image = get_field('image');?>
            <img src="<?php echo $image['url']?>" alt=""/>
           </div>
          </div>
-         <div class="col-md-8 col-sm-12 col-xs-12">
+         <div class="col-md-9 col-sm-12 col-xs-12">
           <div class="campaign-info">
            <div class="campaign-text">
             <div class="campaign-title">
@@ -53,12 +53,14 @@
              </div>
              <div class="donate-btn iw-button-effect">
               <div class="donate-btn-effect">
-               <button data-id="389" data-external-link="" class="iw-capital donate theme-bg enable"><span data-hover="Join Us" class="effect">Join Us</span></button>
+               <button data-id="389" onclick="window.location='<?php echo site_url().'/donate/'?>';"  data-external-link="<?php echo site_url().'/donate/'?>" class="iw-capital donate theme-bg enable"><span data-hover="Donate" class="effect">Donate</span></button>
               </div>
              </div>
              <div style="clear: both;"></div>
             </div>
-            <div class="campaign-des"><?php the_content()?>
+            <div class="campaign-des">
+              <?php $content = get_the_content(); echo wp_trim_words( $content, 75, '...' );?>
+              <a href="<?php the_permalink()?>"> read more</a>
             </div>
            </div>
           </div>

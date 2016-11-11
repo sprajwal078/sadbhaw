@@ -14,10 +14,10 @@
   <div class="page-heading">
    <div class="container">
     <div class="page-title">
-     <div class="iw-heading-title"><h1>Events</h1></div> </div>
+     <div class="iw-heading-title"><h1>Downloads</h1></div> </div>
    </div>
   </div>
-  <div class="container">
+  <div class="container downloads">
    <div class="contents-main" id="contents-main">
     <div class="container">
      <div class="row">
@@ -60,8 +60,8 @@
                     </div>
                     <div style="clear: both;"></div>
                    </div>
-                   <div class="campaign-des"><?php the_content();?>
-                   </div>
+                     <!-- <div class="campaign-des"><?php // the_content();?>
+                     </div> -->
                   </div>
                  </div>
                 </div>
@@ -83,4 +83,3 @@
     </div>
    </div>
   </div>
-  

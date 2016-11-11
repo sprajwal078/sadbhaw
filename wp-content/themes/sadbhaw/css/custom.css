@@ -41,6 +41,9 @@ body.down .header.clone, body.down .iw-header-v2-menu.header-sticky.clone,
 .header.header-sticky.clone .iw-menu-default .iw-nav-menu > li > a strong{
   color: rgba(0,0,0,.9)!important;
 }
+.header.header-sticky.clone .iw-menu-default .iw-nav-menu > li:not(.active):hover > a strong{
+  color: white !important;
+}
 .header .iw-menu-default .iw-nav-menu > li .sub-menu  li a{
   color: rgba(0,0,0,1)
 }
@@ -73,7 +76,7 @@ body.down .header .iw-menu-default .iw-nav-menu > li.active > a{
 body.down .header .iw-menu-default .iw-nav-menu > li.active > a:hover{
   background: #002e5f;
 }
-body.down .header .iw-menu-default .iw-nav-menu > li:hover > a strong{
+body.down .header .iw-menu-default .iw-nav-menu > li:hover > a:hover strong{
   color: white !important;
 }
 
@@ -96,6 +99,9 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   display: none;
 }
 
+.fill{
+  width: 100%;
+}
 .theme-color-hover:hover, .widget_categories ul li a:hover, .widget_archive ul li a:hover, .widget_meta ul li a:hover, .widget_recent_comments ul li a:hover, .recent-blog-post-detail .recent-blog-post-title > a:hover, .shortcode_widget .iw-tabs .iw-tab-item .iw-tab-title, .iw-category .more-link, .iw-category .tags-links > a, ul.comment_list .name-cmt, .author-title, ul.comment_list .comment-reply-link, .post-info-category a:hover, .post-content-right .post-info span:hover, .post-content-right .post-info span:hover a, .post-content-right .post-info span:hover i, .iw-category .tags-links > a, .search-results .main-content article .entry-header .entry-meta time, .search-results .main-content article .tags-links a, .search-results .main-content article .entry-header .author a, .header.header-version-2 .iw-button-toggle i, .blog-author .authorDetails .author-title a, .header.header-version-4 .iw-menu-default .iw-nav-menu > li > a strong span, .header .iw-menu-default .iw-nav-menu > li .sub-menu li a:hover, .slide-container.slider-2 .tp-bullets .tp-bullet.selected:after, .header .iw-menu-default .iw-nav-menu li.current-menu-parent .sub-menu li.selected.active a, .iw-footer-v2-widget .footer-post-campaign a:hover{
   color: #002e5f;
 }
@@ -254,9 +260,23 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 .profile-item h3{
   margin-top: 0;
   border-bottom: 2px solid gray;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
-
+.profile-item h3 small{
+  display: block;
+  margin-top: 5px
+}
+.get-engaged{
+  padding: 5px 15px;
+  border: 1px solid #002e5f;
+  color: #002e5f;
+  margin-left: 20px;
+  transition: all .3s;
+}
+.get-engaged:hover{
+  color: white;
+  background: #002e5f;
+}
 /* .profile-item .detail p{
   max-height: 145px;
   overflow: hidden;
@@ -343,11 +363,73 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 }
 
 .social-tabs .tab-content{
-
   margin-left: -12px;
   margin-right: -41px;
 }
 
+/*about sadbhaw page*/
 .feature_image{
   padding-bottom: 100px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+.about-sadbhaw .missions .iwh-title{
+  font-size: 25px !important;
+}
+.about-sadbhaw .leaders-profile{
+  padding-top: 0;
+}
+.about-sadbhaw .profile-item img{
+  border-radius: 0;
+}
+.about-sadbhaw .leaders-profile .profile-item{
+  align-items: flex-start;
+}
+
+/*events page*/
+.campaing-listing .item-info .image img{
+  height: 200px;
+}
+.campaing-listing .item-info .campaign-text .campaign-des{
+  max-height: 250px;
+  overflow: hidden;
+}
+.campaing-listing .item-info .campaign-text{
+  box-shadow: 0px 0px 2px #838383;
+}
+.campaing-listing .item-info .campaign-text:hover{
+  box-shadow: box-shadow: 0px 0px 7px #535353;
+}
+
+/*fund raising*/
+.campaing-listing.infunding_style2 .item-info:hover{
+  box-shadow: none;
+}
+.campaing-listing.infunding_style2 .campaign-info{
+  padding-right: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.campaing-listing.infunding_style2 .item-info .campaign-text .campaign-title{
+  padding: 15px;
+}
+.campaing-listing.infunding_style2 .item-info .campaign-text .campaign-title h3{
+  transform: translatey(5px);
+}
+.funding .item-info img{
+  margin-top: 8px;
+}
+/*downloads*/
+.downloads .campaing-listing .item-info .campaign-text{
+  box-shadow: none;
+  padding: 0 10px;
+}
+/*others*/
+.page-title{
+  padding-top: 50px;
+}
+.page-heading{
+  background-image: url('../images/banner.jpg');
+  background-position: 0 0;
+  height: 300px;
 }

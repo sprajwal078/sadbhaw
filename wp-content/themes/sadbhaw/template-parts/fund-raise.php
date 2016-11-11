@@ -17,7 +17,7 @@
      <div class="iw-heading-title"><h1>Campaigns</h1></div> </div>
    </div>
   </div>
-  <div class="container">
+  <div class="container funding">
    <div class="wpb_wrapper">
     <div class="vc_row wpb_row vc_inner vc_row-fluid">
      <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -52,12 +52,14 @@
            </div>
            <div class="donate-btn iw-button-effect">
             <div class="donate-btn-effect">
-             <button data-id="389" data-external-link="" class="iw-capital donate theme-bg enable"><span data-hover="Join Us" class="effect">Join Us</span></button>
+              <button data-id="389" onclick="window.location='<?php echo site_url().'/get-engaged/'?>';"  data-external-link="<?php echo site_url().'/donate/'?>" class="iw-capital donate theme-bg enable"><span data-hover="Donate" class="effect">Join Us</span></button>
             </div>
            </div>
            <div style="clear: both;"></div>
           </div>
-          <div class="campaign-des"><?php the_content()?>
+          <div class="campaign-des">
+            <?php $content = get_the_content(); echo wp_trim_words( $content, 70, '...' );?>
+            <a href="<?php the_permalink()?>"> read more</a>
           </div>
          </div>
         </div>

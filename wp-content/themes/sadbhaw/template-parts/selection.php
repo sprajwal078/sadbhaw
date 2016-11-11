@@ -3,13 +3,15 @@
   *Template name: Selection Sadbhaw
   */
  get_header();?>
-
-  <div class="page-heading">
+  <div class="feature_image" style="background-image: url('<?php the_post_thumbnail_url()?>'); background-size: 100%">
+    <img src=""/>
+  </div>
+  <!-- <div class="page-heading">
    <div class="container">
     <div class="page-title">
      <div class="iw-heading-title"><h1>Selection Process</h1></div> </div>
    </div>
-  </div>
+  </div> -->
   <div class="container">
     <?php $args = array('post_type'=>'page',
                         'p'=>1826,
