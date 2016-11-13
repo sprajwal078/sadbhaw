@@ -4,7 +4,7 @@
   */
  get_header();
    include(locate_template('template-parts/slider-part.php')); ?>
-   <div class="contents-main" id="contents-main">
+   <div class="contents-main home-content" id="contents-main">
     <article id="post-725" class="post-725 page type-page status-publish hentry">
      <div class="entry-content">
       <div class="vc_row wpb_row vc_row-fluid theme-bg vc_custom_1454496271895 vc_row-has-fill our-goals" style="margin-left:0;margin-right:0;background-size:100% auto">
@@ -298,4 +298,4 @@
      </div>
     </article>
    </div>
-   <?php get_footer()?>
+<?php get_footer()?>

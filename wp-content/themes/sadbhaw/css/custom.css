@@ -5,11 +5,14 @@
 
 
 /* generals */
-html body{
+html body {
   font-family: 'Open Sans', sans-serif;
   color: rgba(0,0,0,.7);
+  font-size: 15px !important;
 }
-
+.iw-heading.style1 p.iwh-content{
+  font-size: 14px;
+}
 .theme-color{
   color:  white;
 }
@@ -287,6 +290,12 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 } */
 
 
+/*big image for donate home page*/
+.big-img.vc_custom_1451359398429{
+  margin-bottom: 35px !important;
+}
+
+
 /* partners */
 .partners.vc_custom_1454496271895{
   padding-top: 0 !important;
@@ -355,17 +364,32 @@ body.down .iw-nav-menu >li:hover>a strong:before{
     /* transform: translateY(0) */
   }
 }
-
-/* events listing */
-.campaing-listing .item-info .image img{
-  width: 100%;
-  max-height: 200px;
-}
-
 .social-tabs .tab-content{
   margin-left: -12px;
   margin-right: -41px;
 }
+
+/* events listing */
+.events{
+  padding-top: 102px;
+}
+.events .campaing-listing .item-info .image img{
+  width: 100%;
+  height: 300px;
+
+}
+.campaing-listing .item-info .campaign-text .campaign-des{
+  max-height: 250px;
+  overflow: hidden;
+}
+.campaing-listing .item-info .campaign-text{
+  box-shadow: 0px 0px 2px #838383;
+}
+.campaing-listing .item-info .campaign-text:hover{
+  box-shadow: box-shadow: 0px 0px 7px #535353;
+}
+
+
 
 /*about sadbhaw page*/
 .feature_image{
@@ -386,22 +410,18 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   align-items: flex-start;
 }
 
-/*events page*/
-.campaing-listing .item-info .image img{
-  height: 200px;
-}
-.campaing-listing .item-info .campaign-text .campaign-des{
-  max-height: 250px;
-  overflow: hidden;
-}
-.campaing-listing .item-info .campaign-text{
-  box-shadow: 0px 0px 2px #838383;
-}
-.campaing-listing .item-info .campaign-text:hover{
-  box-shadow: box-shadow: 0px 0px 7px #535353;
-}
-
 /*fund raising*/
+.campaing-listing .item-info .image img{
+  width: 100%;
+  height: 230px;
+  margin: 0;
+}
+.funding{
+  padding-top: 100px;
+}
+.funding .campaing-listing .item-info .image{
+  padding: 15px 0;
+}
 .campaing-listing.infunding_style2 .item-info:hover{
   box-shadow: none;
 }
@@ -419,7 +439,14 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 .funding .item-info img{
   margin-top: 8px;
 }
+.funding .donate-btn-effect{
+  margin: 0;
+    float: right;
+}
 /*downloads*/
+.downloads{
+  padding-top: 102px;
+}
 .downloads .campaing-listing .item-info .campaign-text{
   box-shadow: none;
   padding: 0 10px;
@@ -432,4 +459,14 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   background-image: url('../images/banner.jpg');
   background-position: 0 0;
   height: 300px;
+}
+/* stories-list*/
+.stories-list{
+  padding-top: 102px;
+}
+.stories-list .campaing-listing .item-info .image{
+  padding: 15px 0;
+}
+.stories-list .campaing-listing .item-info .image img{
+  max-height: 225px;
 }

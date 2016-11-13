@@ -12,7 +12,7 @@
         $('.iw-button-effect .effect').each(function () {
             $(this).attr('data-hover', $(this).text());
         });
-		
+
 		/** hash link scroll */
 		$('.wrapper a').live('click',function (e) {
 			var anchor = $(this).attr('href');
@@ -99,7 +99,7 @@
             }
             $el.val(qtya);
         }
-		
+
 		var owl = $(".product-detail .product-essential .owl-carousel");
 		owl.owlCarousel({
 			direction: $('body').hasClass('rtl') ? 'rtl' : 'ltr',
@@ -317,7 +317,7 @@
             paginationNumbers: false
         })
     }
-	
+
 	function navStyle4(){
 
 			var el = $('.header-version-4 .main-menu');
@@ -325,7 +325,7 @@
 				var trigger = el.find('.nav-trigger');
 				var menuItems = el.find('.iw-nav-menu > li');
 				var $body = $('body');
-				
+
 				menuItems.each(function() {
 					var $this = $(this);
 					$this.css({
@@ -337,14 +337,14 @@
 				trigger.find('span').css({
 					'-webkit-transition-delay': menuItems.length / 15 + 's, 0s' + menuItems.length/15 + 's',
 					'-moz-transition-delay': menuItems.length / 15 + 's, 0s' + menuItems.length/15 + 's',
-					'transition-delay': menuItems.length / 15 + 's, 0s' +	menuItems.length/15 + 's' 
+					'transition-delay': menuItems.length / 15 + 's, 0s' +	menuItems.length/15 + 's'
 				});
 				el.find('.header-donate-button').css({
 					'-webkit-transition-delay': (menuItems.length/2)/15 + 's',
 					'-moz-transition-delay': (menuItems.length/2)/15 + 's',
 					'transition-delay': (menuItems.length/2)/15 + 's'
 				});
-				
+
 				trigger.on('click', function(event) {
 					event.preventDefault();
 					$body.toggleClass('menu-activated');
@@ -385,17 +385,17 @@
             $('.profile-box.style5').removeClass('active');
             $(this).addClass('active');
         });
-		
+
 		$(".in-volunteer-contact select, .infunding-listing-page .filter-form select,.orderby, .widget select").select2();
-		
+
 		$('.in-volunteer-contact .wpcf7-list-item input[type=radio]').iCheck({
 			radioClass: 'iradio_flat'
 		});
 
         $('.iw-server-location-2 .map-picker .picker-icon').click(function (){
-			
+
             var parent = $(this).parent();
-			
+
             if (parent.hasClass('active')){
                 parent.removeClass('active');
             } else {
@@ -403,7 +403,7 @@
                 parent.addClass('active');
             }
         });
-        
+
 		$(".iw-button-toggle-header-v4").addClass('iw-button-toggle');
 		$(".icon-arrow").each(function(){
 			var click_icon_arrow = true;
@@ -440,9 +440,9 @@
 				}
 				$(this).removeClass('show_customer');
 				$click_button_togle = true;
-			}	
+			}
 		});
-		$(window).on("resize",function(){	
+		$(window).on("resize",function(){
 			if($(window).width() < 992){
 				if($click_button_togle){
 					$('.menu-default-menu-container, .menu-menu-with-icons-container').hide();
@@ -450,8 +450,8 @@
 			}else{
 				$('.menu-default-menu-container, .menu-menu-with-icons-container').show();
 			}
-			
-		});       
+
+		});
     });
 	/*window loaded */
 	$(window).on('load',function(){
@@ -462,6 +462,6 @@
      * Toggle button menu in mobile and table
      */
 
-    
+
 })(jQuery);
 

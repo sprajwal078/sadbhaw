@@ -11,19 +11,34 @@
           'order' => 'ASC')
     );
   ?>
-  <div class="page-heading">
+  <!-- <div class="page-heading">
    <div class="container">
     <div class="page-title">
      <div class="iw-heading-title"><h1>Events</h1></div> </div>
    </div>
-  </div>
-  <div class="container">
+  </div> -->
+  <div class="container events">
   <section class="campaing-listing infunding_style1">
+    <div class="wpb_wrapper">
+        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner vc_custom_1451981561873">
+                    <div class="wpb_wrapper">
+                        <div class="iw-heading   style1  center-text">
+                            <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
+                            <p class="iwh-content"><?php the_content(); ?> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
    <div class="row">
     <?php if( $events->have_posts() ) :
       while ( $events->have_posts() ) : $events->the_post();
     ?>
-    <div class="col-sm-6 col-md-4 col-xs-12 post_item events">
+    <div class="col-sm-6 col-md-4 col-xs-12 post_item">
      <div class="item-info">
       <div class="image">
        <img src="<?php echo the_post_thumbnail_url();?>" alt=""/>

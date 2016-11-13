@@ -11,12 +11,12 @@
           'order' => 'ASC')
   );
   ?>
-  <div class="page-heading">
+  <!-- <div class="page-heading">
    <div class="container">
     <div class="page-title">
      <div class="iw-heading-title"><h1>Campaigns</h1></div> </div>
    </div>
-  </div>
+  </div> -->
   <div class="container funding">
    <div class="wpb_wrapper">
     <div class="vc_row wpb_row vc_inner vc_row-fluid">
@@ -30,6 +30,7 @@
       </div>
      </div>
     </div>
+    <br>
    </div>
    <section class="campaing-listing infunding_style2">
     <?php if( $cam->have_posts() ) :
@@ -37,15 +38,16 @@
     ?>
     <div class="post_item">
      <div class="item-info">
-      <div class="row">
-       <div class="col-md-4 col-sm-12 col-xs-12">
-        <div class="image">
-         <img src="<?php echo the_post_thumbnail_url()?>" alt=""/>
+      <div class="row campaing-info">
+       <!-- <div class="col-md-4 col-sm-12 col-xs-12">
+       </div> -->
+       <div class="col-md-12 col-sm-12 col-xs-12 campaign-text row">
+        <div class="col-md-4">
+          <div class="image">
+           <img src="<?php echo the_post_thumbnail_url()?>" alt=""/>
+          </div>
         </div>
-       </div>
-       <div class="col-md-8 col-sm-12 col-xs-12">
-        <div class="campaign-info">
-         <div class="campaign-text">
+        <div class="col-md-8">
           <div class="campaign-title">
            <div class="title">
             <h3><a class="theme-color-hover" href="<?php the_permalink()?>"><?php the_title()?></a></h3>
@@ -61,7 +63,6 @@
             <?php $content = get_the_content(); echo wp_trim_words( $content, 70, '...' );?>
             <a href="<?php the_permalink()?>"> read more</a>
           </div>
-         </div>
         </div>
        </div>
       </div>
