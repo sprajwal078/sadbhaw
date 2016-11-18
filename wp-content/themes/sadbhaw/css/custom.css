@@ -470,3 +470,7 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 .stories-list .campaing-listing .item-info .image img{
   max-height: 225px;
 }
+
+.page-content{
+  margin-top: 150px !important;
+}

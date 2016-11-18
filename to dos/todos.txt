@@ -42,7 +42,7 @@ Latest Todos
 NEW CHANGES
 - fix navbar issue
 - number rollup and slider change randomly stops working
-- add team members
+- add team members [done]
 - events photos show in grid view and open on lightbox when clicked
 - body font size change to 15px [done]
 - about sadhbaw scholarship font color issue [done]

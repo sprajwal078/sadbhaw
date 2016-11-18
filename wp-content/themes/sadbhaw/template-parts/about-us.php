@@ -53,7 +53,7 @@
                                                               <?php
                                                               $leaders = generate_query(
                                                                   array(
-                                                                      'post_type' => 'leader',
+                                                                      'post_type' => 'team',
                                                                       'posts_per_page'  => -1,
                                                                       'orderby'   => 'menu_order',
                                                                       'order' => 'ASC')
@@ -61,7 +61,6 @@
                                                               <!-- item1 -->
                                                               <?php if( $leaders->have_posts() ) :
                                                                   while ( $leaders->have_posts() ) : $leaders->the_post();
-                                                                      the_sub_field('location');
                                                                       ?>
                                                                       <div class="col-md-6 profile-item">
                                                                           <figure>
@@ -70,7 +69,7 @@
                                                                           <div class="detail">
                                                                               <h3>
                                                                                  <?php the_title()?>
-                                                                                 <small>Location: <?php the_field('location');?></small>
+                                                                                
                                                                               </h3>
                                                                               <p>
                                                                                   <?php $content = get_the_content(); echo wp_trim_words( $content, 15, '...' );?>
