@@ -27,7 +27,7 @@ Latest Todos
 		Fundraising Campaigns
 	No changes on the pages whatsover
 
-- Home Page story section remove pic [do this later]
+- Home Page story section remove pic[done]
 
 - rename goals to our goal
 - rename copyright sadbhaw to hci and link to http://www.himalayanclimate.org/
