@@ -59,7 +59,7 @@
                     <?php $content = get_the_content(); echo wp_trim_words( $content, 30, '...' );?> <br>
                       <a href="<?php the_permalink()?>">read more</a>
                   </div>
-                  <div class="media-right">
+                  <div class="media-right hidden">
                     <a href="#">
                       <img alt="64x64" class="media-object" data-src="holder.js/64x64" src="<?php echo $image['url']?>" data-holder-rendered="true" width="100%">
                     </a>
