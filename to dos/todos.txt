@@ -1,8 +1,6 @@
 Latest Todos
 
 - Home page - social feeds youtube, fb, twitter [focus on this later]
-- bug fix -> consistent menu on all pages (done)
-- About us -> About Sadhbaw Scholarship (done)
 - About us -> Selection process
 - News and updates -> Events (done)
 - News and updates -> Campaign for Fund Raising (done)

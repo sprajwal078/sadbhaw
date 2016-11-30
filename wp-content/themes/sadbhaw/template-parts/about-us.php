@@ -69,10 +69,10 @@
                                                                           <div class="detail">
                                                                               <h3>
                                                                                  <?php the_title()?>
-                                                                                
+
                                                                               </h3>
                                                                               <p>
-                                                                                  <?php $content = get_the_content(); echo wp_trim_words( $content, 15, '...' );?>
+                                                                                  <?php $content = get_the_content(); echo wp_trim_words( $content, 22, '...' );?>
                                                                                   <a href="<?php the_permalink()?>"> read more</a>
                                                                               </p>
                                                                           </div>

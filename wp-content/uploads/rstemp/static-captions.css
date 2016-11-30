@@ -1,0 +1,16 @@
+.slider-heading{
+  color: white !important;
+  font-size: 30px !important;
+  text-transform: uppercase !important;
+  font-family: sans-serif !important;
+}
+.desc{
+  line-height: 20px !important;
+  font-family: open-sans, sans-serif !important;
+  font-size: 17px !important;
+}
+.desc a{
+  color: white;
+  text-decoration: none;
+  font-size: 17px !important;    
+}
