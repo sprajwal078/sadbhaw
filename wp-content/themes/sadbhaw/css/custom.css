@@ -5,10 +5,19 @@
 
 
 /* generals */
+html{
+  height: 100%
+}
 html body {
   font-family: 'Open Sans', sans-serif;
   color: rgba(0,0,0,.7);
   font-size: 15px !important;
+  height: 100%
+}
+.wrapper{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .iw-heading.style1 p.iwh-content{
   font-size: 14px;
@@ -446,6 +455,7 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 /*downloads*/
 .downloads{
   padding-top: 102px;
+  min-height: 100%;
 }
 .downloads .campaing-listing .item-info .campaign-text{
   box-shadow: none;
@@ -470,7 +480,33 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 .stories-list .campaing-listing .item-info .image img{
   max-height: 225px;
 }
-
 .page-content{
   margin-top: 150px !important;
+}
+/*partners page*/
+.our-partners,.in-volunteer-contact{
+  margin-top: 0px;
+  z-index: 0;
+}
+
+/*get engaged page*/
+.two-column-form .in-contact-field,.two-column-form .wpcf7-form-control-wrap{
+  display: block;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #002e5e;
+}
+
+/*donate page*/
+.two-button{
+  width: auto !important;
+  display: inline-block;
+}
+.radio-label{
+  margin-right: 150px;
+}
+
+/*contact page*/
+.contact-map{
+  padding-bottom: 60px;
 }

@@ -51,7 +51,7 @@
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/fonts/pwsignaturetwo/stylesheet.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/css/woocommece.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/css/animation.css' type='text/css' media='all'/>
-		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/style.css' type='text/css' media='all'/>
+		<!-- <link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/style.css' type='text/css' media='all'/> -->
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/css/responsive.css' type='text/css' media='all'/>
 
 	<link rel='stylesheet' href='http://inwavethemes.com/wordpress/incharity/wp-admin/admin-ajax.php?action=inwave_color&#038;ver=1.5.0' type='text/css' media='all'/>
