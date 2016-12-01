@@ -12,7 +12,7 @@ get_header();
           <div class="wpb_wrapper">
             <div class="iw-heading   style1  center-text">
               <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
-              <h4 class="text-left">What's Next?</h4>
+              <h4 class="">What's Next?</h4>
               <p class="iwh-content"><?php echo $post->post_content; ?></p>
             </div>
           </div>

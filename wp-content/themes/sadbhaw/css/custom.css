@@ -14,6 +14,12 @@ html body {
   font-size: 15px !important;
   height: 100%
 }
+.mt{
+  margin-top: 50px;
+}
+.mb{
+  margin-bottom: 50px;
+}
 .wrapper{
   height: 100%;
   overflow-x: hidden;
@@ -27,6 +33,9 @@ html body {
 }
 .theme-bg{
   background: none repeat scroll 0 0 #002e5e!important;
+}
+.in-volunteer-contact .wpcf7-submit{
+  background: #002e5e;
 }
 
 /* headers and navs */
@@ -327,7 +336,7 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   color: black;
 }
 .partners .nav-tabs >li a:hover{
-  background: rgba(255,255,255,.3);
+  background: rgba(0,0,0,.08);
 }
 .partners .nav-tabs >li a:focus{
   background: transparent;
@@ -362,6 +371,13 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   margin-bottom: 20px;
   width: 250px;
 }
+
+/*.partners .in-contact-field.in-submit-field{
+  margin-left: 80px;
+}
+.partners .in-volunteer-contact{
+  text-align: center;
+}*/
 
 @keyframes story-animation{
   0{
@@ -506,7 +522,22 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   margin-right: 150px;
 }
 
+a.become-volunteer-button{
+  background: #002e5e;
+}
+
 /*contact page*/
 .contact-map{
   padding-bottom: 60px;
+}
+
+.contact label{
+  width: 100%;
+}
+.contact .message,
+.contact input[type="submit"]{
+  width: calc(100% - 45px) !important;
+}
+.contact-details i.fa{
+  color: black;
 }

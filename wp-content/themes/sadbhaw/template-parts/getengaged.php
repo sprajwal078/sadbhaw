@@ -13,8 +13,8 @@ get_header();
             <div class="iw-heading   style1  center-text">
               <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
             </div>
-            <div class="row">
-              <div class="col-md-6">
+            <div class="row mt">
+              <div class="col-md-3">
                 <!-- Nav Pills -->
                 <ul class="nav nav-pills nav-stacked" role="tablist">
                   <li role="presentation" class="active">
@@ -25,7 +25,7 @@ get_header();
                   </li>
                 </ul>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-9">
                 <div class="tab-content">
                   <!-- Become a volunteer tab starts -->
                   <div role="tabpanel" class="tab-pane active" id="become-volunteer">
@@ -54,7 +54,7 @@ get_header();
                               <input class="" placeholder="Email" required="required" type="email" value="" name="volunteer[email]"/> </span>
                             </div>
                           </div>
-                          <div class="in-contact-field">
+                          <div class="in-contact-field in-submit-field">
                             <div class="in-submit-field-inner"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"/></div>
                           </div>
                         </div>
@@ -87,7 +87,7 @@ get_header();
                             <input class="" placeholder="Email" required="required" type="email" value="" name="ambassador[email]"/> </span>
                           </div>
                         </div>
-                        <div class="in-contact-field">
+                        <div class="in-contact-field in-submit-field">
                           <div class="in-submit-field-inner"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"/></div>
                         </div>
                       </div>

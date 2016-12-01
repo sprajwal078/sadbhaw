@@ -4,8 +4,8 @@
 */
 get_header();
 ?>
-<div class="container downloads">
-  <div class="wpb_wrapper">
+<div class="container downloads ">
+  <div class="wpb_wrapper partners">
       <div class="vc_row wpb_row vc_inner vc_row-fluid">
           <div class="wpb_column vc_column_container vc_col-sm-12">
               <div class="vc_column-inner vc_custom_1451981561873">
@@ -21,7 +21,7 @@ get_header();
                         if(!empty($categories)){
                       ?>
                       <!-- nav tabs -->
-                      <ul class="nav nav-tabs nav-justified" role="tablist">
+                      <ul class="nav nav-tabs nav-justified mt" role="tablist">
                         <?php
                           //Counter for making the first tab as active
                           $i=1;
@@ -84,8 +84,8 @@ get_header();
                         }
                       ?>
                     <div class="row">
-                      <div class="col-md-12">
-                        <div class="become-a-partner">
+                      <div class="col-md-10 col-md-offset-1">
+                        <div class="become-a-partner mt mb">
                         <!-- Become a partner form starts -->
                           <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
                             <input type="hidden" name="action" value="become_a_partner"/>
