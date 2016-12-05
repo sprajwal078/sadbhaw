@@ -1,7 +1,4 @@
 <?php
-/*
-*Template name: Events Sadbhaw
-*/
 get_header();
 ?>
 <div class="container">

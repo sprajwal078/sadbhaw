@@ -1,16 +1,12 @@
 <?php
-/*
-*Template name: Events Sadbhaw
-*/
 get_header();
 ?>
-<div class="page-heading">
-    <div class="container">
-        <div class="page-title">
-            <div class="iw-heading-title"><h1>Event Detail</h1></div> </div>
-    </div>
-</div>
-<div class="container">
+<div class="container downloads">
+    <!-- Heading Start -->
+    <div class="iw-heading   style1  center-text">
+        <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
+        <p class="iwh-content"><?php the_content(); ?> </p>
+    </div><!-- Heading end -->
     <div class="page-content">
         <div class="main-content">
             <div class="container">
@@ -43,18 +39,45 @@ get_header();
                                                     <h3 class="iwh-title" style="font-size:40px">Photos</h3>
                                                 </div>
                                             </div>
-                                            <div id='gallery-1' class='gallery galleryid-340 gallery-columns-1 gallery-size-medium'>
-                                                <?php if( have_rows('gallery') ):
-                                                while ( have_rows('gallery') ) : the_row();$image = get_sub_field('image');?>
-                                                    <figure class='gallery-item'>
-                                                    <div class='gallery-icon landscape'>
-                                                        <img src="<?php echo $image['url']?>" class="attachment-medium size-medium" alt=""/></a>
-                                                    </div>
-                                                </figure>
-                                                <?php
-                                                endwhile; else :?>
-                                                No gallery added
-                                                <?php endif;?>
+                                            <div class="row">
+                                            <?php
+                                                if( have_rows('gallery') ):
+                                                    $i = 0;
+                                                    while ( have_rows('gallery') ) : the_row();
+                                                        $image = get_sub_field('image');
+                                                        $i++;
+                                            ?>
+                                            <!-- <div id='gallery-1' class='gallery galleryid-340 gallery-columns-1 gallery-size-medium'> -->
+                                                            <div class="col-md-4">
+                                                                <figure class='gallery-item'>
+                                                                    <div class='gallery-icon landscape'>
+                                                                        <img src="<?php echo $image['url']?>" class="attachment-medium size-medium" alt="" data-toggle="modal" data-target="#image<?php echo $i ?>"/>
+                                                                        <!-- Modal -->
+                                                                        <div id="image<?php echo $i ?>" class="modal fade" role="dialog">
+                                                                          <div class="modal-dialog modal-lg">
+                                                                            <!-- Modal content-->
+                                                                            <div class="modal-content">
+                                                                              <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                              </div>
+                                                                              <div class="modal-body">
+                                                                                <div class="media">
+                                                                                  <img src="<?php echo $image['url']?>" >
+                                                                              </div>
+                                                                              <div class="modal-footer">
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div><!-- Modal Ends -->
+                                                                    </div>
+                                                                </figure>
+                                                            </div>
+                                            <?php
+                                                    endwhile;
+                                                else:
+                                            ?>
+                                                    <div class="col-md-12">No gallery added</div>
+                                            <?php endif;?>
                                             </div>
                                         </div>
                                     </div>
