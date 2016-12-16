@@ -14,7 +14,7 @@ get_header();
               <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
             </div>
             <div class="contents-main" id="contents-main">
-              <div class="vc_row wpb_row vc_row-fluid volunteer-contact-intro vc_custom_1453711736106">
+              <div class="vc_row wpb_row vc_row-fluid volunteer-contact-intro vc_custom_1453711736106" style="background-image: url('<?php the_post_thumbnail_url()?>') !important; background-size: 100% !important; padding-bottom: 15px;">
                <div class="container">
                 <div class="row">
                  <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -34,11 +34,6 @@ get_header();
                         </div>
                        </div>
                       </div>
-                     </div>
-                    </div>
-                    <div class="wpb_text_column wpb_content_element  vc_custom_1453710569576">
-                     <div class="wpb_wrapper">
-                      <p><a class="become-volunteer-button" href="#">Fill the form to donate <i class="fa fa-arrow-right"></i></a></p>
                      </div>
                     </div>
                    </div>

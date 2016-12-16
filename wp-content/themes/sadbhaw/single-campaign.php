@@ -6,7 +6,7 @@ get_header();
     <div class="iw-heading   style1  center-text">
         <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
     </div><!-- Heading end -->
-    <div class="page-content">
+    <div class="mt">
         <div class="main-content">
             <div class="container">
                 <div class="row">
@@ -36,7 +36,7 @@ get_header();
                         <div class="post-content-desc">
                             <div class="post-text">
                                 <p><?php the_content()?><span id="more-340"></span></p>
-                            </div> 
+                            </div>
                         </div>
                     </div>
 <!--                     <div class="col-sm-12 col-xs-12 col-lg-3 col-md-4">

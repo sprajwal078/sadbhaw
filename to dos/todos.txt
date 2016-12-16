@@ -1,5 +1,68 @@
-- Show Team members/ Leaders detail in popup
-- event photos remove slider and show in grid and open in lightbox
-- Canpaign detail page Needs to be similar to other pages like campaign lists
-- backend change 'resources' to downloads
-- pagination on stories
+Home
+- fix stories and social feeds height alignment [done]
+- our impact count rollup not working. *
+- Ambassador popup - name bold - add location, wrap text around image [done]
+- make image square [done]
+
+- read more- make cubicle [done]
+
+- slider content stylable *
+
+- Want to be an ambassador? make it look more funky/ appealing [done]
+
+- before footer add 1 line An initiation of Himalaian Climate and logo. make description and image editable. [added static content on the page needs work on backend] *
+
+About
+	- aboout sadbhaw scholarship
+		- Sadhbawdbhaw's Team - change title to Sadhbaw Team [done]
+		- popup change style and team member fix image and content alignment [done]
+
+News & updates
+- Event Name make it bold [done]
+- Show event date *
+- add text padding on description , jusify text [done]
+- add read more [done]
+
+Download
+- make search functional *
+- add file type and published date. *
+
+event detail
+- remove banner image [done]
+- remove end date [done]
+- change start date to date [done]
+- add location, fb share icon *
+- open slider on modal not individual image *
+
+Campaign
+- campaign name bold [done]
+
+Campaign detail page
+- add start time end time *
+- add countdown *
+- fb share *
+
+Partners
+-lead partner selected by default and move it to middle *
+
+
+Contact
+- map reduce height [done]
+- contact us make more appealing
+
+Get Engaged
+- title Become a sadbhaw ambassador [done]
+
+Donate Us
+- Remove fill form button [done]
+- form validation *
+- Online Payment | Bank Details on left and right *
+
+Stories
+- needs rework, follow the mock [done]
+- create story type/categories- donor, parent or beneficiary and display then in place of current "beneficiary" *
+- stories pagination show/hide next and previous buttons *
+
+story detail page show image. [done]
+
+Rework forms

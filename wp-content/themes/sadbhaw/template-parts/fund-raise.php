@@ -44,7 +44,7 @@ $cam = generate_query(
       <div class="col-md-8">
         <div class="campaign-title">
          <div class="title">
-          <h3><a class="theme-color-hover" href="<?php the_permalink()?>"><?php the_title()?></a></h3>
+          <h3><a class="theme-color-hover" href="<?php the_permalink()?>"><strong><?php the_title()?></strong></a></h3>
          </div>
          <div class="donate-btn iw-button-effect">
           <div class="donate-btn-effect">
@@ -54,8 +54,8 @@ $cam = generate_query(
          <div style="clear: both;"></div>
         </div>
         <div class="campaign-des">
-          <?php $content = get_the_content(); echo wp_trim_words( $content, 70, '...' );?>
-          <a href="<?php the_permalink()?>"> read more</a>
+          <?php $content = get_the_content(); echo wp_trim_words( $content, 90, '...' );?>
+          <a class="read-more" href="<?php the_permalink()?>"> read more</a>
         </div>
       </div>
      </div>

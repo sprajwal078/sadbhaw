@@ -38,7 +38,6 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                   </div>
                 </form><!-- Payment Select Form Ends -->
 
-                <?php /**
 
                 <!-- Direct Deposit Section Starts -->
                 <div class="direct-deposit">
@@ -47,6 +46,7 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                       <p><?php echo get_field('direct_deposit'); ?></p>
                   </div>
                 </div><!-- Direct Deposit Section Ends -->
+                <?php /**
                 <!-- Visit Office Section Starts -->
                 <div class="visit-office">
                   <div class="in-volunteer-contact">
@@ -94,7 +94,6 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                     </div>
                   </form>
                 </div><!-- We Visit You Section Ends -->
-
                 **/ ?>
 
               </div>

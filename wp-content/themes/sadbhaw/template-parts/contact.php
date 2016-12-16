@@ -16,7 +16,7 @@
               </div>
               <div class="contact-map mt">
                 <div class="map-contain" data-title="inwavethemes" data-image="http://inwavethemes.com/wordpress/incharity/wp-content/uploads/2015/10/map-maker.png" data-lat="40.6700" data-long="-73.9400" data-zoom="11" data-info="">
-                    <div class="map-view map-frame" style="height:610px"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28253.60137753605!2d85.3406408!3d27.7265422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu+44600!5e0!3m2!1sen!2snp!4v1472621645651" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    <div class="map-view map-frame" style="height:330px"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28253.60137753605!2d85.3406408!3d27.7265422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu+44600!5e0!3m2!1sen!2snp!4v1472621645651" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
                 </div>
               </div>
             </div><!-- Google Maps Section Ends -->

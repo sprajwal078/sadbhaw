@@ -49,7 +49,7 @@ get_header(); ?>
                       <div class="container team">
                         <div class="row">
                           <div class="wpb_column vc_column_container vc_col-sm-12">
-                            <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Sadhbaw's Team</h3></div>
+                            <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Sadhbaw Team</h3></div>
                               <div class="col-md-10 col-md-offset-1 profile-wrap">
                                 <div class="row">
                                   <?php
@@ -75,7 +75,7 @@ get_header(); ?>
                                             </h3>
                                             <p>
                                               <?php $content = get_the_content(); echo wp_trim_words( $content, 22, '...' );?>
-                                              <a href="#" data-toggle="modal" data-target="#team<?php the_ID(); ?>"> read more</a>
+                                              <a class="read-more" href="#" data-toggle="modal" data-target="#team<?php the_ID(); ?>"> read more</a>
                                               <!-- Modal -->
                                               <div id="team<?php the_ID(); ?>" class="modal fade" role="dialog">
                                                 <div class="modal-dialog">
@@ -83,15 +83,11 @@ get_header(); ?>
                                                   <div class="modal-content">
                                                     <div class="modal-header">
                                                       <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                      <h4 class="modal-title"><?php the_title() ?></h4>
+                                                      <h4 class="modal-title" style="font-size: 22px"> <strong><?php the_title() ?></strong></h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                      <div class="media">
-                                                        <figure class="media-left">
-                                                          <img src="<?php the_post_thumbnail_url()?>" alt="img" class="media-object">
-                                                        </figure>
-                                                        <p class="media-body"><?php echo $content; ?></p>
-                                                      </div>
+                                                          <img style="transform: translateY(5px);" src="<?php the_post_thumbnail_url()?>" alt="img">
+                                                          <p><?php echo $content; ?></p>
                                                     </div>
                                                     <div class="modal-footer">
                                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

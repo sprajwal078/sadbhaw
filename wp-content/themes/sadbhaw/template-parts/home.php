@@ -47,7 +47,7 @@ get_header();
            <?php if( $stories->have_posts() ) :
            while ( $stories->have_posts() ) : $stories->the_post();
             $image = get_field('image');
-           if($stories->current_post % 2 == 0 && $stories->current_post != 0){?>
+           if($stories->current_post % 3 == 0 && $stories->current_post != 0){?>
                </div>
             <div class ="slide-item" style="display: none">
            <?php }
@@ -56,8 +56,8 @@ get_header();
               <div class="media">
                 <div class="media-body">
                   <h3 class="media-heading"><?php the_title()?></h3>
-                  <?php $content = get_the_content(); echo wp_trim_words( $content, 30, '...' );?> <br>
-                    <a href="<?php the_permalink()?>">read more</a>
+                  <?php $content = get_the_content(); echo wp_trim_words( $content, 25, '... ' );?>
+                    <a class="read-more" href="<?php the_permalink()?>">read more</a>
                 </div>
                 <div class="media-right hidden">
                   <a href="#">
@@ -150,7 +150,7 @@ get_header();
            <div class="container">
                <div class="row">
                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                       <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Ambassadors</h3></div>
+                       <div class="center-text"><h3 class="iwh-title" style="font-size:40px">Sadbhaw Ambassadors</h3></div>
                        <div class="col-md-10 col-md-offset-1 profile-wrap">
                            <div class="row">
                                <?php
@@ -178,7 +178,7 @@ get_header();
                                                <p>
                                                    <?php $content = get_the_content(); echo wp_trim_words( $content, 35, '...' );?>
                                                    <!-- Trigger the leader detail modal with read more link -->
-                                                   <a href="#" class="leader-readmore" data-toggle="modal" data-target="#leader<?php the_ID(); ?>"> read more</a>
+                                                   <a href="#" class="leader-readmore read-more" data-toggle="modal" data-target="#leader<?php the_ID(); ?>"> read more</a>
                                                    <!-- Modal -->
                                                     <div id="leader<?php the_ID(); ?>" class="modal fade" role="dialog">
                                                       <div class="modal-dialog">
@@ -186,15 +186,16 @@ get_header();
                                                         <div class="modal-content">
                                                           <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title"><?php the_title() ?></h4>
+                                                            <h4 class="modal-title">
+                                                              <strong><?php the_title() ?></strong>
+                                                              <br>
+                                                              <small>Location: <?php the_field('location');?></small>
+                                                            </h4>
                                                           </div>
                                                           <div class="modal-body">
-                                                            <div class="media">
-                                                              <figure class="media-left">
-                                                                <img src="<?php the_post_thumbnail_url()?>" alt="img" class="media-object">
-                                                              </figure>
-                                                              <p class="media-body"><?php echo $content; ?></p>
-                                                            </div>
+                                                            <img align="top" src="<?php the_post_thumbnail_url()?>" alt="img" class="media-object">
+                                                            <p><?php echo $content; ?></p>
+                                                            <div class="clearfix"></div>
                                                           </div>
                                                           <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -207,8 +208,8 @@ get_header();
                                        </div>
                                    <?php endwhile;wp_reset_postdata();endif;?>
                            </div>
-                           <p class="text-center" style="font-size: 18px;">
-                              Want to be an ambassador ?
+                           <p class="text-center be-ambassador">
+                              <span>Want to be an Ambassador ?</span>
                               <a href="<?php echo site_url().'/get-engaged/'?>" class="get-engaged">Get Engaged</a>
                            </p>
 
@@ -233,12 +234,20 @@ get_header();
                        <a href="#"><img class="fill" src="<?php echo the_post_thumbnail_url();?>"/></a>
                    <?php endwhile;wp_reset_postdata();endif;?>
            </div>
-           <!-- <div class="container">
-               <div class="row">
-                   <div class="col-md-10 col-md-offset-1">
-                   </div>
+       </div>
+
+       <!-- an initiation -->
+       <div class="container mb">
+           <div class="row">
+                <br>
+               <div class="col-md-10 col-md-offset-1 text-center">
+                <h4>Sadhbaw is an initiation of Himalayan Climate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem architecto debitis sapiente alias adipisci doloremque, magnam nihil accusamus cum suscipit, placeat optio tempore, laborum sit ab esse. Magnam, necessitatibus, accusantium.</h4>
+                <br>
+                <a href="http://himalayanclimate.org/" targer="_blank">
+                  <img src="wp-content/themes/sadbhaw/images/logos/logo_small.png" alt="HCI">
+                </a>
                </div>
-           </div> -->
+           </div>
        </div>
    </div>
   </article>

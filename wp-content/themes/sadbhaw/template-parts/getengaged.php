@@ -65,7 +65,7 @@ get_header();
                     <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
                       <input type="hidden" name="action" value="become_an_ambassador"/>
                       <div class="in-volunteer-contact two-column-form">
-                        <h3 class="title-contact-form">Become an Ambassador</h3>
+                        <h3 class="title-contact-form">Become a Sadbhaw Ambassador</h3>
                         <div class="in-contact-field">
                           <label class="label_field">Full Name*</label>
                           <div class="input-field">
