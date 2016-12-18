@@ -50,8 +50,8 @@
     <script src="<?php echo site_url()?>/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.js"></script>
     <script src="<?php echo site_url()?>/wp-content/themes/incharity/js/bootstrap.min.js"></script>
 
-    <script src="<?php echo site_url()?>/wp-content/themes/incharity/js/template.js"></script>
-    <script src="<?php echo site_url()?>/wp-content/themes/incharity/js/panel-settings.js"></script>
+    <!-- <script src="<?php echo site_url()?>/wp-content/themes/incharity/js/template.js"></script> -->
+    <!-- <script src="<?php echo site_url()?>/wp-content/themes/incharity/js/panel-settings.js"></script> -->
     <script src="<?php echo site_url()?>/wp-includes/js/wp-embed.min.js"></script>
     <script src="<?php echo site_url()?>/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js"></script>
     <script src="<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/js/jquery.parallax-1.1.3.js"></script>

@@ -11,6 +11,7 @@ Home
 - Want to be an ambassador? make it look more funky/ appealing [done]
 
 - before footer add 1 line An initiation of Himalaian Climate and logo. make description and image editable. [added static content on the page needs work on backend] *
+[[Footer text and image can be changed from the home page inside pages menu]]
 
 About
 	- aboout sadbhaw scholarship

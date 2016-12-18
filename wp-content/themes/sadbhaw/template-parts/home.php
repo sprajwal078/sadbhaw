@@ -241,10 +241,11 @@ get_header();
            <div class="row">
                 <br>
                <div class="col-md-10 col-md-offset-1 text-center">
-                <h4>Sadhbaw is an initiation of Himalayan Climate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem architecto debitis sapiente alias adipisci doloremque, magnam nihil accusamus cum suscipit, placeat optio tempore, laborum sit ab esse. Magnam, necessitatibus, accusantium.</h4>
+                <h4><?php the_field('footer_text') ?></h4>
                 <br>
                 <a href="http://himalayanclimate.org/" targer="_blank">
-                  <img src="wp-content/themes/sadbhaw/images/logos/logo_small.png" alt="HCI">
+                  <?php $himal_image = get_field('footer_image'); ?>
+                  <img src="<?php echo $himal_image['url']; ?>" alt="<?php echo $himal_image['alt']; ?>">
                 </a>
                </div>
            </div>

@@ -43,7 +43,8 @@ $events = generate_query(
     <div class="campaign-text">
      <div class="campaign-title">
       <div class="title">
-       <h3><a class="theme-color-hover" href="<?php the_permalink()?>"><strong><?php the_title()?></a></strong></h3>
+       <h3><a class="theme-color-hover" href="<?php the_permalink()?>"><strong><?php the_title()?></a> </strong></h3>
+       <h4><i class="fa fa-calendar-o"></i><span> <?php echo date('Y-m-d',strtotime(get_field('start_date'))); ?></span><span> - </span><span><?php echo date('Y-m-d',strtotime(get_field('end_date'))); ?></span></h4>
       </div>
       <div style="clear: both;"></div>
      </div>

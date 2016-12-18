@@ -379,7 +379,7 @@
         carousel_init();
 		navStyle4();
         /*** fit video */
-        $(".fit-video").fitVids();
+        // $(".fit-video").fitVids();
 
         $('.profile-box.style5').hover(function () {
             $('.profile-box.style5').removeClass('active');

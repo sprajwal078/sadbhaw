@@ -25,7 +25,7 @@ get_header();
                                                 <?php //the_title();?>
                                             </h3> -->
                                             <div class="post-info">
-                                                <div class="post-info-date"><i class="fa fa-calendar-o"></i>Date : <?php the_field('start_date')?></div>
+                                                <div class="post-info-date"><i class="fa fa-calendar-o"></i>Date : <span> <?php echo date('Y-m-d',strtotime(get_field('start_date'))); ?></span><span> - </span><span><?php echo date('Y-m-d',strtotime(get_field('end_date'))); ?></span></div>
                                             </div>
                                         </div>
                                     </div>

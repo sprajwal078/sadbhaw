@@ -55,7 +55,7 @@
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/css/responsive.css' type='text/css' media='all'/>
 
 	<link rel='stylesheet' href='http://inwavethemes.com/wordpress/incharity/wp-admin/admin-ajax.php?action=inwave_color&#038;ver=1.5.0' type='text/css' media='all'/>
-		<link rel='stylesheet' href='wp-admin/admin-ajaxe15b.css?action=inwave_color&amp;ver=1.5.0' type='text/css' media='all'/>
+		<!-- <link rel='stylesheet' href='wp-admin/admin-ajaxe15b.css?action=inwave_color&amp;ver=1.5.0' type='text/css' media='all'/> -->
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all'/>
 		<script src="<?php echo site_url()?>/wp-content/plugins/infunding/assets/js/masonry.pkgd.min.js"></script>
 		<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyAQ-kNIGl-wRlW4gbo-Se0tZKkBXnvbuT0&ver=4.5.3'></script>
@@ -109,9 +109,9 @@
 		</noscript>
 	    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
-		<script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
-		<script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
-		<script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+		<!-- <script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script> -->
+		<!-- <script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script> -->
+		<!-- <script type="text/javascript" src="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script> -->
 	<?php wp_head(); ?>
 </head>
 <body id="page-top" class="home page page-id-725 page-parent page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php wpb-js-composer js-comp-ver-4.12 vc_responsive down">
