@@ -114,7 +114,7 @@ get_header();
       </div>
      </div>
     </div>
-    <div class="vc_row wpb_row vc_row-fluid vc_custom_1451359398429 our-impacts" style="margin-left:0;margin-right:0;background-size:100% auto;">
+    <div class="vc_row wpb_row vc_row-fluid vc_custom_1451359398429 our-impacts rollup" style="margin-left:0;margin-right:0;background-size:100% auto;">
      <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
