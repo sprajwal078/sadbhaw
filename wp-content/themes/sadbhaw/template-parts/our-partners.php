@@ -28,7 +28,7 @@ get_header();
                           //Loop through the partner category names
                           foreach ($categories as $cat){
                         ?>
-                         <li role="presentation" class="<?php if($i == 1) echo "active" ?>">
+                         <li role="presentation" class="<?php if($i == 2) echo "active" ?>">
                           <a href="#partner<?php echo $i?>" aria-controls="partner<?php echo $i ?>" role="tab" data-toggle="tab">
                             <?php echo $cat->name ?>
                           </a>
@@ -45,7 +45,7 @@ get_header();
                             $i=1;
                             foreach ($categories as $cat){
                           ?>
-                            <div role="tabpanel" class="tab-pane <?php if($i == 1) echo "active" ?>" id="partner<?php echo $i ?>">
+                            <div role="tabpanel" class="tab-pane <?php if($i == 2) echo "active" ?>" id="partner<?php echo $i ?>">
                               <?php
                                 //Get partner details
                                 $partners = generate_query(array( 'post_type'       => 'our-partner',

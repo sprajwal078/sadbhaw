@@ -14,6 +14,8 @@ function sadhbaw_scripts(){
 
   //Bootstrap JS
   wp_enqueue_script('bootstrap-js',get_template_directory_uri() . '/js/bootstrap.min.js');
+
+  wp_enqueue_script('countdown-js',get_template_directory_uri() . '/js/jquery.countdown.min.js');
   //Custom JS
   wp_enqueue_script('custom-js',get_template_directory_uri() . '/js/custom.js');
 }
@@ -123,9 +125,20 @@ add_action('admin_post_nopriv_become_an_ambassador','become_an_ambassador');
 function donate_us(){
   //For donate button
   if ($_POST['submit'] == 'Donate'){
-    //Check if the terms are accepted
-    if ($_POST['terms'] == 'accept'){
+    $error = [];
+    //Check for empty fields
+    if (empty($_POST['donate']['name'])) $error[] = 'name_empty';
+    if (empty($_POST['donate']['email'])) $error[] = 'email_empty';
+    if (empty($_POST['donate']['sponsor'])) $error[] = 'sponsor_empty';
+    if (!isset($_POST['terms']) || $_POST['terms'] == 'decline') $error[] = 'terms_not_accepted';
+    if(empty($error)){
       wp_redirect(site_url('/payment/?_donation_nonce=').$_POST['_donation_nonce']);
+      die;
+    }else{
+      session_start();
+      $_SESSION['error'] = $error;
+      $_SESSION['prev_values'] = $_POST;
+      wp_redirect($_SERVER['HTTP_REFERER']);
       die;
     }
   //For I pledge button

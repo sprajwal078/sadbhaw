@@ -2,6 +2,7 @@
 /*
 *Template name: Donate Sadbhaw
 */
+session_start();
 get_header();
 ?>
 <div class="container downloads">
@@ -53,31 +54,35 @@ get_header();
                      <div class="in-volunteer-contact">
                         <h3 class="title-contact-form">Contact Information</h3>
                         <div class="in-contact-field">
-                         <label class="label_field">Name</label>
+                         <label class="label_field">Name*</label>
                          <div class="input-field">
   												<span class="wpcf7-form-control-wrap">
-  												<input class="" placeholder="Name" type="text" value="" name="donate[name]"/> </span>
+  												  <input class="" placeholder="Name" type="text" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['name'];  ?>" name="donate[name]"/>
+                            <span class="error"><?php if(isset($_SESSION['error']) && in_array('name_empty',$_SESSION['error'])) echo "Name Field is required"  ?></span>
+                          </span>
                          </div>
                         </div>
                         <div class="in-contact-field">
-                         <label class="label_field">Email</label>
+                         <label class="label_field">Email*</label>
                          <div class="input-field">
   												<span class="wpcf7-form-control-wrap">
-  												<input class="" placeholder="Email" type="email" value="" name="donate[email]"/> </span>
+  												<input class="" placeholder="Email" type="email" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['email'];  ?>" name="donate[email]"/>
+                          <span class="error"><?php if(isset($_SESSION['error']) && in_array('email_empty',$_SESSION['error'])) echo "Email Field is required"  ?></span>
+                          </span>
                          </div>
                         </div>
                         <div class="in-contact-field">
                          <label class="label_field">Address</label>
                          <div class="input-field">
                           <span class="wpcf7-form-control-wrap">
-                          <input class="" placeholder="Address" type="text" value="" name="donate[address]"/> </span>
+                          <input class="" placeholder="Address" type="text" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['address'];  ?>" name="donate[address]"/> </span>
                          </div>
                         </div>
                         <div class="in-contact-field">
                          <label class="label_field">Contact Number</label>
                          <div class="input-field">
   												<span class="wpcf7-form-control-wrap">
-  												<input class="" placeholder="Contact Number" type="text" value="" name="donate[phone]"/> </span>
+  												<input class="" placeholder="Contact Number" type="text" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['phone'];  ?>" name="donate[phone]"/> </span>
                          </div>
                         </div>
                         <?php
@@ -88,25 +93,27 @@ get_header();
                          <label class="label_field">I would like to sponsor *</label>
                          <div class="input-field">
   												<span class="wpcf7-form-control-wrap">
-  													<select name="donate[sponsor]" required>
+  													<select name="donate[sponsor]">
   														<option value="" disabled selected>Select one</option>
                               <?php foreach ($donation_plans as $plan) : ?>
-  														<option value="<?php echo $plan['plan'] ?>"><?php echo $plan['plan'] ?></option>
+  														<option value="<?php echo $plan['plan'] ?>" ><?php echo $plan['plan'] ?></option>
                             <?php endforeach; ?>
   													</select>
+                            <span class="error"><?php if(isset($_SESSION['error']) && in_array('sponsor_empty',$_SESSION['error'])) echo "Please select a sponsor"  ?></span>
   												</span>
                          </div>
                         </div>
                         <div class="in-contact-field">
-                         <label class="label_field">Agreement</label>
+                         <label class="label_field">Agreement*</label>
                          <div class="input-field"><span class="wpcf7-form-control-wrap your-message"><textarea name="donate[aggrement]" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" disabled><?php the_field('terms_of_agreement') ?></textarea></span> </div>
                         </div>
                         <div class="in-contact-field">
                          <label class="label_field"> </label>
                          <div class="input-field">
                             <span class="wpcf7-form-control-wrap your-message">
-                              <label><input type="radio" name="terms" value="decline"> Decline </label>
-                              <label><input type="radio" name="terms" value="accept"> Accept </label>
+                              <label><input type="radio" name="terms" value="decline" > Decline </label>
+                              <label><input type="radio" name="terms" value="accept">  Accept </label>
+                              <span class="error"><?php if(isset($_SESSION['error']) && in_array('terms_not_accepted',$_SESSION['error'])) echo "Please accept the agreement"  ?></span>
                             </span>
                          </div>
                         </div>
@@ -135,4 +142,8 @@ get_header();
     </div>
   </div>
 </div>
+<?php
+  if(isset($_SESSION['error'])) unset($_SESSION['error']);
+  if(isset($_SESSION['prev_values'])) unset($_SESSION['prev_values']);
+?>
 <?php get_footer()?>

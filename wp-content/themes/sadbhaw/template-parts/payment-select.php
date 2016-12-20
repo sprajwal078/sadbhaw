@@ -16,7 +16,7 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
               <p class="iwh-content"><?php echo $post->post_content; ?> </p>
             </div>
             <div class="row mt">
-              <div class="col-md-12">
+              <div class="col-md-6">
                 <!-- Payment Select Form Starts -->
                 <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
                   <input type="hidden" name="action" value="payment_method"/>
@@ -37,8 +37,8 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                     </div>
                   </div>
                 </form><!-- Payment Select Form Ends -->
-
-
+              </div>
+              <div class="col-md-6">
                 <!-- Direct Deposit Section Starts -->
                 <div class="direct-deposit">
                   <div class="in-volunteer-contact">
@@ -46,6 +46,7 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                       <p><?php echo get_field('direct_deposit'); ?></p>
                   </div>
                 </div><!-- Direct Deposit Section Ends -->
+              </div>
                 <?php /**
                 <!-- Visit Office Section Starts -->
                 <div class="visit-office">

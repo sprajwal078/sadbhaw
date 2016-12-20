@@ -35,7 +35,7 @@ $stories = generate_query(array('post_type'      => 'story',
         <div class="campaign-info">
          <div class="campaign-text">
             <div class="col-md-1 story-type-container">
-              <div class="story-type">Beneficiary</div>
+              <div class="story-type"><?php echo wp_get_post_terms(get_the_ID(),'story-type')[0]->name; ?></div>
             </div>
             <div class="col-md-8">
               <div class="campaign-title">
@@ -72,8 +72,12 @@ $stories = generate_query(array('post_type'      => 'story',
   <?php endwhile; ?>
     <div class="col-md-10 col-md-offset-1">
       <!-- Pagination. -->
+      <?php if(get_next_posts_link( 'Next', $stories->max_num_pages )): ?>
       <div class="btn btn-default nav-previous alignright"><?php next_posts_link( 'Next', $stories->max_num_pages ); ?></div>
+      <?php endif; ?>
+      <?php if(get_previous_posts_link( 'Previous' )): ?>
       <div class="btn btn-default nav-next alignleft"><?php previous_posts_link( 'Previous' ); ?></div>
+    <?php endif; ?>
     </div>
   <?php else: ?>
    No stories found ! please add stories.

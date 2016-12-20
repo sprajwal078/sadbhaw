@@ -591,6 +591,9 @@ body.down .iw-nav-menu >li:hover>a strong:before{
 a.become-volunteer-button{
   background: #002e5e;
 }
+span.error{
+  color: red;
+}
 
 /*contact page*/
 .contact-map{
@@ -613,5 +616,9 @@ a.become-volunteer-button{
 .post-info{
   margin-top: 10px;
 }
-
-
+#countdown{
+  padding: 20px;
+  color: #FFF;
+  background: #002e5e;
+  font-size: 18px;
+}
