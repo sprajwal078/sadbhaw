@@ -3,10 +3,19 @@
  * Enqueue scripts and styles.
  */
 function sadhbaw_scripts(){
+  //Bootstrap CSS
+  wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css');
   //InCharity Theme Base Stylesheet
-  wp_enqueue_style('main', get_template_directory_uri() . '/style.css', array());
+  wp_enqueue_style('main', get_template_directory_uri() . '/style.css');
+  //Infunding plugin css
+  wp_enqueue_style('infunding-css', get_template_directory_uri() . '/css/infunding_style.css');
   //Custom Stylesheet
-  wp_enqueue_style('custom', get_template_directory_uri() . '/css/custom.css', array());
+  wp_enqueue_style('custom', get_template_directory_uri() . '/css/custom.css');
+
+  //Bootstrap JS
+  wp_enqueue_script('bootstrap-js',get_template_directory_uri() . '/js/bootstrap.min.js');
+  //Custom JS
+  wp_enqueue_script('custom-js',get_template_directory_uri() . '/js/custom.js');
 }
 add_action('wp_enqueue_scripts','sadhbaw_scripts');
 

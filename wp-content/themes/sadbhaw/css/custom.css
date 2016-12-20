@@ -521,6 +521,9 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   box-shadow: none;
   padding: 0 10px;
 }
+.filter-field{
+  color: #000 !important;
+}
 /*others*/
 .page-title{
   padding-top: 50px;

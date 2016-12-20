@@ -2,14 +2,20 @@
   /*
   *Template name: Download Sadbhaw
   */
- get_header();
-  $resource = generate_query(
-      array(
-          'post_type' => 'resource',
-          'posts_per_page'	=> -1,
-          'orderby'   => 'menu_order',
-          'order' => 'ASC')
-  );
+  get_header();
+  $args = array('post_type' => 'download',
+              'posts_per_page'  => -1,
+              'orderby'   => 'menu_order',
+              'order' => 'ASC');
+  if (isset($_GET['keyword']) && !empty($_GET['keyword'])){
+    $args['s'] = $_GET['keyword'];
+  }
+  if (isset($_GET['category']) && !empty($_GET['category'])){
+    $args['tax_query'] = array(
+                          array('taxonomy' => 'download-category',
+                                'terms' => $_GET['category']));
+  }
+  $resource = generate_query($args);
   ?>
   <!-- <div class="page-heading">
    <div class="container">
@@ -47,11 +53,19 @@
               <div class="filter-item">
                <div class="filter-form">
                 <form id="filterForm" name="filterForm" action="#" method="get">
-                 <input type="text" class="filter-field" placeholder="Enter your keywords" name="keyword" value=""/>
+                 <input type="text" class="filter-field" placeholder="Enter your keywords" name="keyword" value="<?php if (isset($_GET['keyword'])) echo $_GET['keyword']; ?>"/>
+                    <?php
+                      $categories = get_terms(array('taxonomy' => 'download-category',
+                                                        'hide_empty' => false,
+                                                        'fields' => 'id=>name'));
+                    ?>
                  <select class="filter-field" name="category">
                   <option value="" selected="selected">All Categories</option>
-                  <option value="40">Demo category</option>
+                    <?php foreach ($categories as $id => $name): ?>
+                      <option value="<?php echo $id ?>" <?php if (isset($_GET['category']) && $_GET['category'] == $id) echo "selected"; ?>><?php echo $name ?></option>
+                    <?php endforeach; ?>
                  </select>
+                 <input type="submit" value="Filter Results" class="filter-field">
                 </form>
                </div>
                <div style="clear: both"></div>
@@ -72,6 +86,7 @@
                    <div class="campaign-title">
                     <div class="title">
                      <h3><a target="_blank" href="<?php the_field('download')?>"><?php the_title();?></a></h3>
+                     <h6>File Type : <?php the_field('type'); ?> | Uploaded Date : <?php echo date('Y-m-d',get_field('date')); ?></h6>
                     </div>
                     <div style="clear: both;"></div>
                    </div>
@@ -82,7 +97,7 @@
                 </div>
                 <?php endwhile;
                 else:?>
-                 No Events Found ! please add events.
+                 No downloadable files
                 <?php endif;?>
                </div>
               </section>

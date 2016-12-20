@@ -18,6 +18,13 @@
 		<link rel="pingback" href="xmlrpc.php">
 		<script type="text/javascript">document.documentElement.className=document.documentElement.className+' yes-js js_active js'</script>
 		<title>Sadhbhaw </title>
+			<!-- You can use Open Graph tags to customize link previews.
+	    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+		<meta property="og:url"           content="<?php the_permalink(); ?>" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Sadbhaw" />
+		<meta property="og:description"   content="Sadbhaw" />
+		<meta property="og:image"         content="<?php echo bloginfo('template_url')."/image/logo.png"; ?>" />
 		<style>.wishlist_table .add_to_cart,a.add_to_wishlist.button.alt{border-radius:16px;-moz-border-radius:16px;-webkit-border-radius:16px}</style>
 		<script type="text/javascript">var yith_wcwl_plugin_ajax_web_url='wp-admin/admin-ajax.html';</script>
 		<link rel="alternate" type="application/rss+xml" title="inCharity &raquo; Feed" href="feed/index.html"/>
@@ -27,7 +34,6 @@
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/css/font-awesome/css/font-awesome.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/infunding/assets/css/custombox.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/infunding/assets/css/iw-legacy.css' type='text/css' media='all'/>
-		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/infunding/assets/css/infunding_style.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/infunding/assets/css/infunding_slider.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/infunding/assets/css/owl.carousel.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/plugins/infunding/assets/css/owl.theme.css' type='text/css' media='all'/>
@@ -46,7 +52,6 @@
 		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Slab%3A100%2C300%2C400%2C700&amp;ver=1.5.0' type='text/css' media='all'/>
 		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=ABeeZee%3A100%2C300%2C400%2C700&amp;ver=1.5.0' type='text/css' media='all'/>
 
-		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/css/bootstrap.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/css/select2.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/fonts/pwsignaturetwo/stylesheet.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='<?php echo site_url()?>/wp-content/themes/incharity/css/woocommece.css' type='text/css' media='all'/>
@@ -115,6 +120,15 @@
 	<?php wp_head(); ?>
 </head>
 <body id="page-top" class="home page page-id-725 page-parent page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php wpb-js-composer js-comp-ver-4.12 vc_responsive down">
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="wrapper ">
 	<div class="header header-default header-sticky clone">
 		<div role="navigation" class="navbar navbar-default navbar-bg-light">
