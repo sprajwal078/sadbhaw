@@ -5,7 +5,7 @@
 if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],'donation_verify') ):
   get_header();
 ?>
-<div class="container downloads">
+<div class="container downloads payment-select">
   <div class="wpb_wrapper">
     <div class="vc_row wpb_row vc_inner vc_row-fluid">
       <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -15,37 +15,51 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
               <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
               <p class="iwh-content"><?php echo $post->post_content; ?> </p>
             </div>
-            <div class="row mt">
+            <div class="row mt flex-row align-stretch form-basic clearfix mb">
               <div class="col-md-6">
                 <!-- Payment Select Form Starts -->
                 <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
                   <input type="hidden" name="action" value="payment_method"/>
-                  <div class="in-volunteer-contact">
-                    <h3 class="title-contact-form">Online Payment</h3>
-                    <div class="in-contact-field">
-                      <label class="label_field">Select method</label>
-                      <div class="input-field">
-                        <span class="wpcf7-form-control-wrap">
-                          <label class="radio-label"><input required="required" type="radio" value="esewa" name="payment_method"/> eSewa</label>
-                          <label class="radio-label"><input required="required" type="radio" value="skrill" name="payment_method"/> Skrill</label>
-                          <label class="radio-label"><input required="required" type="radio" value="paypal" name="payment_method"/> PayPal</label>
-                        </span>
+                  <div class="">
+
+                      <!-- Form Title -->
+                      <div class="form-title">
+                        <h2>Select Payment Method</h2>
                       </div>
-                      <div class="in-contact-field">
-                        <div class="in-submit-field-inner text-right"><input type="submit" value="Next" class="wpcf7-form-control wpcf7-submit two-button"/></div>
+
+                      <!-- Payment Method -->
+                      <div class="form-row inline text-center">
+                          <label>
+                            Esewa
+                            <input type="radio" checked name="payment_method" value="esewa">
+                          </label>
+                          <label>
+                            Skrill
+                            <input type="radio" name="payment_method" value="skrill">
+                          </label>
+                          <label>
+                            PayPal
+                            <input type="radio" name="payment_method" value="paypal">
+                          </label>
                       </div>
-                    </div>
+                      <div class="form-row text-center mt">
+                        <button type="submit">Next</button>
+                      </div>
                   </div>
                 </form><!-- Payment Select Form Ends -->
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" style="border-left: 1px solid rgba(0,0,0,.2)">
                 <!-- Direct Deposit Section Starts -->
-                <div class="direct-deposit">
-                  <div class="in-volunteer-contact">
-                    <h3 class="title-contact-form">Direct Deposit</h3>
+                <div class="">
+                    <!-- Form Title -->
+                    <div class="form-title">
+                      <h2>Direct Deposit</h2>
+                    </div>
+                    <div class="form-row text-center">
+
                       <p><?php echo get_field('direct_deposit'); ?></p>
-                  </div>
-                </div><!-- Direct Deposit Section Ends -->
+                    </div>
+                </div>
               </div>
                 <?php /**
                 <!-- Visit Office Section Starts -->

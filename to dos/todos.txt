@@ -19,50 +19,51 @@ About
 
 News & updates
 - Event Name make it bold [done]
-- Show event date *
+- Show event date [done]
 - add text padding on description , jusify text [done]
 - add read more [done]
 
 Download
-- make search functional *
-- add file type and published date. *
+- make search functional [done]
+- add file type and published date. [done]
 
 event detail
 - remove banner image [done]
 - remove end date [done]
 - change start date to date [done]
-- add location, fb share icon *
-- open slider on modal not individual image *
+- add location *
+- fb share icon [done]
+- open slider on modal not individual image [done]
 
 Campaign
 - campaign name bold [done]
 
 Campaign detail page
-- add start time end time *
-- add countdown *
-- fb share *
+- add start time end time [done]
+- add countdown [done]
+- fb share [done]
 
 Partners
--lead partner selected by default and move it to middle *
+-lead partner selected by default and move it to middle [done]
 
 
 Contact
 - map reduce height [done]
-- contact us make more appealing
+- contact us make more appealing [done]
 
 Get Engaged
 - title Become a sadbhaw ambassador [done]
 
 Donate Us
 - Remove fill form button [done]
-- form validation *
-- Online Payment | Bank Details on left and right *
+- form validation [done]
+- Online Payment | Bank Details on left and right [done]
 
 Stories
 - needs rework, follow the mock [done]
-- create story type/categories- donor, parent or beneficiary and display then in place of current "beneficiary" *
-- stories pagination show/hide next and previous buttons *
+- create story type/categories- donor, parent or beneficiary and display then in place of current "beneficiary" [done]
+- stories pagination show/hide next and previous buttons [done]
 
 story detail page show image. [done]
 
-Rework forms
+Rework forms [done]

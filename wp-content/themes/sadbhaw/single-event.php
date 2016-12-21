@@ -26,12 +26,12 @@ get_header();
                       </h3> -->
                       <div class="post-info">
                         <div class="row">
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                             <div class="post-info-date"><i class="fa fa-calendar-o"></i>Date : <span> <?php echo date('Y-m-d',strtotime(get_field('start_date'))); ?></span><span> - </span><span><?php echo date('Y-m-d',strtotime(get_field('end_date'))); ?></span></div>
-                          </div>
-                          <div class="col-md-6">
                             <div class="fb-share-button" data-href="<?php the_permalink() ?>" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>&amp;src=sdkpreparse">Share</a></div>
                           </div>
+                          <!-- <div class="col-md-6">
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -66,7 +66,8 @@ get_header();
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4><?php the_title(); ?> Photos</h4>
                                   </div>
                                   <div class="modal-body">
                                   <div id="carousel" class="carousel slide" data-ride="carousel">

@@ -84,13 +84,12 @@
       }
     },5000);
 
+    // $(document).on('scroll', function(event) {
     $(document).on('DOMMouseScroll MouseScrollEvent MozMousePixelScroll wheel scroll', function(event) {
       if($('.rollup').length > 0 ) {
         if ($('.rollup').position().top <= $(document).scrollTop() + 450) {
           if (!animate_done) {
             animate_done = true;
-            console.log("running");
-
             $('.Count').each(function () {
               var $this = $(this);
               jQuery({Counter: 0}).animate({Counter: $this.text()}, {

@@ -20,8 +20,27 @@ html body {
 .mb{
   margin-bottom: 50px;
 }
+.row-left{
+  margin-left: -15px;
+}
+.row-right{
+  margin-right: -15px;
+}
 .rel{
   position: relative;
+}
+.flex-row{
+  display: flex;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-fill{
+  flex: 1;
+}
+.align-stretch{
+  align-items: stretch;
 }
 .wrapper{
   height: 100%;
@@ -40,7 +59,9 @@ html body {
 .in-volunteer-contact .wpcf7-submit{
   background: #002e5e;
 }
-
+.fb-share-button{
+  transform: translateY(-2px);
+}
 a.read-more{
   background: #002e5e;
   padding: 3px 8px 5px;
@@ -366,6 +387,7 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   color:  black;
   border-radius: 0;
   transition: all .3s ease;
+  border-bottom: 2px solid rgba(0,0,0,.09);
 }
 .partners .nav-tabs >li.active a,
 .partners .nav-tabs >li.active a:hover,
@@ -621,4 +643,122 @@ span.error{
   color: #FFF;
   background: #002e5e;
   font-size: 18px;
+}
+
+
+/*custom form*/
+.form-basic{
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  font: bold 14px sans-serif;
+  border: 1px solid rgba(0,0,0,.09);
+  background: rgba(0,0,0,.05);
+}
+.form-title{
+  text-align: center;
+  margin-bottom: 55px;
+  background: white;
+  background: transparent;
+}
+.form-basic .form-title h2{
+  display: inline-block;
+  box-sizing: border-box;
+  color: #4c565e;
+  font-size: 24px;
+  padding: 30px 15px;
+  border-bottom: 2px solid #002e5e;
+  margin: 0;
+  font-weight: bold;
+}
+.form-basic .form-row {
+    margin-bottom: 15px;
+}
+.form-basic .form-row > label{
+  width: 100%;
+  transition: all .3s;
+  position: relative;
+  padding-top: 32px;
+}
+
+.form-basic .form-row > label span {
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    color: #5F5F5F;
+    padding: 7px 12px;
+    background: white;
+    z-index: 5px;
+    transform: translateY(2px);
+    border: 1px solid #dbdbdb;
+    border-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+.form-basic input,
+.form-basic select,
+ .form-basic textarea{
+    color: #5f5f5f;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    font-weight: normal;
+    transition: all .3s;
+}
+.form-basic input:focus,
+.form-basic input:active,
+.form-basic select:focus,
+.form-basic select:active,
+.form-basic textarea:focus,
+.form-basic textarea:active{
+  outline: none !important;
+  border-color: #002e5e;
+}
+.form-basic input:focus ~ span,
+.form-basic input:active ~ span,
+.form-basic select:active ~ span,
+.form-basic select:focus ~ span,
+.form-basic textarea:active ~ span,
+.form-basic textarea:focus ~ span{
+  color: #002e5e;
+  border-color: #002e5e;
+}
+.form-basic button {
+    border-radius: 2px;
+    background-color: #002e5e;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 33px;
+    font-size: 16px;
+    border: 0;
+    margin-right: 15px;
+}
+
+.form-basic .inline label{
+  width: auto;
+  padding-top: 0;
+}
+.form-basic .inline input{
+  width: auto;
+  margin-left: 15px;
+}
+.form-basic input[type="checkbox"],
+.form-basic input[type="radio"]{
+  width: 16px;
+  height: 16px;
+  margin-top: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.payment-select .form-basic input{
+  margin-right: 50px;
+}
+
+#countdown{
+  font-size: 16px;
 }

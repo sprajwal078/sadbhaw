@@ -21,62 +21,65 @@ get_header();
                         if(!empty($categories)){
                       ?>
                       <!-- nav tabs -->
-                      <ul class="nav nav-tabs nav-justified mt" role="tablist">
-                        <?php
-                          //Counter for making the first tab as active
-                          $i=1;
-                          //Loop through the partner category names
-                          foreach ($categories as $cat){
-                        ?>
-                         <li role="presentation" class="<?php if($i == 2) echo "active" ?>">
-                          <a href="#partner<?php echo $i?>" aria-controls="partner<?php echo $i ?>" role="tab" data-toggle="tab">
-                            <?php echo $cat->name ?>
-                          </a>
-                        </li>
-                        <?php
-                          $i++;
-                          }
-                        ?>
-                      </ul>
-                      <!-- Tab panes -->
-                      <div class="col-md-12">
-                        <div class="tab-content">
+                      <div class="col-md-10 col-md-offset-1">
+                        <ul class="nav nav-tabs nav-justified mt" role="tablist">
                           <?php
+                            //Counter for making the first tab as active
                             $i=1;
+                            //Loop through the partner category names
                             foreach ($categories as $cat){
                           ?>
-                            <div role="tabpanel" class="tab-pane <?php if($i == 2) echo "active" ?>" id="partner<?php echo $i ?>">
-                              <?php
-                                //Get partner details
-                                $partners = generate_query(array( 'post_type'       => 'our-partner',
-                                                                  'orderby'         => 'menu_order',
-                                                                  'order'           => 'ASC',
-                                                                  'posts_per_page'  => 3,
-                                                                  'tax_query'       => array(
-                                                                        array(
-                                                                          'taxonomy' => 'partner-cat',
-                                                                          'field' => 'id',
-                                                                          'terms' => $cat->term_id
-                                                                        ),
-                                                                      )
-                                                                )
-                                                          );
-                                if( $partners->have_posts() ) :
-                                  while ( $partners->have_posts() ) : $partners->the_post();
-                                    $image = get_field('logo');
-                                ?>
-                                    <figure>
-                                      <img style="float: left;" src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
-                                    </figure>
+                           <li role="presentation" class="<?php if($i == 2) echo "active" ?>">
+                            <a href="#partner<?php echo $i?>" aria-controls="partner<?php echo $i ?>" role="tab" data-toggle="tab">
+                              <?php echo $cat->name ?>
+                            </a>
+                          </li>
+                          <?php
+                            $i++;
+                            }
+                          ?>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="col-md-12">
+                          <div class="tab-content row">
+                            <?php
+                              $i=1;
+                              foreach ($categories as $cat){
+                            ?>
+                              <div role="tabpanel" class="tab-pane <?php if($i == 2) echo "active" ?>" id="partner<?php echo $i ?>">
                                 <?php
-                                  endwhile;
-                                  wp_reset_postdata();
-                                endif;
-                                $i++;
-                              ?>
-                            </div>
-                          <?php } ?>
+                                  //Get partner details
+                                  $partners = generate_query(array( 'post_type'       => 'our-partner',
+                                                                    'orderby'         => 'menu_order',
+                                                                    'order'           => 'ASC',
+                                                                    'posts_per_page'  => 3,
+                                                                    'tax_query'       => array(
+                                                                          array(
+                                                                            'taxonomy' => 'partner-cat',
+                                                                            'field' => 'id',
+                                                                            'terms' => $cat->term_id
+                                                                          ),
+                                                                        )
+                                                                  )
+                                                            );
+                                  if( $partners->have_posts() ) :
+                                    while ( $partners->have_posts() ) : $partners->the_post();
+                                      $image = get_field('logo');
+                                  ?>
+                                      <figure>
+                                        <img style="float: left;" src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>">
+                                      </figure>
+                                  <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                  endif;
+                                  $i++;
+                                ?>
+                              </div>
+                            <?php } ?>
+                          </div>
                         </div>
+
                       </div>
                     <?php
                         }else {
@@ -84,36 +87,50 @@ get_header();
                         }
                       ?>
                     <div class="row">
-                      <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-8 col-md-offset-2">
                         <div class="become-a-partner mt mb">
                         <!-- Become a partner form starts -->
                           <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
                             <input type="hidden" name="action" value="become_a_partner"/>
-                            <div class="in-volunteer-contact our-partners">
-                              <h3 class="title-contact-form">Become A Partner</h3>
-                              <div class="in-contact-field">
-                                <label class="label_field">Full Name*</label>
-                                <div class="input-field">
-                                  <span class="wpcf7-form-control-wrap">
-                                  <input class="" placeholder="Full Name" required="required" type="text" value="" name="partner[fullname]"/> </span>
+                            <!-- Form section -->
+                            <div class="form-basic clearfix">
+                              <div class="col-md-8 col-md-offset-2">
+                                <!-- Form Title -->
+                                <div class="form-title">
+                                  <h2>Become a Partner</h2>
                                 </div>
-                              </div>
-                              <div class="in-contact-field">
-                                <label class="label_field">Address*</label>
-                                <div class="input-field">
-                                  <span class="wpcf7-form-control-wrap">
-                                  <input class="" placeholder="Address" required="required" type="text" value="" name="partner[address]"/> </span>
+
+                                <!-- Form Body -->
+                                <div class="form-body">
+                                  <!-- Full name -->
+                                  <div class="form-row">
+                                      <label>
+                                        <input placeholder="Your Name" type="text" name="name" required>
+                                        <span>Full Name *</span>
+                                      </label>
+                                  </div>
+
+                                  <!-- Address -->
+                                  <div class="form-row">
+                                      <label>
+                                        <input placeholder="Address" type="text" name="address">
+                                        <span>Address</span>
+                                      </label>
+                                  </div>
+
+                                  <!-- Email -->
+                                  <div class="form-row">
+                                      <label>
+                                        <input placeholder="Your Email" type="email" name="email" required>
+                                        <span>Email *</span>
+                                      </label>
+                                  </div>
+
+
+                                  <div class="form-row">
+                                    <button type="submit">Submit</button>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="in-contact-field">
-                                <label class="label_field">Email*</label>
-                                <div class="input-field">
-                                  <span class="wpcf7-form-control-wrap">
-                                  <input class="" placeholder="Email" required="required" type="email" value="" name="partner[email]"/> </span>
-                                </div>
-                              </div>
-                              <div class="in-contact-field in-submit-field">
-                                <div class="in-submit-field-inner"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"/><i class="fa fa-arrow-right"></i></div>
                               </div>
                             </div>
                           </form><!-- Become a partner form ends -->

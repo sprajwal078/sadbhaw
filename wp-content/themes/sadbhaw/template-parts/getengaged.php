@@ -13,7 +13,7 @@ get_header();
             <div class="iw-heading   style1  center-text">
               <h3 class="iwh-title" style="font-size:40px"><?php the_title(); ?></h3>
             </div>
-            <div class="row mt">
+            <div class="row mt mb col-md-10 col-md-offset-1">
               <div class="col-md-3">
                 <!-- Nav Pills -->
                 <ul class="nav nav-pills nav-stacked" role="tablist">
@@ -31,31 +31,44 @@ get_header();
                   <div role="tabpanel" class="tab-pane active" id="become-volunteer">
                       <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
                         <input type="hidden" name="action" value="become_a_volunteer"/>
-                        <div class="in-volunteer-contact two-column-form">
-                          <h3 class="title-contact-form">Become a Volunteer</h3>
-                          <div class="in-contact-field">
-                            <label class="label_field">Full Name*</label>
-                            <div class="input-field">
-                              <span class="wpcf7-form-control-wrap">
-                              <input class="" placeholder="Full Name" required="required" type="text" value="" name="volunteer[fullname]"/> </span>
+                        <!-- Form section -->
+                        <div class="form-basic clearfix">
+                          <div class="col-md-8 col-md-offset-2">
+                            <!-- Form Title -->
+                            <div class="form-title">
+                              <h2>Become a Volunteer</h2>
                             </div>
-                          </div>
-                          <div class="in-contact-field">
-                            <label class="label_field">Address*</label>
-                            <div class="input-field">
-                              <span class="wpcf7-form-control-wrap">
-                              <input class="" placeholder="Address" required="required" type="text" value="" name="volunteer[address]"/> </span>
+
+                            <!-- Form Body -->
+                            <div class="form-body">
+                              <!-- Full name -->
+                              <div class="form-row">
+                                  <label>
+                                    <input placeholder="Your Name" type="text" name="name" required>
+                                    <span>Full Name *</span>
+                                  </label>
+                              </div>
+
+                              <!-- Address -->
+                              <div class="form-row">
+                                  <label>
+                                    <input placeholder="Address" type="text" name="address">
+                                    <span>Address</span>
+                                  </label>
+                              </div>
+
+                              <!-- Email -->
+                              <div class="form-row">
+                                  <label>
+                                    <input placeholder="Your Email" type="email" name="email" required>
+                                    <span>Email *</span>
+                                  </label>
+                              </div>
+
+                              <div class="form-row">
+                                <button type="submit">Submit</button>
+                              </div>
                             </div>
-                          </div>
-                          <div class="in-contact-field">
-                            <label class="label_field">Email*</label>
-                            <div class="input-field">
-                              <span class="wpcf7-form-control-wrap">
-                              <input class="" placeholder="Email" required="required" type="email" value="" name="volunteer[email]"/> </span>
-                            </div>
-                          </div>
-                          <div class="in-contact-field in-submit-field">
-                            <div class="in-submit-field-inner"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"/></div>
                           </div>
                         </div>
                       </form>
@@ -64,31 +77,44 @@ get_header();
                   <div role="tabpanel" class="tab-pane" id="become-ambassador">
                     <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
                       <input type="hidden" name="action" value="become_an_ambassador"/>
-                      <div class="in-volunteer-contact two-column-form">
-                        <h3 class="title-contact-form">Become a Sadbhaw Ambassador</h3>
-                        <div class="in-contact-field">
-                          <label class="label_field">Full Name*</label>
-                          <div class="input-field">
-                            <span class="wpcf7-form-control-wrap">
-                            <input class="" placeholder="Full Name" required="required" type="text" value="" name="ambassador[fullname]"/> </span>
+                      <!-- Form section -->
+                      <div class="form-basic clearfix">
+                        <div class="col-md-8 col-md-offset-2">
+                          <!-- Form Title -->
+                          <div class="form-title">
+                            <h2>Become a Sadbhaw Ambassdor</h2>
                           </div>
-                        </div>
-                        <div class="in-contact-field">
-                          <label class="label_field">Address*</label>
-                          <div class="input-field">
-                            <span class="wpcf7-form-control-wrap">
-                            <input class="" placeholder="Address" required="required" type="text" value="" name="ambassador[address]"/> </span>
+
+                          <!-- Form Body -->
+                          <div class="form-body">
+                            <!-- Full name -->
+                            <div class="form-row">
+                                <label>
+                                  <input placeholder="Your Name" type="text" name="name" required>
+                                  <span>Full Name *</span>
+                                </label>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="form-row">
+                                <label>
+                                  <input placeholder="Address" type="text" name="address">
+                                  <span>Address</span>
+                                </label>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-row">
+                                <label>
+                                  <input placeholder="Your Email" type="email" name="email" required>
+                                  <span>Email *</span>
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                              <button type="submit">Submit</button>
+                            </div>
                           </div>
-                        </div>
-                        <div class="in-contact-field">
-                          <label class="label_field">Email*</label>
-                          <div class="input-field">
-                            <span class="wpcf7-form-control-wrap">
-                            <input class="" placeholder="Email" required="required" type="email" value="" name="ambassador[email]"/> </span>
-                          </div>
-                        </div>
-                        <div class="in-contact-field in-submit-field">
-                          <div class="in-submit-field-inner"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"/></div>
                         </div>
                       </div>
                     </form>

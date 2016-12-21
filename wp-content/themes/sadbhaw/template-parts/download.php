@@ -85,7 +85,7 @@
                   <div class="campaign-text">
                    <div class="campaign-title">
                     <div class="title">
-                     <h3><a target="_blank" href="<?php the_field('download')?>"><?php the_title();?></a></h3>
+                     <h3><a target="_blank" href="<?php the_field('download')?>"><?php the_title();?> <i class="fa fa-download" aria-hidden="true"></i></a></h3>
                      <h6>File Type : <?php the_field('type'); ?> | Uploaded Date : <?php echo date('Y-m-d',get_field('date')); ?></h6>
                     </div>
                     <div style="clear: both;"></div>
