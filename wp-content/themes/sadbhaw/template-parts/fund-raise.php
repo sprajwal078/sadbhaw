@@ -48,7 +48,7 @@ $cam = generate_query(
          </div>
          <div class="donate-btn iw-button-effect">
           <div class="donate-btn-effect">
-            <button data-id="389" onclick="window.location='<?php echo site_url().'/get-engaged/'?>';"  data-external-link="<?php echo site_url().'/donate/'?>" class="iw-capital donate theme-bg enable"><span data-hover="Donate" class="effect">Join Us</span></button>
+            <button data-id="389" onclick="window.location='<?php echo site_url().'/get-engaged/'?>';"  data-external-link="<?php echo site_url().'/donate/'?>" class="iw-capital donate theme-bg enable"><span data-hover="Join Us" class="effect">Join Us</span></button>
           </div>
          </div>
          <div style="clear: both;"></div>
