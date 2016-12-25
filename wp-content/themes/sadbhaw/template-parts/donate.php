@@ -43,20 +43,22 @@ get_header();
                   <input placeholder="Your Name" type="text" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['name'];  ?>" name="donate[name]" required>
                   <span>Full Name *</span>
                 </label>
+                <span class="error"><?php if(isset($_SESSION['error']) && in_array('name_empty',$_SESSION['error'])) echo "Name Field is required"  ?></span>
             </div>
 
             <!-- Email -->
             <div class="form-row">
                 <label>
-                  <input placeholder="Your Email" type="email" name="email" required>
+                  <input placeholder="Your Email" type="email" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['email'];  ?>" name="donate[email]" required>
                   <span>Email *</span>
                 </label>
+                <span class="error"><?php if(isset($_SESSION['error']) && in_array('email_empty',$_SESSION['error'])) echo "Email Field is required"  ?></span>
             </div>
 
             <!-- Address -->
             <div class="form-row">
                 <label>
-                  <input placeholder="Address" type="text" name="address">
+                  <input placeholder="Address" type="text" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['address'];  ?>" name="donate[address]">
                   <span>Address</span>
                 </label>
             </div>
@@ -64,7 +66,7 @@ get_header();
             <!-- Contact -->
             <div class="form-row">
                 <label>
-                  <input placeholder="Contact Number" type="number" name="contact">
+                  <input placeholder="Contact Number" type="number" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['phone'];  ?>" name="donate[phone]">
                   <span>Contact *</span>
                 </label>
             </div>
@@ -72,41 +74,52 @@ get_header();
             <!-- Agreement -->
             <div class="form-row">
                 <label>
-                  <textarea name="agreement" readonly></textarea>
+                  <textarea readonly><?php the_field('terms_of_agreement') ?></textarea>
                   <span>Agreement</span>
                 </label>
             </div>
 
-
+            <?php
+              //Get the donation plans added in the donate us section to display as dropdown
+              $donation_plans = get_field('donation_plans');
+            ?>
             <!-- Sponsor -->
             <div class="form-row">
                 <label>
                   <select name="donate[sponsor]" required>
                     <option value="" disabled selected>Select one</option>
-                    <option value="1">10000 NRS</option>
+                    <?php foreach ($donation_plans as $plan) : ?>
+                      <option value="<?php echo $plan['plan'] ?>" ><?php echo $plan['plan'] ?></option>
+                    <?php endforeach; ?>
                   </select>
                   <span>I would like to sponsor *</span>
                 </label>
+                <span class="error"><?php if(isset($_SESSION['error']) && in_array('sponsor_empty',$_SESSION['error'])) echo "Please select a sponsor"  ?></span>
             </div>
 
             <!-- Decline/Accept -->
             <div class="form-row inline">
                 <label for="accept">
                   I accept the agreement
-                  <input id="accept" type="checkbox" checked>
+                  <input id="accept" type="checkbox" name="terms" checked>
                 </label>
+                <span class="error"><?php if(isset($_SESSION['error']) && in_array('terms_not_accepted',$_SESSION['error'])) echo "Please accept the agreement"  ?></span>
             </div>
 
             <!-- Submit -->
             <div class="form-row">
-              <button type="submit">Donate</button>
-              <button type="submit">I Pledge</button>
+              <button type="submit" name="submit" value="Donate">Donate</button>
+              <button type="submit" name="submit" value="I Pledge">I Pledge</button>
+              <?php
+                // Ensure form is submitted before taking to payment section / thank you page
+                wp_nonce_field('donation_verify','_donation_nonce');
+              ?>
             </div>
           </div>
         </div>
       </div>
 
-     <div class="in-volunteer-contact">
+<!--      <div class="in-volunteer-contact">
         <h3 class="title-contact-form">Contact Information</h3>
         <div class="in-contact-field">
          <label class="label_field">Name*</label>
@@ -182,7 +195,7 @@ get_header();
             ?>
           </div>
         </div>
-     </div>
+     </div> -->
     </form>
   </div>
 </div>

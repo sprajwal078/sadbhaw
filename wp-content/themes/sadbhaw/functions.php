@@ -5,19 +5,33 @@
 function sadhbaw_scripts(){
   //Bootstrap CSS
   wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css');
+  //Font Awesome
+  wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome/font-awesome.min.css');
+  //iw shortcode css
+  wp_enqueue_style('iw-shortcode', get_template_directory_uri() . '/css/iw-shortcodes.css');
+  //js-composer css
+  wp_enqueue_style('js-composer', get_template_directory_uri() . '/css/js_composer.min.css');
+  //Google Font
+  wp_enqueue_style('google-font-1','http://fonts.googleapis.com/css?family=Roboto+Slab%3A100%2C300%2C400%2C700&amp;ver=1.5.0');
+  wp_enqueue_style('google-font-2','http://fonts.googleapis.com/css?family=ABeeZee%3A100%2C300%2C400%2C700&amp;ver=1.5.0');
   //InCharity Theme Base Stylesheet
   wp_enqueue_style('main', get_template_directory_uri() . '/style.css');
+  //Responsive CSS
+  wp_enqueue_style('responsive', get_template_directory_uri() . '/css/responsive.css');
   //Infunding plugin css
   wp_enqueue_style('infunding-css', get_template_directory_uri() . '/css/infunding_style.css');
   //Custom Stylesheet
   wp_enqueue_style('custom', get_template_directory_uri() . '/css/custom.css');
 
+  //Google Maps API
+  wp_enqueue_script('google-maps-api',"https://maps.googleapis.com/maps/api/js?key=AIzaSyAxP_6_jfGs_RuL61axoXVEyyvPV1Wu-lI",'','',true);
+  wp_enqueue_script('acf-maps',get_template_directory_uri()."/js/acf-googlemap.js",'','',true);
   //Bootstrap JS
-  wp_enqueue_script('bootstrap-js',get_template_directory_uri() . '/js/bootstrap.min.js');
+  wp_enqueue_script('bootstrap-js',get_template_directory_uri() . '/js/bootstrap.min.js','','',true);
 
-  wp_enqueue_script('countdown-js',get_template_directory_uri() . '/js/jquery.countdown.min.js');
+  wp_enqueue_script('countdown-js',get_template_directory_uri() . '/js/jquery.countdown.min.js','','',true);
   //Custom JS
-  wp_enqueue_script('custom-js',get_template_directory_uri() . '/js/custom.js');
+  wp_enqueue_script('custom-js',get_template_directory_uri() . '/js/custom.js','','',true);
 }
 add_action('wp_enqueue_scripts','sadhbaw_scripts');
 
@@ -123,31 +137,28 @@ add_action('admin_post_nopriv_become_an_ambassador','become_an_ambassador');
 
 //Handles the become an ambassador form submit
 function donate_us(){
+  //Check for empty fields
+  $error = [];
+  if (empty($_POST['donate']['name'])) $error[] = 'name_empty';
+  if (empty($_POST['donate']['email'])) $error[] = 'email_empty';
+  if (empty($_POST['donate']['phone'])) $error[] = 'contact_empty';
+  if (empty($_POST['donate']['sponsor'])) $error[] = 'sponsor_empty';
+  if (!isset($_POST['terms'])) $error[] = 'terms_not_accepted';
+  if (!empty($error)){
+    session_start();
+    $_SESSION['error'] = $error;
+    $_SESSION['prev_values'] = $_POST;
+    wp_redirect($_SERVER['HTTP_REFERER']);
+    die;
+  }
   //For donate button
   if ($_POST['submit'] == 'Donate'){
-    $error = [];
-    //Check for empty fields
-    if (empty($_POST['donate']['name'])) $error[] = 'name_empty';
-    if (empty($_POST['donate']['email'])) $error[] = 'email_empty';
-    if (empty($_POST['donate']['sponsor'])) $error[] = 'sponsor_empty';
-    if (!isset($_POST['terms']) || $_POST['terms'] == 'decline') $error[] = 'terms_not_accepted';
-    if(empty($error)){
-      wp_redirect(site_url('/payment/?_donation_nonce=').$_POST['_donation_nonce']);
-      die;
-    }else{
-      session_start();
-      $_SESSION['error'] = $error;
-      $_SESSION['prev_values'] = $_POST;
-      wp_redirect($_SERVER['HTTP_REFERER']);
-      die;
-    }
+    wp_redirect(site_url('/payment/?_donation_nonce=').$_POST['_donation_nonce']);
+    die;
   //For I pledge button
   }elseif ($_POST['submit'] == 'I Pledge'){
     wp_redirect(site_url('thank-you'));
     die;
-    //Get email address of site admin
-    // $email = get_option('admin_email');
-    // wp_mail($email,'')
   }
 }
 add_action('admin_post_donate_us','donate_us');
@@ -178,3 +189,44 @@ add_action('admin_post_we_visit_you','we_visit_you');
 add_action('admin_post_nopriv_we_visit_you','we_visit_you');
 
 /*----------  Form Handling Ends  ----------*/
+
+/**
+ * Google Map API key
+ * @param  Array  $api  API array
+ * @return Array        Updated API array
+ */
+function sadbhaw_google_map_api( $api ){
+  $api['key'] = 'AIzaSyAxP_6_jfGs_RuL61axoXVEyyvPV1Wu-lI';
+  return $api;
+}
+add_filter('acf/fields/google_map/api', 'sadbhaw_google_map_api');
+
+//Adding the Open Graph in the Language Attributes
+function add_opengraph_doctype( $output ) {
+    return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
+  }
+// add_filter('language_attributes', 'add_opengraph_doctype');
+
+//Lets add Open Graph Meta Info
+
+function insert_fb_in_head() {
+  global $post;
+  if ( !is_singular()) //if it is not a post or a page
+    return;
+        echo '<meta property="fb:admins" content="1385322881512772"/>';
+        echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+        echo '<meta property="og:type" content="article"/>';
+        echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+        echo '<meta property="og:site_name" content="Sadbhaw"/>';
+  if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
+    $default_image=get_template_directory_uri().'/images/logos/logo_big.png'; //replace this with a default image on your server or an image in your media library
+    echo '<meta property="og:image" content="' . $default_image . '"/>';
+  }
+  else{
+    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+    echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+  }
+  echo "
+";
+}
+// add_action( 'wp_head', 'insert_fb_in_head', 5 );

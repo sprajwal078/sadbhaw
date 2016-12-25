@@ -22,49 +22,19 @@
                 <li id="menu-item-475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-475"><a href="<?php echo site_url()?>">Home</a></li>
               </ul>
             </nav>
-            <div class="back-to-top"><a href="#page-top" title="Back to top" class="button-effect3"><i class="fa fa-arrow-up"></i></a></div>
+            <div class="back-to-top"><a href="#page-top" title="Back to top" class="ibutton-effect3"><i class="fa fa-arrow-up"></i></a></div>
           </div>
         </div>
       </div>
     </div>
   </footer>
   </div>
-
+<?php wp_footer(); ?>
   <script type="text/javascript">
     function revslider_showDoubleJqueryError(sliderID){
       var errorMessage="Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";errorMessage+="<br> This includes make eliminates the revolution slider libraries, and make it not work.";errorMessage+="<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";errorMessage+="<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";errorMessage="<span style='font-size:16px;color:#BC0C06;'>"+errorMessage+"</span>";jQuery(sliderID).show().html(errorMessage);
     }
   </script>
-  <!-- <script src="<?php echo site_url()?>/wp-content/plugins/infunding/assets/js/infunding_script.js"></script> -->
-  <script src="<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/js/iw-server-location.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/js/iw-shortcodes.js"></script>
-
-
-  <script src="<?php echo site_url()?>/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js"></script>
-
-  <script src="<?php echo site_url()?>/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js"></script>
-
-
-  <script src="<?php echo site_url()?>/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.js"></script>
-
-  <!-- <script src="<?php echo site_url()?>/wp-content/themes/incharity/js/template.js"></script> -->
-  <!-- <script src="<?php echo site_url()?>/wp-content/themes/incharity/js/panel-settings.js"></script> -->
-  <script src="<?php echo site_url()?>/wp-includes/js/wp-embed.min.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/js/jquery.parallax-1.1.3.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/plugins/iw_composer_addons/assets/js/jquery.gallery.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/plugins/infunding/assets/js/owl.carousel.min.js"></script>
-  <script src="<?php echo site_url()?>/wp-content/themes/sadbhaw/js/animatejs/jquery.counterup.min.js"></script>
-<style>
-  .tp-thumbs{
-    display: none;
-  }
-  .style4.profile-box{
-    color:black !important;
-  }
-</style>
 <script>
   $(document).ready(function() {
     var animate_done = false;
@@ -109,5 +79,5 @@
     });
 });
 </script>
-<?php wp_footer(); ?>
+
 </body>

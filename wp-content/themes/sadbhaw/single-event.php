@@ -28,7 +28,7 @@ get_header();
                         <div class="row">
                           <div class="col-md-12">
                             <div class="post-info-date"><i class="fa fa-calendar-o"></i>Date : <span> <?php echo date('Y-m-d',strtotime(get_field('start_date'))); ?></span><span> - </span><span><?php echo date('Y-m-d',strtotime(get_field('end_date'))); ?></span></div>
-                            <div class="fb-share-button" data-href="<?php the_permalink() ?>" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>&amp;src=sdkpreparse">Share</a></div>
+                            <div class="fb-share-button" data-href="http://localhost/sadbhaw/event/event-1/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2Fsadbhaw%2Fevent%2Fevent-1%2F&amp;src=sdkpreparse">Share</a></div>
                           </div>
                           <!-- <div class="col-md-6">
                           </div> -->
@@ -45,7 +45,7 @@ get_header();
                           <h3 class="iwh-title" style="font-size:40px">Photos</h3>
                         </div>
                       </div>
-                      <div class="row">
+                    <div class="row">
                       <?php
                         if( have_rows('gallery') ):
                           $i = 0;
@@ -107,6 +107,22 @@ get_header();
                       <?php else: ?>
                           <div class="col-md-12">No gallery added</div>
                       <?php endif;?>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <!-- Map -->
+                      <?php
+                        $location = get_field('location');
+                      ?>
+                      <div class="col-md-12">
+                        <div class="wpb_wrapper">
+                          <div class="iw-heading   style1  center-text">
+                            <h3 class="iwh-title" style="font-size:40px">Location</h3>
+                          </div>
+                        </div>
+                        <div class="acf-map">
+                          <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+                        </div><!-- Google Maps Section Ends -->
                       </div>
                     </div>
                   </div>
