@@ -63,6 +63,14 @@ get_header();
                 </label>
             </div>
 
+            <!-- City/Zip -->
+            <div class="form-row">
+                <label>
+                  <input placeholder="City,Zip Code" type="text" value="<?php if(isset($_SESSION['prev_values'])) echo $_SESSION['prev_values']['donate']['city'];  ?>" name="donate[city]">
+                  <span>City,Zip</span>
+                </label>
+            </div>
+
             <!-- Contact -->
             <div class="form-row">
                 <label>
@@ -101,7 +109,7 @@ get_header();
             <div class="form-row inline">
                 <label for="accept">
                   I accept the agreement
-                  <input id="accept" type="checkbox" name="terms" checked>
+                  <input id="accept" type="checkbox" name="terms">
                 </label>
                 <span class="error"><?php if(isset($_SESSION['error']) && in_array('terms_not_accepted',$_SESSION['error'])) echo "Please accept the agreement"  ?></span>
             </div>

@@ -38,33 +38,194 @@ get_header();
                             <div class="form-title">
                               <h2>Become a Volunteer</h2>
                             </div>
-
+                            <div class="error">
+                              <?php if (isset($_GET['submit']) && $_GET['submit'] == 'false'): ?>
+                                <div class="alert alert-warning">
+                                  Fields marked * are required.
+                                </div>
+                              <?php elseif (isset($_GET['submit']) && $_GET['submit'] == 'true'): ?>
+                                <div class="alert alert-success">
+                                  Your details have been sent to the admin.
+                                </div>
+                              <?php endif; ?>
+                            </div>
                             <!-- Form Body -->
                             <div class="form-body">
-                              <!-- Full name -->
+                              <!-- First name -->
                               <div class="form-row">
-                                  <label>
-                                    <input placeholder="Your Name" type="text" name="name" required>
-                                    <span>Full Name *</span>
-                                  </label>
+                                <label>
+                                  <input placeholder="First Name" type="text" name="first-name" required>
+                                  <span>First Name *</span>
+                                </label>
                               </div>
-
-                              <!-- Address -->
+                              <!-- Last name -->
                               <div class="form-row">
-                                  <label>
-                                    <input placeholder="Address" type="text" name="address">
-                                    <span>Address</span>
-                                  </label>
+                                <label>
+                                  <input placeholder="Last Name" type="text" name="last-name" required>
+                                  <span>Last Name *</span>
+                                </label>
                               </div>
-
                               <!-- Email -->
                               <div class="form-row">
-                                  <label>
-                                    <input placeholder="Your Email" type="email" name="email" required>
-                                    <span>Email *</span>
-                                  </label>
+                                <label>
+                                  <input placeholder="Your Email" type="email" name="email" required>
+                                  <span>Email *</span>
+                                </label>
                               </div>
-
+                              <!-- Address -->
+                              <div class="form-row">
+                                <label>
+                                  <input placeholder="Address" type="text" name="address">
+                                  <span>Address</span>
+                                </label>
+                              </div>
+                              <!-- City/State/Zip -->
+                              <div class="form-row">
+                                <label>
+                                  <input placeholder="City/State/Zip" type="text" name="city">
+                                  <span>City/State/Zip</span>
+                                </label>
+                              </div>
+                              <!-- Telephone -->
+                              <div class="form-row">
+                                <label>
+                                  <input placeholder="Telephone" type="text" name="phone">
+                                  <span>Telephone</span>
+                                </label>
+                              </div>
+                              <!-- Gender -->
+                              <div class="form-row">
+                                <label>
+                                  Male<input type="radio" name="gender" value="male">
+                                  Female<input type="radio" name="gender" value="female">
+                                  <span>Gender</span>
+                                </label>
+                              </div>
+                              <!-- Education -->
+                              <div class="form-row">
+                                <label>
+                                  1-5<input type="radio" name="education" value="1-5">
+                                  6-9<input type="radio" name="education" value="6-9">
+                                  11-12<input type="radio" name="education" value="11-12">
+                                  College<input type="radio" name="education" value="College">
+                                  Business<input type="radio" name="education" value="Business">
+                                  Graduate School<input type="radio" name="education" value="Graduate School">
+                                  Technical/Vocational<input type="radio" name="education" value="Graduate School">
+                                  <span>Education</span>
+                                </label>
+                              </div>
+                              <!-- Skills -->
+                              <div class="form-row">
+                                <label>
+                                  <span>Skill</span>
+                                  <div class="form-element">
+                                    1.<input placeholder="Skill Name" type="text" name="skill[0][name]" >
+                                    Proficiency:
+                                    Skilled<input type="radio" name="skill[0][proficiency]" value="Skilled" >
+                                    Can Teach<input type="radio" name="skill[0][proficiency]" value="Can Teach" >
+                                    Amateur<input type="radio" name="skill[0][proficiency]" value="Amateur" >
+                                  </div>
+                                  <div class="form-element">
+                                    2.<input placeholder="Skill Name" type="text" name="skill[1][name]" >
+                                    Proficiency:
+                                    Skilled<input type="radio" name="skill[1][proficiency]" value="Skilled" >
+                                    Can Teach<input type="radio" name="skill[1][proficiency]" value="Can Teach" >
+                                    Amateur<input type="radio" name="skill[1][proficiency]" value="Amateur" >
+                                  </div>
+                                  <div class="form-element">
+                                    3.<input placeholder="Skill Name" type="text" name="skill[2][name]" >
+                                    Proficiency:
+                                    Skilled<input type="radio" name="skill[2][proficiency]" value="Skilled" >
+                                    Can Teach<input type="radio" name="skill[2][proficiency]" value="Can Teach" >
+                                    Amateur<input type="radio" name="skill[2][proficiency]" value="Amateur" >
+                                  </div>
+                                </label>
+                              </div>
+                              <!-- Languages -->
+                              <div class="form-row">
+                                <label>
+                                  <span>Languages</span>
+                                  <div class="form-element">
+                                    1.<input placeholder="Language Name" type="text" name="language[0][name]" >
+                                    Proficiency:
+                                    Fluent<input type="radio" name="language[0][proficiency]" value="Fluent" >
+                                    Read<input type="radio" name="language[0][proficiency]" value="Read" >
+                                    Write<input type="radio" name="language[0][proficiency]" value="Write" >
+                                  </div>
+                                  <div class="form-element">
+                                    2.<input placeholder="Language Name" type="text" name="language[1][name]" >
+                                    Proficiency:
+                                    Fluent<input type="radio" name="language[1][proficiency]" value="Fluent" >
+                                    Read<input type="radio" name="language[1][proficiency]" value="Read" >
+                                    Write<input type="radio" name="language[1][proficiency]" value="Write" >
+                                  </div>
+                                </label>
+                              </div>
+                              <!-- Volunteer Availability -->
+                              <div class="form-row">
+                                <label>
+                                  <span>Volunteer Availability</span>
+                                  <div class="form-element">
+                                    Number of Days per week
+                                    1<input type="radio" name="availability[no-of-days]" value="1">
+                                    2<input type="radio" name="availability[no-of-days]" value="2">
+                                    3<input type="radio" name="availability[no-of-days]" value="3">
+                                    4<input type="radio" name="availability[no-of-days]" value="4">
+                                    5<input type="radio" name="availability[no-of-days]" value="5">
+                                  </div>
+                                  <div class="form-element">
+                                    Monday<input type="checkbox" name="availability[days][Monday]">
+                                    Tuesday<input type="checkbox" name="availability[days][Tuesday]">
+                                    Wednesday<input type="checkbox" name="availability[days][Wednesday]">
+                                    Thursday<input type="checkbox" name="availability[days][Thursday]">
+                                    Friday<input type="checkbox" name="availability[days][Friday]">
+                                    No Preference<input type="checkbox" name="availability[days][No Preference]">
+                                  </div>
+                                </label>
+                              </div>
+                              <!-- Transportation -->
+                              <div class="form-row">
+                                <label>
+                                  <span>Transportation(How you will get to your assignment)</span>
+                                  Public Trans.<input type="radio" name="transportation" value="Public">
+                                  Walk<input type="radio" name="transportation" value="Walk">
+                                  Motorcycle<input type="radio" name="transportation" value="Motorcycle">
+                                </label>
+                              </div>
+                              <!-- Emergency -->
+                              <div class="form-emergency">
+                                <span>In case of emergency, notify</span>
+                                <div class="form-row">
+                                  <label>
+                                    <span>First Name</span>
+                                    <input type="text" name="emergency[first-name]" placeholder="First Name">
+                                  </label>
+                                </div>
+                                <div class="form-row">
+                                  <label>
+                                    <span>Last Name</span>
+                                    <input type="text" name="emergency[last-name]" placeholder="Last Name">
+                                  </label>
+                                </div>
+                                <div class="form-row">
+                                  <label>
+                                    <span>Address</span>
+                                    <input type="text" name="emergency[address]" placeholder="Address">
+                                  </label>
+                                </div>
+                                <div class="form-row">
+                                  <label>
+                                    <span>City</span>
+                                    <input type="text" name="emergency[city]" placeholder="City/State/Zip">
+                                  </label>
+                                </div>
+                                <div class="form-row">
+                                  <label>
+                                    <span>Phone</span>
+                                    <input type="text" name="emergency[phone]" placeholder="Telephone">
+                                  </label>
+                                </div>
+                              </div>
                               <div class="form-row">
                                 <button type="submit">Submit</button>
                               </div>

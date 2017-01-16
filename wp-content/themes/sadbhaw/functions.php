@@ -123,7 +123,58 @@ add_action('admin_post_nopriv_become_a_partner','become_a_partner');
 
 //Handles the become a volunteer form submit
 function become_a_volunteer(){
-  echo "Thank you for being a volunteer";
+  global $wpdb;
+  if (!empty($_POST['first-name']) && !empty($_POST['last-name']) && !empty($_POST['email'])){
+    $wpdb->insert('wp_sadbhaw_volunteers',array('first_name' => $_POST['first-name'],
+                                                'last_name' => $_POST['last-name'],
+                                                'email' => $_POST['email'],
+                                                'address' => $_POST['address'],
+                                                'city' => $_POST['city'],
+                                                'phone' => $_POST['phone'],
+                                                'gender' => $_POST['gender'],
+                                                'education' => $_POST['education'],
+                                                'skill' => json_encode($_POST['skill']),
+                                                'language' => json_encode($_POST['language']),
+                                                'availability' => json_encode($_POST['availability']),
+                                                'transportation' => $_POST['transportation'],
+                                                'emergency' => json_encode($_POST['emergency'])
+                                                ));
+    $message = '';
+    $message .= "The following person has tried to register as a volunteer\n\n";
+    $message .= "First Name : ".$_POST['first-name']."\n";
+    $message .= "Last Name : ".$_POST['last-name']."\n";
+    $message .= "Email : ".$_POST['email']."\n";
+    $message .= "Address : ".$_POST['address']."\n";
+    $message .= "City/State/Zip : ".$_POST['city']."\n";
+    $message .= "Phone : ".$_POST['phone']."\n";
+    $message .= "Gender : ".$_POST['gender']."\n";
+    $message .= "Education : ".$_POST['education']."\n";
+    $message .= "Skills : \n";
+    foreach ($_POST['skill'] as $skill) {
+      $message .= $skill['name']." - ".$skill['proficiency']."\n";
+    }
+    $message .= "Language : \n";
+    foreach ($_POST['language'] as $language) {
+      $message .= $language['name']." - ".$language['proficiency']."\n";
+    }
+    $message .= "Available Days : ".$_POST['availability']['no-of-days']."\n";
+    $message .= "Days : ".implode(',',array_keys($_POST['availability']['days']))."\n";
+    $message .= "Transportation : ".$_POST['transportation']."\n";
+    $message .= "Emergency Contact : \n";
+    $emergency = $_POST['emergency'];
+    $message .= "First Name : ".$emergency['first-name']."\n";
+    $message .= "Last Name : ".$emergency['last-name']."\n";
+    $message .= "Address : ".$emergency['address']."\n";
+    $message .= "City/State/Zip : ".$emergency['city']."\n";
+    $message .= "Phone : ".$_POST['phone']."\n";
+    wp_mail(get_bloginfo('admin_email'),'Sadbhaw Volunteer Registration',$message);
+    wp_redirect($_SERVER['HTTP_REFERER']."?submit=true");
+    die;
+  }
+  else{
+    wp_redirect($_SERVER['HTTP_REFERER']."?submit=false");
+    die;
+  }
 }
 add_action('admin_post_become_a_volunteer','become_a_volunteer');
 add_action('admin_post_nopriv_become_a_volunteer','become_a_volunteer');
