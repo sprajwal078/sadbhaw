@@ -8,6 +8,11 @@
         var image = $(e.relatedTarget) // Button that triggered the modal
         $(this).carousel(image.data('position'));
       });
+
+      //Show respective payement button after switching the payment select radio button
+      $('#payment-select input[type=radio]').on('change',function(e){
+        $('#'+this.value).siblings().hide().end().show()
+      })
     });
    // The rest of the code goes here!
   }(window.jQuery, window, document));

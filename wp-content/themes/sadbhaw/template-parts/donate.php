@@ -34,7 +34,6 @@ get_header();
           <div class="form-title">
             <h2>Contact Information</h2>
           </div>
-
           <!-- Form Body -->
           <div class="form-body">
             <!-- Full name -->
@@ -97,7 +96,7 @@ get_header();
                   <select name="donate[sponsor]" required>
                     <option value="" disabled selected>Select one</option>
                     <?php foreach ($donation_plans as $plan) : ?>
-                      <option value="<?php echo $plan['plan'] ?>" ><?php echo $plan['plan'] ?></option>
+                      <option value="<?php echo $plan['amount'] ?>" ><?php echo $plan['plan'] ?></option>
                     <?php endforeach; ?>
                   </select>
                   <span>I would like to sponsor *</span>

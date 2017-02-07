@@ -2,7 +2,11 @@
 /*
 *Template name: Payment Select Sadhbhaw
 */
-if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],'donation_verify') ):
+//Check if nonce is valid and donator info has been added to the db
+if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],'donation_verify') && isset($_GET['id']) ):
+  global $wpdb;
+  //Get donation amount from db
+  $amount = $wpdb->get_var($wpdb->prepare('SELECT donated_amount FROM wp_sadbhaw_donators WHERE id = %d', $_GET['id']));
   get_header();
 ?>
 <div class="container downloads payment-select">
@@ -18,20 +22,19 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
             <div class="row mt flex-row align-stretch form-basic clearfix mb">
               <div class="col-md-6">
                 <!-- Payment Select Form Starts -->
-                <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
-                  <input type="hidden" name="action" value="payment_method"/>
+                <!-- <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post"> -->
+                  <!-- <input type="hidden" name="action" value="payment_method"/> -->
                   <div class="">
-
                       <!-- Form Title -->
                       <div class="form-title">
                         <h2>Select Payment Method</h2>
                       </div>
 
                       <!-- Payment Method -->
-                      <div class="form-row inline text-center">
+                      <div class="form-row inline text-center" id="payment-select">
                           <label>
                             Esewa
-                            <input type="radio" checked name="payment_method" value="esewa">
+                            <input type="radio" checked name="payment_method" value="esewa" >
                           </label>
                           <label>
                             Skrill
@@ -43,10 +46,21 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                           </label>
                       </div>
                       <div class="form-row text-center mt">
-                        <button type="submit">Next</button>
+                        <div id="esewa">
+                          <!-- Generates esewa donation form with donate button -->
+                          <?php echo do_shortcode("[wpesewa-donation amount=10 surl='".site_url('/donation-redirect?response=success&id=').$_GET['id']."' furl='".site_url('/donation-redirect?response=failed/')."']"); ?>
+                        </div>
+                        <div id="skrill" style="display: none">
+                          <!-- Skrill Donate Button -->
+                          <button type="button">Skrill</button>
+                        </div>
+                        <div id="paypal" style="display: none">
+                          <!-- Paypal Donate Button -->
+                          <button type="button">Paypal</button>
+                        </div>
                       </div>
                   </div>
-                </form><!-- Payment Select Form Ends -->
+                <!-- </form>Payment Select Form Ends -->
               </div>
               <div class="col-md-6" style="border-left: 1px solid rgba(0,0,0,.2)">
                 <!-- Direct Deposit Section Starts -->

@@ -204,7 +204,17 @@ function donate_us(){
   }
   //For donate button
   if ($_POST['submit'] == 'Donate'){
-    wp_redirect(site_url('/payment/?_donation_nonce=').$_POST['_donation_nonce']);
+    global $wpdb;
+    //Save donator info
+    $wpdb->insert('wp_sadbhaw_donators',array('name' => $_POST['donate']['name'],
+                                              'email' => $_POST['donate']['email'],
+                                              'address' => $_POST['donate']['address'],
+                                              'zip' => $_POST['donate']['city'],
+                                              'phone' => $_POST['donate']['phone'],
+                                              'donated_amount' => $_POST['donate']['sponsor']));
+    $id = $wpdb->insert_id;
+    //Redirect to payment select page
+    wp_redirect(site_url('/payment-options/?_donation_nonce=').$_POST['_donation_nonce']."&id={$id}");
     die;
   //For I pledge button
   }elseif ($_POST['submit'] == 'I Pledge'){
