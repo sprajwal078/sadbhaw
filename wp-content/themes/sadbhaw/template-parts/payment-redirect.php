@@ -18,12 +18,12 @@ if (isset($_GET['response'])):
 	              	Donation Recieved
 	              </h4>
 	              <p class="iwh-content">
-	              <form action = "http://dev.esewa.com.np/epay/transrec" method="POST">
+<!-- 	              <form action = "http://dev.esewa.com.np/epay/transrec" method="POST">
 									<input type="hidden" name="refid" value="abde5222-cd16-4958-95cc-d32af125e1c8" />
 									<input value="<?php echo $_GET['amt'] ?>" type="hidden" name="amt">
 									<input value="<?php echo $_GET['oid'] ?>" type="hidden" name="oid">
 									<input value="Verify" type="submit">
-									</form>
+									</form> -->
 	              	<!-- Content can be added here -->
 	              </p>
 	            <?php elseif ($_GET['response'] == 'failed'): ?>

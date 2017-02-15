@@ -167,11 +167,11 @@ get_header();
                                   <span>Volunteer Availability</span>
                                   <div class="form-element">
                                     Number of Days per week
-                                    1<input type="radio" name="availability[no-of-days]" value="1">
-                                    2<input type="radio" name="availability[no-of-days]" value="2">
-                                    3<input type="radio" name="availability[no-of-days]" value="3">
-                                    4<input type="radio" name="availability[no-of-days]" value="4">
-                                    5<input type="radio" name="availability[no-of-days]" value="5">
+                                    1<input type="radio" name="availability[no_of_days]" value="1">
+                                    2<input type="radio" name="availability[no_of_days]" value="2">
+                                    3<input type="radio" name="availability[no_of_days]" value="3">
+                                    4<input type="radio" name="availability[no_of_days]" value="4">
+                                    5<input type="radio" name="availability[no_of_days]" value="5">
                                   </div>
                                   <div class="form-element">
                                     Monday<input type="checkbox" name="availability[days][Monday]">
@@ -198,13 +198,13 @@ get_header();
                                 <div class="form-row">
                                   <label>
                                     <span>First Name</span>
-                                    <input type="text" name="emergency[first-name]" placeholder="First Name">
+                                    <input type="text" name="emergency[first_name]" placeholder="First Name">
                                   </label>
                                 </div>
                                 <div class="form-row">
                                   <label>
                                     <span>Last Name</span>
-                                    <input type="text" name="emergency[last-name]" placeholder="Last Name">
+                                    <input type="text" name="emergency[last_name]" placeholder="Last Name">
                                   </label>
                                 </div>
                                 <div class="form-row">
