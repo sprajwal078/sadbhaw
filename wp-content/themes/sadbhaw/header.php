@@ -27,16 +27,15 @@
 	<?php wp_head(); ?>
 </head>
 <body id="page-top" class="home page page-id-725 page-parent page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php wpb-js-composer js-comp-ver-4.12 vc_responsive down">
-<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
-<?php if(is_singular('event') || is_singular('campaign')): ?>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '1385322881512772',
+      appId      : '253914808385791',
       xfbml      : true,
       version    : 'v2.8'
     });
+    FB.AppEvents.logPageView();
   };
 
   (function(d, s, id){
@@ -47,7 +46,6 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<?php endif; ?>
 <div class="wrapper ">
 	<div class="header header-default header-sticky clone">
 		<div role="navigation" class="navbar navbar-default navbar-bg-light">

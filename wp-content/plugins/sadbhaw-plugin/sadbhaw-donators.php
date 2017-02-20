@@ -85,6 +85,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		  $current_page = $this->get_pagenum();
 		  $items = self::get_donators( $per_page, $current_page );
 		  $total_items  = count($items);
+		  	echo "<pre>";var_dump($items);die;
 		  $this->set_pagination_args( [
 		    'total_items' => $total_items, //WE have to calculate the total number of items
 		    'per_page'    => $per_page //WE have to determine how many items to show on a page

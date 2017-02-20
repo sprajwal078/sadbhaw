@@ -4,7 +4,7 @@
 	 * Plugin Name: Sadbhaw Donators
 	 * Description: Plugin to manage donators for Sadbhaw
 	 * Version: 1.0
-	 * Author: Swopnil Dangol
+	 * Author: Sadbhaw
 	 */
 	define('SADBHAW_PLUGIN_DIR',plugin_dir_path(__FILE__));
 	require_once( SADBHAW_PLUGIN_DIR . 'sadbhaw-donators.php' );

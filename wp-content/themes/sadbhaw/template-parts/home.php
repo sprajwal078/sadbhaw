@@ -3,6 +3,8 @@
 *Template name: Home Sadbhaw
 */
 get_header();
+?>
+<?php
  include(locate_template('template-parts/slider-part.php')); ?>
  <div class="contents-main home-content" id="contents-main">
   <article id="post-725" class="post-725 page type-page status-publish hentry">
@@ -98,16 +100,12 @@ get_header();
           <div class="col-md-12">
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="youtube"><?php the_field('youtube')?></div>
-              <div role="tabpanel" class="tab-pane" id="facebook"><div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/20531316728/posts/10154009990506729/" class="fb-xfbml-parse-ignore">Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on&nbsp;<a href="https://www.facebook.com/20531316728/posts/10154009990506729/">Thursday, August 27, 2015</a></blockquote></div>
-                  <script>(function(d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;
-                          js = d.createElement(s); js.id = id;
-                          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1519539795026213";
-                          fjs.parentNode.insertBefore(js, fjs);
-                      }(document, 'script', 'facebook-jssdk'));</script></div>
-              <div role="tabpanel" class="tab-pane" id="twitter"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New on Amazon Alexa! Use the Twitter Reader skill to hear trends, top Tweets, notifications &amp; more! Just <a href="https://twitter.com/hashtag/AskAlexa?src=hash">#AskAlexa</a>. <a href="https://t.co/BvXRS4NiQu">pic.twitter.com/BvXRS4NiQu</a></p>&mdash; Twitter (@twitter) <a href="https://twitter.com/twitter/status/774276250407886848">September 9, 2016</a></blockquote>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+              <div role="tabpanel" class="tab-pane" id="facebook">
+                <div class="fb-page" data-href="https://www.facebook.com/sadbhawscholarships/" data-tabs="timeline" data-width="600" data-height="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/sadbhawscholarships/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/sadbhawscholarships/">Sadbhaw Scholarships- Nepali Le Nepali Laai</a></blockquote></div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="twitter">
+                <a class="twitter-timeline" data-width="600" data-height="350" href="https://twitter.com/AngularJS_News">Tweets by AngularJS News</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
             </div>
           </div>
 

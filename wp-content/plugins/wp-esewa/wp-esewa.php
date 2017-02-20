@@ -3,7 +3,7 @@
 Plugin Name: Esewa Donation
 Description: Handle Esewa transactions
 Version: 1.0
-Author: Swopnil Dangol
+Author: Sadbhaw
 Text Domain: wpesewa
 */
 // create plugin settings menu

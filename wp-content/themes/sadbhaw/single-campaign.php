@@ -64,7 +64,7 @@ get_header();
                     </div>
                     <br>
 
-                    <div class="fb-share-button" data-href="<?php the_permalink() ?>" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>&amp;src=sdkpreparse">Share</a></div>
+                    <div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink()); ?>&amp;src=sdkpreparse">Share</a></div>
                   <?php endwhile;endif;?>
                 </div>
               </div>
