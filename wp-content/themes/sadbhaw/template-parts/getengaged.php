@@ -39,14 +39,14 @@ get_header();
                               <h2>Become a Volunteer</h2>
                             </div>
                             <div class="error">
-                              <?php if (isset($_GET['submit']) && $_GET['submit'] == 'false'): ?>
+                              <?php if (isset($_GET['submit']) && $_GET['submit'] == 'false' && $_GET['form'] == 'volunteer'): ?>
                                 <div class="alert alert-warning">
                                   Fields marked * are required.
                                 </div>
-                              <?php elseif (isset($_GET['submit']) && $_GET['submit'] == 'true'): ?>
-                                <div class="alert alert-success">
+                              <?php //elseif (isset($_GET['submit']) && $_GET['submit'] == 'true'): ?>
+                       <!--          <div class="alert alert-success">
                                   Your details have been sent to the admin.
-                                </div>
+                                </div> -->
                               <?php endif; ?>
                             </div>
                             <!-- Form Body -->
@@ -276,13 +276,19 @@ get_header();
                           <div class="form-title">
                             <h2>Become a Sadbhaw Ambassdor</h2>
                           </div>
-
+                           <div class="error">
+                              <?php if (isset($_GET['submit']) && $_GET['submit'] == 'false' && $_GET['form'] == 'ambassador'): ?>
+                                <div class="alert alert-warning">
+                                  Fields marked * are required.
+                                </div>
+                              <?php endif; ?>
+                            </div>
                           <!-- Form Body -->
                           <div class="form-body">
                             <!-- Full name -->
                             <div class="form-row">
                                 <label>
-                                  <input placeholder="Your Name" type="text" name="name" required>
+                                  <input placeholder="Your Name" type="text" name="full-name" required>
                                   <span>Full Name *</span>
                                 </label>
                             </div>

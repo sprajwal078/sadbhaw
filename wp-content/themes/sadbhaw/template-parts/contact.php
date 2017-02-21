@@ -24,18 +24,25 @@
       <div class="col-md-6 row-left">
         <!-- Payment Select Form Starts -->
         <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
-          <input type="hidden" name="action" value="payment_method"/>
+          <input type="hidden" name="action" value="contact_us"/>
           <div class="">
               <!-- Form Title -->
               <div class="form-title">
                 <h2>Write Us a Message</h2>
+              </div>
+              <div class="error">
+                <?php if (isset($_GET['submit']) && $_GET['submit'] == 'false' && $_GET['form'] == 'contact'): ?>
+                  <div class="alert alert-warning">
+                    Fields marked * are required.
+                  </div>
+                <?php endif; ?>
               </div>
               <!-- Form Body -->
               <div class="form-body">
                 <!-- Full name -->
                 <div class="form-row">
                     <label>
-                      <input placeholder="Your Name" type="text" name="name" required>
+                      <input placeholder="Your Name" type="text" name="full-name" required>
                       <span>Full Name *</span>
                     </label>
                 </div>

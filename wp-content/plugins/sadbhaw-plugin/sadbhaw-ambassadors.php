@@ -3,27 +3,27 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	if ( ! class_exists( 'WP_List_Table' ) ) {
 	require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 	}
-	//Table showing donators list
-	class Sadbhaw_Donators_List extends WP_List_Table {
+	//Table showing ambassadors list
+	class Sadbhaw_Ambassadors_List extends WP_List_Table {
 		/** Class constructor */
 		public function __construct() {
 			parent::__construct( [
-				'singular' => __( 'Donor', 'sadbhaw' ), //singular name of the listed records
-				'plural'   => __( 'Donors', 'sadbhaw' ) //plural name of the listed records
+				'singular' => __( 'Ambassador', 'sadbhaw' ), //singular name of the listed records
+				'plural'   => __( 'Ambassadors', 'sadbhaw' ) //plural name of the listed records
 			] );
 		}
 
 		/**
-		 * Retrieve donators’s data from the database
+		 * Retrieve ambassadors’s data from the database
 		 *
 		 * @param int $per_page
 		 * @param int $page_number
 		 *
 		 * @return mixed
 		 */
-		public static function get_donators( $per_page = 10, $page_number = 1 ) {
+		public static function get_ambassadors( $per_page = 10, $page_number = 1 ) {
 		  global $wpdb;
-		  $sql = "SELECT ID,name,email,address,zip,phone,donated_amount,pledged FROM {$wpdb->prefix}sadbhaw_donators WHERE verified = 1";
+		  $sql = "SELECT ID,name,email,address FROM {$wpdb->prefix}sadbhaw_ambassadors";
 		  if ( ! empty( $_REQUEST['orderby'] ) ) {
 		    $sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
 		    $sql .= ! empty( $_REQUEST['order'] ) ? ' ' . esc_sql( $_REQUEST['order'] ) : ' ASC';
@@ -34,34 +34,23 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		  return $result;
 		}
 
-		public static function count_results(){
-			global $wpdb;
-		  $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}sadbhaw_donators WHERE verified = 1";
-		  if ( ! empty( $_REQUEST['orderby'] ) ) {
-		    $sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
-		    $sql .= ! empty( $_REQUEST['order'] ) ? ' ' . esc_sql( $_REQUEST['order'] ) : ' ASC';
-		  }
-		  $count = $wpdb->get_var( $sql, 'ARRAY_A' );
-		  return $count;
-		}
-
 		/**
-		 * Delete a customer record.
+		 * Delete an ambassador record.
 		 *
 		 * @param int $id customer ID
 		 */
-		public static function delete_donator( $id ) {
+		public static function delete_ambassador( $id ) {
 		  global $wpdb;
 		  $wpdb->delete(
-		    "{$wpdb->prefix}sadbhaw_donators",
+		    "{$wpdb->prefix}sadbhaw_ambassadors",
 		    [ 'ID' => $id ],
 		    [ '%d' ]
 		  );
 		}
 
-		/** Text displayed when no donator data is available */
+		/** Text displayed when no ambassador data is available */
 		public function no_items() {
-		  _e( 'No donors avaliable.' );
+		  _e( 'No ambassadors avaliable.' );
 		}
 
 			/**
@@ -74,11 +63,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		  	'cb'      => '<input type="checkbox" />',
 		    'name'    => __( 'Name','sadbhaw' ),
 		    'email' => __( 'Email','sadbhaw' ),
-		    'address'    => __( 'Address','sadbhaw' ),
-		    'zip'    => __( 'City/Zip','sadbhaw'),
-		    'phone'    => __( 'Telephone Number','sadbhaw'),
-		    'donated_amount'    => __( 'Donated Amount','sadbhaw'),
-		    'pledged'    => __( 'Type','sadbhaw')
+		    'address'    => __( 'Address','sadbhaw' )
 		  ];
 		  return $columns;
 		}
@@ -93,10 +78,10 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		  $this->_column_headers = array($columns, $hidden, $sortable);
 		  /** Process bulk action */
   		$this->process_bulk_action();
-		  $per_page     = $this->get_items_per_page( 'donators_per_page', 10 );
+		  $per_page     = $this->get_items_per_page( 'ambassadors_per_page', 10 );
 		  $current_page = $this->get_pagenum();
-		  $items = self::get_donators( $per_page, $current_page );
-		  $total_items  = self::count_results();	
+		  $items = self::get_ambassadors( $per_page, $current_page );
+		  $total_items  = count($items);
 		  $this->set_pagination_args( [
 		    'total_items' => $total_items, //WE have to calculate the total number of items
 		    'per_page'    => $per_page //WE have to determine how many items to show on a page
@@ -116,14 +101,9 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 			public function column_default( $item, $column_name ) {
 				global $wpdb;
 				switch ( $column_name ) {
-					case 'pledged':
-						return ($item[ $column_name ])?'Pledge':'Donation';
 					case 'name':
 					case 'email':
 					case 'address':
-					case 'zip':
-					case 'phone':
-					case 'donated_amount':
 						return $item[ $column_name ];
 					default:
 						//return print_r( $item, true ); //Show the whole array for troubleshooting purposes
@@ -161,11 +141,11 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		  if ( 'delete' === $this->current_action() ) {
 		    // In our file that handles the request, verify the nonce.
 		    $nonce = esc_attr( $_REQUEST['_wpnonce'] );
-		    if ( ! wp_verify_nonce( $nonce, 'sadbhaw_delete_donator' ) ) {
+		    if ( ! wp_verify_nonce( $nonce, 'sadbhaw_delete_ambassador' ) ) {
 		      die( 'Go get a life script kiddies' );
 		    }
 		    else {
-		      self::delete_donator( absint( $_GET['donator'] ) );
+		      self::delete_ambassador( absint( $_GET['ambassador'] ) );
 		      wp_redirect( esc_url( add_query_arg() ) );
 		      exit;
 		    }
@@ -177,7 +157,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		    $delete_ids = esc_sql( $_POST['bulk-delete'] );
 		    // loop over the array of record IDs and delete them
 		    foreach ( $delete_ids as $id ) {
-		      self::delete_donator( $id );
+		      self::delete_ambassador( $id );
 		    }
 		  }
 		}

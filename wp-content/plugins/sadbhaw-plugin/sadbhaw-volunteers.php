@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 		public static function delete_volunteer( $id ) {
 		  global $wpdb;
 		  $wpdb->delete(
-		    "{$wpdb->prefix}sadbhaw_Volunteers",
+		    "{$wpdb->prefix}sadbhaw_volunteers",
 		    [ 'ID' => $id ],
 		    [ '%d' ]
 		  );

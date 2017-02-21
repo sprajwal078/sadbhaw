@@ -48,7 +48,7 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                       <div class="form-row text-center mt">
                         <div id="esewa">
                           <!-- Generates esewa donation form with donate button -->
-                          <?php echo do_shortcode("[wpesewa-donation amount=10 surl='".site_url('/donation-redirect?response=success&id=').$_GET['id']."' furl='".site_url('/donation-redirect?response=failed/')."']"); ?>
+                          <?php echo do_shortcode("[wpesewa-donation amount=".$amount." surl='".site_url('/donation-redirect?response=success&id=').$_GET['id']."' furl='".site_url('/donation-redirect?response=failed/')."']"); ?>
                         </div>
                         <div id="skrill" style="display: none">
                           <!-- Skrill Donate Button -->
@@ -56,7 +56,14 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                         </div>
                         <div id="paypal" style="display: none">
                           <!-- Paypal Donate Button -->
-                          <button type="button">Paypal</button>
+                          <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="G3LZXQYNCAT7Q">
+                            <input type="hidden" name="amount" value="<?php echo $amount ?>">
+                            <input type="hidden" name="return" value="<?php echo site_url('/donation-redirect?response=success&id=').$_GET['id']; ?>">
+                            <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width: auto;border: none">
+                            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            </form>
                         </div>
                       </div>
                   </div>

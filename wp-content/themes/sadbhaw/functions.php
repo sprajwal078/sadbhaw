@@ -116,7 +116,25 @@ function list_terms_by_post_type($taxonomy = 'category',$post_type = 'post'){
 
 //Handles the become a partner form submit
 function become_a_partner(){
-  echo "Thank you for being a partner";
+  global $wpdb;
+  if (!empty($_POST['full-name']) && !empty($_POST['email'])){
+    $wpdb->insert('wp_sadbhaw_partners',array('name' => $_POST['full-name'],
+                                                'email' => $_POST['email'],
+                                                'address' => $_POST['address']
+                                                ));
+    $message = '';
+    $message .= "The following person has tried to register as a partner\n\n";
+    $message .= "Name : ".$_POST['full-name']."\n";
+    $message .= "Email : ".$_POST['email']."\n";
+    $message .= "Address : ".$_POST['address']."\n";
+    wp_mail(get_bloginfo('admin_email'),'Sadbhaw Partner Registration',$message);
+    wp_redirect(site_url('thank-you?redirect=partner'));
+    die;
+  }
+  else{
+    wp_redirect($_SERVER['HTTP_REFERER']."?submit=false&form=partner");
+    die;
+  }
 }
 add_action('admin_post_become_a_partner','become_a_partner');
 add_action('admin_post_nopriv_become_a_partner','become_a_partner');
@@ -168,11 +186,11 @@ function become_a_volunteer(){
     $message .= "City/State/Zip : ".$emergency['city']."\n";
     $message .= "Phone : ".$_POST['phone']."\n";
     wp_mail(get_bloginfo('admin_email'),'Sadbhaw Volunteer Registration',$message);
-    wp_redirect($_SERVER['HTTP_REFERER']."?submit=true");
+    wp_redirect(site_url('thank-you?redirect=volunteer'));
     die;
   }
   else{
-    wp_redirect($_SERVER['HTTP_REFERER']."?submit=false");
+    wp_redirect($_SERVER['HTTP_REFERER']."?submit=false&form=volunteer");
     die;
   }
 }
@@ -181,7 +199,25 @@ add_action('admin_post_nopriv_become_a_volunteer','become_a_volunteer');
 
 //Handles the become an ambassador form submit
 function become_an_ambassador(){
-  echo "Thank you for being an ambassador";
+  global $wpdb;
+  if (!empty($_POST['full-name']) && !empty($_POST['email'])){
+    $wpdb->insert('wp_sadbhaw_ambassadors',array('name' => $_POST['full-name'],
+                                                'email' => $_POST['email'],
+                                                'address' => $_POST['address']
+                                                ));
+    $message = '';
+    $message .= "The following person has tried to register as an ambassador\n\n";
+    $message .= "Name : ".$_POST['full-name']."\n";
+    $message .= "Email : ".$_POST['email']."\n";
+    $message .= "Address : ".$_POST['address']."\n";
+    wp_mail(get_bloginfo('admin_email'),'Sadbhaw Ambassador Registration',$message);
+    wp_redirect(site_url('thank-you?redirect=ambassador'));
+    die;
+  }
+  else{
+    wp_redirect($_SERVER['HTTP_REFERER']."?submit=false&form=ambassador");
+    die;
+  }
 }
 add_action('admin_post_become_an_ambassador','become_an_ambassador');
 add_action('admin_post_nopriv_become_an_ambassador','become_an_ambassador');
@@ -211,14 +247,25 @@ function donate_us(){
                                               'address' => $_POST['donate']['address'],
                                               'zip' => $_POST['donate']['city'],
                                               'phone' => $_POST['donate']['phone'],
-                                              'donated_amount' => $_POST['donate']['sponsor']));
+                                              'donated_amount' => $_POST['donate']['sponsor'],
+                                              'pledged' => 0));
     $id = $wpdb->insert_id;
     //Redirect to payment select page
     wp_redirect(site_url('/payment-options/?_donation_nonce=').$_POST['_donation_nonce']."&id={$id}");
     die;
   //For I pledge button
   }elseif ($_POST['submit'] == 'I Pledge'){
-    wp_redirect(site_url('thank-you'));
+    global $wpdb;
+    //Save donator info
+    $wpdb->insert('wp_sadbhaw_donators',array('name' => $_POST['donate']['name'],
+                                              'email' => $_POST['donate']['email'],
+                                              'address' => $_POST['donate']['address'],
+                                              'zip' => $_POST['donate']['city'],
+                                              'phone' => $_POST['donate']['phone'],
+                                              'donated_amount' => $_POST['donate']['sponsor'],
+                                              'pledged' => 1,
+                                              'verified' => 1));
+    wp_redirect(site_url('thank-you?redirect=pledge'));
     die;
   }
 }
@@ -242,12 +289,26 @@ add_action('admin_post_payment_method','payment_method');
 add_action('admin_post_nopriv_payment_method','payment_method');
 
 
-//Handles the we visit you form submit
-function we_visit_you(){
-  echo "We will visit you on your specified day";
+//Handles the contact form
+function contact_us(){
+  global $wpdb;
+  if (!empty($_POST['full-name']) && !empty($_POST['email']) && !empty($_POST['message'])){
+    $message = '';
+    $message .= "The following person tried to contact you\n\n";
+    $message .= "Name : ".$_POST['full-name']."\n";
+    $message .= "Email : ".$_POST['email']."\n";
+    $message .= "Message : ".$_POST['message']."\n";
+    wp_mail(get_bloginfo('admin_email'),'Sadbhaw Contact Us',$message);
+    wp_redirect(site_url('thank-you?redirect=contact'));
+    die;
+  }
+  else{
+    wp_redirect($_SERVER['HTTP_REFERER']."?submit=false&form=contact");
+    die;
+  }
 }
-add_action('admin_post_we_visit_you','we_visit_you');
-add_action('admin_post_nopriv_we_visit_you','we_visit_you');
+add_action('admin_post_contact_us','contact_us');
+add_action('admin_post_nopriv_contact_us','contact_us');
 
 /*----------  Form Handling Ends  ----------*/
 

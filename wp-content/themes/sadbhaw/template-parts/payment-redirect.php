@@ -12,19 +12,16 @@ if (isset($_GET['response'])):
 	        <div class="vc_column-inner vc_custom_1451981561873">
 	          <div class="wpb_wrapper">
 	            <div class="iw-heading style1 center-text">
-	            <?php if ($_GET['response'] == 'success'): ?>
+	            <?php
+	            	if ($_GET['response'] == 'success'):
+	            		global $wpdb;
+	            		$wpdb->update('wp_sadbhaw_donators',array('verified'=>1),array('ID'=>$_GET['id']));
+	            ?>
 	              <h3 class="iwh-title" style="font-size:40px">Thank you</h3>
 	              <h4 class="alert alert-success">
 	              	Donation Recieved
 	              </h4>
 	              <p class="iwh-content">
-<!-- 	              <form action = "http://dev.esewa.com.np/epay/transrec" method="POST">
-									<input type="hidden" name="refid" value="abde5222-cd16-4958-95cc-d32af125e1c8" />
-									<input value="<?php echo $_GET['amt'] ?>" type="hidden" name="amt">
-									<input value="<?php echo $_GET['oid'] ?>" type="hidden" name="oid">
-									<input value="Verify" type="submit">
-									</form> -->
-	              	<!-- Content can be added here -->
 	              </p>
 	            <?php elseif ($_GET['response'] == 'failed'): ?>
 	            	<h3 class="iwh-title" style="font-size:40px">Donation Failed</h3>
