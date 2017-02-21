@@ -95,103 +95,134 @@ get_header();
                               </div>
                               <!-- Gender -->
                               <div class="form-row">
-                                <label>
-                                  Male<input type="radio" name="gender" value="male">
-                                  Female<input type="radio" name="gender" value="female">
-                                  <span>Gender</span>
-                                </label>
+
+                                  <span>Gender: </span>
+                                  Male <input type="radio" name="gender" value="male">
+                                  Female <input type="radio" name="gender" value="female">
                               </div>
                               <!-- Education -->
                               <div class="form-row">
-                                <label>
-                                  1-5<input type="radio" name="education" value="1-5">
-                                  6-9<input type="radio" name="education" value="6-9">
-                                  11-12<input type="radio" name="education" value="11-12">
-                                  College<input type="radio" name="education" value="College">
-                                  Business<input type="radio" name="education" value="Business">
-                                  Graduate School<input type="radio" name="education" value="Graduate School">
-                                  Technical/Vocational<input type="radio" name="education" value="Graduate School">
-                                  <span>Education</span>
-                                </label>
+                                <span>Education:</span>
+                                <div style="padding-left: 30px; margin-top: 10px">
+                                  <p>
+                                    1-5 <input type="radio" name="education" value="1-5">
+                                  </p>
+                                  <p>
+                                    6-9 <input type="radio" name="education" value="6-9">
+                                  </p>
+                                  <p>
+                                    11-12 <input type="radio" name="education" value="11-12">
+                                  </p>
+                                  <p>
+                                    College <input type="radio" name="education" value="College">
+                                  </p>
+                                  <p>
+                                    Business <input type="radio" name="education" value="Business">
+                                  </p>
+                                  <p>
+                                    Graduate School <input type="radio" name="education" value="Graduate School">
+                                  </p>
+                                  <p>
+                                    Technical/Vocational <input type="radio" name="education" value="Graduate School">
+                                  </p>
+                                </div>
                               </div>
                               <!-- Skills -->
                               <div class="form-row">
-                                <label>
-                                  <span>Skill</span>
-                                  <div class="form-element">
-                                    1.<input placeholder="Skill Name" type="text" name="skill[0][name]" >
+                                <p>Skills:</p>
+
+                                  <div class="form-element ">
+                                    <p>
+                                      <input placeholder="Skill Name" type="text" name="skill[0][name]" >
+                                    </p>
                                     Proficiency:
-                                    Skilled<input type="radio" name="skill[0][proficiency]" value="Skilled" >
-                                    Can Teach<input type="radio" name="skill[0][proficiency]" value="Can Teach" >
-                                    Amateur<input type="radio" name="skill[0][proficiency]" value="Amateur" >
+                                    Skilled <input type="radio" name="skill[0][proficiency]" value="Skilled" >
+                                    Can Teach <input type="radio" name="skill[0][proficiency]" value="Can Teach" >
+                                    Amateur <input type="radio" name="skill[0][proficiency]" value="Amateur" >
                                   </div>
-                                  <div class="form-element">
-                                    2.<input placeholder="Skill Name" type="text" name="skill[1][name]" >
+                                  <br>
+                                  <div class="form-element ">
+                                    <p>
+                                      <input placeholder="Skill Name" type="text" name="skill[1][name]" >
+                                    </p>
                                     Proficiency:
-                                    Skilled<input type="radio" name="skill[1][proficiency]" value="Skilled" >
-                                    Can Teach<input type="radio" name="skill[1][proficiency]" value="Can Teach" >
-                                    Amateur<input type="radio" name="skill[1][proficiency]" value="Amateur" >
+                                    Skilled <input type="radio" name="skill[1][proficiency]" value="Skilled" >
+                                    Can Teach <input type="radio" name="skill[1][proficiency]" value="Can Teach" >
+                                    Amateur <input type="radio" name="skill[1][proficiency]" value="Amateur" >
                                   </div>
+                                  <br>
                                   <div class="form-element">
-                                    3.<input placeholder="Skill Name" type="text" name="skill[2][name]" >
+                                    <p>
+                                      <input placeholder="Skill Name" type="text" name="skill[2][name]" >
+                                    </p>
                                     Proficiency:
-                                    Skilled<input type="radio" name="skill[2][proficiency]" value="Skilled" >
-                                    Can Teach<input type="radio" name="skill[2][proficiency]" value="Can Teach" >
-                                    Amateur<input type="radio" name="skill[2][proficiency]" value="Amateur" >
+                                    Skilled <input type="radio" name="skill[2][proficiency]" value="Skilled" >
+                                    Can Teach <input type="radio" name="skill[2][proficiency]" value="Can Teach" >
+                                    Amateur <input type="radio" name="skill[2][proficiency]" value="Amateur" >
                                   </div>
-                                </label>
                               </div>
+                              <br><br>
                               <!-- Languages -->
                               <div class="form-row">
-                                <label>
-                                  <span>Languages</span>
+                                <p>
+                                  <span>Languages:</span>
+                                </p>
                                   <div class="form-element">
-                                    1.<input placeholder="Language Name" type="text" name="language[0][name]" >
+                                    <p>
+                                      <input placeholder="Language Name" type="text" name="language[0][name]" >
+                                    </p>
                                     Proficiency:
-                                    Fluent<input type="radio" name="language[0][proficiency]" value="Fluent" >
-                                    Read<input type="radio" name="language[0][proficiency]" value="Read" >
-                                    Write<input type="radio" name="language[0][proficiency]" value="Write" >
+                                    Fluent <input type="radio" name="language[0][proficiency]" value="Fluent" >
+                                    Read <input type="radio" name="language[0][proficiency]" value="Read" >
+                                    Write <input type="radio" name="language[0][proficiency]" value="Write" >
                                   </div>
+                                  <br>
                                   <div class="form-element">
-                                    2.<input placeholder="Language Name" type="text" name="language[1][name]" >
+                                    <p>
+                                      <input placeholder="Language Name" type="text" name="language[1][name]" >
+                                    </p>
                                     Proficiency:
                                     Fluent<input type="radio" name="language[1][proficiency]" value="Fluent" >
                                     Read<input type="radio" name="language[1][proficiency]" value="Read" >
                                     Write<input type="radio" name="language[1][proficiency]" value="Write" >
                                   </div>
-                                </label>
                               </div>
+                              <br><br>
                               <!-- Volunteer Availability -->
                               <div class="form-row">
-                                <label>
-                                  <span>Volunteer Availability</span>
+                                <p>
+                                  <span>Volunteer Availability:</span>
+                                </p>
                                   <div class="form-element">
-                                    Number of Days per week
-                                    1<input type="radio" name="availability[no_of_days]" value="1">
-                                    2<input type="radio" name="availability[no_of_days]" value="2">
-                                    3<input type="radio" name="availability[no_of_days]" value="3">
-                                    4<input type="radio" name="availability[no_of_days]" value="4">
-                                    5<input type="radio" name="availability[no_of_days]" value="5">
+                                    Number of Days per week:
+                                    <br>
+                                    1 <input type="radio" name="availability[no_of_days]" value="1">
+                                    2 <input type="radio" name="availability[no_of_days]" value="2">
+                                    3 <input type="radio" name="availability[no_of_days]" value="3">
+                                    4 <input type="radio" name="availability[no_of_days]" value="4">
+                                    5 <input type="radio" name="availability[no_of_days]" value="5">
                                   </div>
+                                  <br>
                                   <div class="form-element">
-                                    Monday<input type="checkbox" name="availability[days][Monday]">
-                                    Tuesday<input type="checkbox" name="availability[days][Tuesday]">
-                                    Wednesday<input type="checkbox" name="availability[days][Wednesday]">
-                                    Thursday<input type="checkbox" name="availability[days][Thursday]">
-                                    Friday<input type="checkbox" name="availability[days][Friday]">
-                                    No Preference<input type="checkbox" name="availability[days][No Preference]">
+                                    Monday <input type="checkbox" name="availability[days][Monday]">
+                                    Tuesday <input type="checkbox" name="availability[days][Tuesday]">
+                                    Wednesday <input type="checkbox" name="availability[days][Wednesday]">
+                                    Thursday <input type="checkbox" name="availability[days][Thursday]">
+                                    Friday <input type="checkbox" name="availability[days][Friday]">
+                                    No Preference <input type="checkbox" name="availability[days][No Preference]">
                                   </div>
-                                </label>
                               </div>
+                              <br><br>
                               <!-- Transportation -->
                               <div class="form-row">
-                                <label>
-                                  <span>Transportation(How you will get to your assignment)</span>
-                                  Public Trans.<input type="radio" name="transportation" value="Public">
-                                  Walk<input type="radio" name="transportation" value="Walk">
-                                  Motorcycle<input type="radio" name="transportation" value="Motorcycle">
-                                </label>
+                                <p>
+                                  <span>Transportation(How you will get to your assignment):</span>
+                                </p>
+                                  Public Trans. <input type="radio" name="transportation" value="Public">
+                                  Walk <input type="radio" name="transportation" value="Walk">
+                                  Motorcycle <input type="radio" name="transportation" value="Motorcycle">
                               </div>
+                              <br><br>
                               <!-- Emergency -->
                               <div class="form-emergency">
                                 <span>In case of emergency, notify</span>

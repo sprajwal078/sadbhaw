@@ -220,17 +220,7 @@ get_header();
     <!-- leaders profile -->
        <div class="vc_row wpb_row vc_row-fluid vc_custom_1451359398429" style="margin-left:0;margin-right:0;background-size:100% auto;">
            <div class="vc_row wpb_row vc_inner vc_row-fluid">
-               <?php  $home_donate = generate_query(array( 'post_type' => 'general-info','meta_query'	=> array(
-                   array(
-                       'key'		=> 'info_for',
-                       'value'		=> 'homedonate',
-                       'compare'	=> '='
-                   )
-               ),'numberposts'	=> 1, ));?>
-               <?php if( $home_donate->have_posts() ) :
-                   while ( $home_donate->have_posts() ) : $home_donate->the_post();?>
-                       <a href="#"><img class="fill" src="<?php echo the_post_thumbnail_url();?>"/></a>
-                   <?php endwhile;wp_reset_postdata();endif;?>
+              <a href="<?php the_field('donate_link') ?>"><img class="fill" src="<?php the_field('donate_image') ?>"/></a>
            </div>
        </div>
 
