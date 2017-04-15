@@ -63,7 +63,7 @@ function wpesewa_settings_page() {
 function wpesewa_sanitize_options( $input ) {
 	$input['option_ref_id'] = sanitize_text_field( $input['option_ref_id'] );
 	$input['option_user_id'] = sanitize_text_field( $input['option_user_id'] );
-	$input['option_testing'] = ( $input['option_testing'] == 'on' ) ? 'on' : '';
+	$input['option_testing'] = ( isset($input['option_testing']) && $input['option_testing'] == 'on' ) ? 'on' : '';
 	return $input;
 }
 
@@ -72,7 +72,7 @@ add_shortcode( 'wpesewa-donation', 'wpesewa_donation_btn' );
 function wpesewa_donation_btn( $atts, $content = null ) {
 	$wpesewa_options = get_option( 'wpesewa_options' );
 	//Use dev url if test environment is et in the settings
-	$action_url = ($wpesewa_options['option_testing'] == 'on')?"http://dev.esewa.com.np/donate/main":"https://esewa.com.np/ donate /main";
+	$action_url = ($wpesewa_options['option_testing'] == 'on')?"http://dev.esewa.com.np/donate/main":"https://esewa.com.np/donate/main";
 	$atts = shortcode_atts(
 		array(
 			'amount' => 10, //Default amount

@@ -23,7 +23,7 @@
 		<![endif]--><!--[if IE  8]>
 		<link rel="stylesheet" type="text/css" href="http://inwavethemes.com/wordpress/incharity/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen">
 		<![endif]-->
-	    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body id="page-top" class="home page page-id-725 page-parent page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php wpb-js-composer js-comp-ver-4.12 vc_responsive down">

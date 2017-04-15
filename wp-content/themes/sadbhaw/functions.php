@@ -116,7 +116,9 @@ function list_terms_by_post_type($taxonomy = 'category',$post_type = 'post'){
 
 //Handles the become a partner form submit
 function become_a_partner(){
+  var_dump(wp_mail('swopnildangol@gmail.com','Test mail','Test body'));die;
   global $wpdb;
+  var_dump(wp_mail(get_bloginfo('admin_email'),'Sadbhaw Partner Registration',"sample msg"));die;
   if (!empty($_POST['full-name']) && !empty($_POST['email'])){
     $wpdb->insert('wp_sadbhaw_partners',array('name' => $_POST['full-name'],
                                                 'email' => $_POST['email'],
@@ -322,3 +324,31 @@ function sadbhaw_google_map_api( $api ){
   return $api;
 }
 add_filter('acf/fields/google_map/api', 'sadbhaw_google_map_api');
+
+
+function sanitize_multiple_emails($value,$oldValue)
+{
+    //if anything is fishy, just trust wp to keep on as it would.
+    if(!isset($_POST["admin_email"]))
+        return $value;
+
+    $result = "";
+    $emails = explode(",",$_POST["admin_email"]);
+    foreach($emails as $email)
+    {
+        $email = trim($email);
+        $email = sanitize_email( $email );
+
+        //again, something wrong? let wp keep at it.
+        if(!is_email($email))
+            return $value;
+        $result .= $email.",";
+
+    }
+
+    if(strlen($result == ""))
+        return $value;
+    $result = substr($result,0,-1);
+    return $result;
+}
+add_filter('pre_update_option_admin_email','sanitize_multiple_emails',10,2);
