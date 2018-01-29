@@ -69,6 +69,7 @@ a.read-more{
   color: white;
   font-size: 13px;
   line-height: 13px;
+  white-space: nowrap;
 }
 a.read-more:hover{
   background: rgba(0, 46, 94, 0.88);
@@ -94,6 +95,9 @@ body.down .header.clone, body.down .iw-header-v2-menu.header-sticky.clone,
 .header .iw-menu-default .iw-nav-menu > li > .sub-menu{
   /* box-shadow: none; */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 7px -6px;
+}
+.header .iw-menu-default .iw-nav-menu > li > a{
+  display: block;
 }
 .header.header-sticky.clone .iw-menu-default .iw-nav-menu > li > a strong{
   color: rgba(0,0,0,.9)!important;
@@ -587,6 +591,20 @@ body.down .iw-nav-menu >li:hover>a strong:before{
   margin: 15px;
   margin-left: 0;
 }
+
+.story-single aside{
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+}
+
+.story-single img{
+  height: 250px;
+}
+
+.story-single .story-container{
+  margin:20px 0;
+}
+
 /*partners page*/
 .our-partners,.in-volunteer-contact{
   margin-top: 0px;
@@ -618,9 +636,6 @@ span.error{
 }
 
 /*contact page*/
-.contact-map{
-  padding-bottom: 60px;
-}
 
 .contact label{
   width: 100%;
@@ -773,4 +788,38 @@ span.error{
 /* fixes potential theme css conflict */
 .acf-map img {
    max-width: inherit !important;
+}
+
+#map-modal .modal-dialog{
+  width: 1000px;
+}
+
+.story-single .post-content-desc .post-text{
+  border: 1px solid #e3e3e3;
+  padding: 12px 10px 17px 10px;
+}
+
+@media (max-width: 991px){
+  .logo-header{
+    height: 65px;
+  }
+  .logo-header .logo{
+    border-radius: 0;
+  }
+  .header-sticky.clone .logo .mobile-logo{
+    display:block;
+    height: 75px;
+  }
+  .header-sticky.clone .logo .sticky-logo{
+    display: none;
+  }
+  .header.clone, .iw-header-v2-menu.header-sticky.clone, .header-version-2 .iw-header-v2-menu.header-sticky.clone{
+    display: block !important;
+  }
+  .header.header-sticky.clone .iw-menu-default .iw-nav-menu > li > a strong {
+    color: #838383!important;
+  }
+  body.down .header .iw-menu-default .iw-nav-menu > li.active > a, body.down .header .iw-menu-default .iw-nav-menu > li.active > a, body.down .iw-nav-menu >li:hover>a {
+    background-color: transparent !important;
+  }
 }

@@ -215,17 +215,14 @@
     .header .logo .main-logo{
         display: none;
     }
-    .header-sticky.clone .logo .sticky-logo{
-        display: none;
+    .header .logo .sticky-logo{
+        display: block;
         margin: 0 15px;
-    }
-    .navbar{
-        min-height: 40px; 
     }
     .header .navbar .main-menu{
         background: rgb(49, 49, 49) none repeat scroll 0 0;
         float: none;
-        margin: 0 !important;
+        margin: 0 ;
         position: relative;
     }
     .header .iw-nav-menu li a .icon-arrow::before{
@@ -559,7 +556,7 @@
     .header.clone,
     .iw-header-v2-menu.header-sticky.clone,
     .header-version-2 .iw-header-v2-menu.header-sticky.clone{
-        /*display: none!important;*/
+        display: none!important;
     }
 
     /*--------------------- Blog Details ----------------*/

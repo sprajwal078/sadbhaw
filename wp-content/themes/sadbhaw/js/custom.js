@@ -51,8 +51,46 @@
         }
       }
       $('body').addClass('down');
-      event.stopPropagation();
+        event.stopPropagation();
+      });
+      if (window.location.hash) {
+        $("a[href='" + window.location.hash + "']").tab('show');
+      }
+
+
+    var $click_button_togle = true;
+    $('.iw-button-toggle').on('click',function(){
+      if($click_button_togle){
+        if($(window).width() < 992){
+          $('.menu-default-menu-container, .menu-menu-with-icons-container').slideDown();
+        }else{
+          $('.menu-default-menu-container, .menu-menu-with-icons-container').show();
+        }
+        $(this).addClass('show_customer');
+        $click_button_togle = false;
+      }else{
+        if($(window).width() < 992){
+          $('.menu-default-menu-container, .menu-menu-with-icons-container').slideUp();
+        }else{
+
+          $('.menu-default-menu-container, .menu-menu-with-icons-container').show();
+
+        }
+        $(this).removeClass('show_customer');
+        $click_button_togle = true;
+      } 
     });
+    $(window).on("resize",function(){ 
+      if($(window).width() < 992){
+        if($click_button_togle){
+          $('.menu-default-menu-container, .menu-menu-with-icons-container').hide();
+        }
+      }else{
+        $('.menu-default-menu-container, .menu-menu-with-icons-container').show();
+      }
+      
+    });
+      
     });
    // The rest of the code goes here!
   }(window.jQuery, window, document));

@@ -57,13 +57,22 @@ if (isset($_GET['_donation_nonce']) && wp_verify_nonce($_GET['_donation_nonce'],
                         <div id="paypal" style="display: none">
                           <!-- Paypal Donate Button -->
                           <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="G3LZXQYNCAT7Q">
-                            <input type="hidden" name="amount" value="<?php echo $amount ?>">
-                            <input type="hidden" name="return" value="<?php echo site_url('/donation-redirect?response=success&id=').$_GET['id']; ?>">
-                            <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width: auto;border: none">
+                            <input type="hidden" name="cmd" value="_donations">
+                            <input type="hidden" name="business" value="6HBYSAURPWP4W">
+                            <input type="hidden" name="lc" value="NP">
+                            <input type="hidden" name="item_name" value="Sadbhaw Donation">
+                            <input type="hidden" name="amount" value="<?php echo currencyConverter('NPR','USD',$amount); ?>">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="cn" value="Add special instructions to the seller:">
+                            <input type="hidden" name="no_shipping" value="2">
+                            <input type="hidden" name="rm" value="1">
+                            <input type="hidden" name="return" value="<?php site_url('/donation-redirect/?response=success&id=').$_GET['id']; ?>">
+                            <input type="hidden" name="cancel_return" value="<?php site_url('/donation-redirect/?response=failed') ?>">
+                            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+                            <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width: auto;border: none">
                             <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                            </form>
+                          </form>
                         </div>
                       </div>
                   </div>

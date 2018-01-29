@@ -10,103 +10,122 @@
     <div class="iw-heading style1 center-text">
       <h3 class="iwh-title" style="font-size:40px">Our Location</h3>
     </div>
-
-    <!-- Map -->
-    <?php
-      $location = get_field('location',139);
-    ?>
-    <div class="contact-map mt row">
-      <div class="acf-map">
-        <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-      </div>
-    </div><!-- Google Maps Section Ends -->
     <div class="row flex-row align-stretch form-basic clearfix mb">
-      <div class="col-md-6 row-left">
-        <!-- Payment Select Form Starts -->
-        <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
-          <input type="hidden" name="action" value="contact_us"/>
+      <div class="col-md-12">
+        <div class="col-md-6 row-left">
+          <!-- Payment Select Form Starts -->
+          <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="post">
+            <input type="hidden" name="action" value="contact_us"/>
+            <div class="">
+                <!-- Form Title -->
+                <div class="form-title">
+                  <h2>Write Us a Message</h2>
+                </div>
+                <div class="error">
+                  <?php if (isset($_GET['submit']) && $_GET['submit'] == 'false' && $_GET['form'] == 'contact'): ?>
+                    <div class="alert alert-warning">
+                      Fields marked * are required.
+                    </div>
+                  <?php endif; ?>
+                </div>
+                <!-- Form Body -->
+                <div class="form-body">
+                  <!-- Full name -->
+                  <div class="form-row">
+                      <label>
+                        <input placeholder="Your Name" type="text" name="full-name" required>
+                        <span>Full Name *</span>
+                      </label>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-row">
+                      <label>
+                        <input placeholder="Your Email" type="email" name="email" required>
+                        <span>Email *</span>
+                      </label>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="form-row">
+                      <label>
+                        <textarea placeholder="Your Message" name="message" required rows="7"></textarea>
+                        <span>Message *</span>
+                      </label>
+                  </div>
+
+                  <div class="form-row">
+                    <button type="submit">Send</button>
+                  </div>
+                </div>
+            </div>
+          </form><!-- Payment Select Form Ends -->
+        </div>
+        <div class="col-md-6 row-right" style="border-left: 1px solid rgba(0,0,0,.2)">
+          <!-- Direct Deposit Section Starts -->
           <div class="">
+              <?php
+                $args = array('post_type' =>  'page',
+                              'p'         =>  139,
+                              'showposts' =>1
+                            );
+                $contactQuery = new WP_Query($args);
+                if ( $contactQuery->have_posts() ):
+                  while( $contactQuery->have_posts() ): $contactQuery->the_post();
+              ?>
               <!-- Form Title -->
               <div class="form-title">
-                <h2>Write Us a Message</h2>
+                <h2>Contact Us</h2>
               </div>
-              <div class="error">
-                <?php if (isset($_GET['submit']) && $_GET['submit'] == 'false' && $_GET['form'] == 'contact'): ?>
-                  <div class="alert alert-warning">
-                    Fields marked * are required.
+              <!-- address -->
+              <div class="form-row">
+                <p><strong><i class="fa fa-map-marker"></i> ADDRESS</strong></p>
+                <p><?php the_field('address'); ?></p>
+              </div>
+              <br>
+
+              <!-- phone -->
+              <div class="form-row">
+                <p><strong><i class="fa fa-phone"></i> PHONE</strong></p>
+                <p><?php the_field('telephone'); ?></p>
+              </div>
+              <br>
+
+              <!-- email -->
+              <div class="form-row">
+                <p><strong><i class="fa fa-envelope-o"></i> EMAIL</strong></p>
+                <p><?php the_field('email'); ?></p>
+              </div>
+
+              <?php endwhile; wp_reset_postdata(); endif; ?>
+              <div class="find-us text-center">
+                <button type="button" class="map-toggle" data-target="#map-modal" data-toggle="modal">Find Us</button>
+                <!-- Modal -->
+                <div id="map-modal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="modal-body">
+                            <!-- Map -->
+                        <?php
+                          $location = get_field('location',139);
+                        ?>
+                        <div class="contact-map">
+                          <div class="acf-map">
+                            <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+                          </div>
+                        </div>
+                        <!-- Google Maps Section Ends -->
+                      </div>
+                    </div>
                   </div>
-                <?php endif; ?>
-              </div>
-              <!-- Form Body -->
-              <div class="form-body">
-                <!-- Full name -->
-                <div class="form-row">
-                    <label>
-                      <input placeholder="Your Name" type="text" name="full-name" required>
-                      <span>Full Name *</span>
-                    </label>
-                </div>
-
-                <!-- Email -->
-                <div class="form-row">
-                    <label>
-                      <input placeholder="Your Email" type="email" name="email" required>
-                      <span>Email *</span>
-                    </label>
-                </div>
-
-                <!-- Message -->
-                <div class="form-row">
-                    <label>
-                      <textarea placeholder="Your Message" name="message" required rows="7"></textarea>
-                      <span>Message *</span>
-                    </label>
-                </div>
-
-                <div class="form-row">
-                  <button type="submit">Send</button>
-                </div>
+                </div><!-- Modal Ends -->
               </div>
           </div>
-        </form><!-- Payment Select Form Ends -->
-      </div>
-      <div class="col-md-6 row-right" style="border-left: 1px solid rgba(0,0,0,.2)">
-        <!-- Direct Deposit Section Starts -->
-        <div class="">
-            <?php
-              $args = array('post_type' =>  'page',
-                            'p'         =>  139,
-                            'showposts' =>1
-                          );
-              $contactQuery = new WP_Query($args);
-              if ( $contactQuery->have_posts() ):
-                while( $contactQuery->have_posts() ): $contactQuery->the_post();
-            ?>
-            <!-- Form Title -->
-            <div class="form-title">
-              <h2>Contact Us</h2>
-            </div>
-            <!-- address -->
-            <div class="form-row">
-              <p><strong><i class="fa fa-map-marker"></i> ADDRESS</strong></p>
-              <p><?php the_field('address'); ?></p>
-            </div>
-            <br>
-
-            <!-- phone -->
-            <div class="form-row">
-              <p><strong><i class="fa fa-phone"></i> PHONE</strong></p>
-              <p><?php the_field('telephone'); ?></p>
-            </div>
-            <br>
-
-            <!-- email -->
-            <div class="form-row">
-              <p><strong><i class="fa fa-envelope-o"></i> EMAIL</strong></p>
-              <p><?php the_field('email'); ?></p>
-            </div>
-
-            <?php endwhile; wp_reset_postdata(); endif; ?>
         </div>
       </div>
     </div>

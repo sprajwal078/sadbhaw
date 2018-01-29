@@ -8,7 +8,6 @@
  * @subpackage Sadbhaw
  * @since Sadbhaw 1.0
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -51,10 +50,10 @@
 		<div role="navigation" class="navbar navbar-default navbar-bg-light">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-2 col-sm-12 col-xs-12 no-padding">
+					<div class="col-md-2 col-sm-12 col-xs-12 no-padding logo-header">
 						<h1 class="logo">
 							<a href="<?php echo site_url()?>" title="inCharity">
-								<img class="main-logo" src="<?php echo get_template_directory_uri().'/images/logos/logo_big.png'?>" alt="inCharity">
+								<img class="mobile-logo" src="<?php echo get_template_directory_uri().'/images/logos/logo_big.png'?>" alt="inCharity">
 								<img class="sticky-logo" src="<?php echo get_template_directory_uri().'/images/logos/logo_small.png'?>" alt="inCharity">
 							</a>
 						</h1>
